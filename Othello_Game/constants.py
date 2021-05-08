@@ -1,0 +1,2 @@
+NUM_COLS = 8
+NUM_ROWS = 8
