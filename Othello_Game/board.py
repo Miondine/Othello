@@ -15,14 +15,14 @@ class Board:
     def create_board(self):
 
         # initialise board with unoccupied positions
-        for row in range(NUM_ROWS):
+        for row in range(self.NUM_ROWS):
             self.positions.append([])
-            for col in range(NUM_COLS):
+            for col in range(self.NUM_COLS):
                 self.positions[row].append(0)
 
         # initialise starting postition
         self.positions[3][3] = 1
         self.positions[3][4] = -1
         self.positions[4][3] = -1
-        self.postitions[4][4] = 1
+        self.positions[4][4] = 1
     
