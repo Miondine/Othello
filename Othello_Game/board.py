@@ -1,7 +1,7 @@
 '''
 
 Class to represent the game board. The positions on the board are saved as a two dimensional list where the first dimension
-represents the row of the board and the second dimension the column. Each position is eihter unoccupied (0), white (1) or black (-1.
+represents the row of the board and the second dimension the column. Each position is eihter unoccupied (0), white (1) or black (-1).
 
 '''
 class Board:
