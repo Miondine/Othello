@@ -10,7 +10,10 @@ class Board:
 
     def __init__(self):
         self.positions = []
-        
+        self.disks_black = 2
+        self.disks_white = 2
+        self.num_positions = (c.NUM_ROWS * c.NUM_ROWS)
+        self.empty_positions = self.num_positions - 4
         self.create_board()
 
     def create_board(self):
@@ -27,3 +30,21 @@ class Board:
         self.positions[4][3] = -1
         self.positions[4][4] = 1
     
+    def update_num_diks(self):
+        temp_disks_black = 0
+        temp_disks_white = 0
+        for row in range(c.NUM_ROWS):
+            for col in range(c.NUM_COLS):
+                if (self.position[row][col] == 1):
+                    temp_disks_white += 1
+                elif (self.position[row][col] == -1):
+                    temp_disks_black += 1
+        
+        self.disks_black = temp_disks_black
+        self.disks_white = temp_disks_white
+        self.empty_positions = self.num_positions - self.disks_white - self.disks_black
+
+    
+
+
+
