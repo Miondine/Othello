@@ -35,9 +35,9 @@ class Board:
         temp_disks_white = 0
         for row in range(c.NUM_ROWS):
             for col in range(c.NUM_COLS):
-                if (self.position[row][col] == 1):
+                if (self.positions[row][col] == 1):
                     temp_disks_white += 1
-                elif (self.position[row][col] == -1):
+                elif (self.positions[row][col] == -1):
                     temp_disks_black += 1
         
         self.disks_black = temp_disks_black
