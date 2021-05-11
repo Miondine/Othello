@@ -1,2 +1,21 @@
+# constants for board setup
 NUM_COLS = 8
 NUM_ROWS = 8
+
+# constants for graphical interface
+
+WIDTH = 800
+HEIGHT = 800
+MARGIN = 100
+BOARD_WIDTH = WIDTH - 2*MARGIN
+BOARD_HEIGHT = HEIGHT - 2*MARGIN
+SQUARE_SIZE = BOARD_WIDTH / NUM_COLS
+RADIUS_DISK = (0.5 * SQUARE_SIZE) * 0.8
+#colours:
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+GREY = (128,128,128)
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+YELLOW = (255,255,0)
+ORANGE = (255,128,0)
