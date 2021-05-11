@@ -39,6 +39,8 @@ class Player:
     '''
     def get_possible_moves(self,board):
         directions = [[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[-1,-1]]
+        self.possible_moves = []
+        self.possible_positions = []
         
         for row in range(c.NUM_ROWS):
             for col in range(c.NUM_COLS):
@@ -72,6 +74,7 @@ class Player:
                                 for temp_row, temp_col in zip(temp_rows,temp_cols):
                                     possible_board.positions[temp_row][temp_col] = self.colour
                                 break
+                                
                             #case five
                             break
 
@@ -82,8 +85,7 @@ class Player:
                         self.possible_moves.append(possible_board)
                     
 
-                                
-                                
+
                             
                                 
 
