@@ -45,7 +45,6 @@ class Player:
                 if(board.positions[row][col] != 0):
                      continue
                 else:
-                    print(f'Position: {row},{col}')
                     possible_board = deepcopy(board)
                     valid_position = False
                     for direction in directions:
@@ -65,7 +64,6 @@ class Player:
                             elif(board.positions[row+direction[0]*counter][col+direction[1]*counter] == self.opponent_colour): 
                                 temp_rows.append(row+direction[0]*counter)
                                 temp_cols.append(col+direction[1]*counter)
-                                print(f'direction: {direction[0]},{direction[1]}, position: {row+direction[0]*counter},{col+direction[1]*counter}')
                                 counter +=1
                                 continue
                             # case four
@@ -78,12 +76,10 @@ class Player:
                             break
 
                     if (valid_position == True):
-                        print('position added')
                         possible_board.positions[row][col] = self.colour
                         possible_board.update_num_diks()
                         self.possible_positions.append([row,col])
                         self.possible_moves.append(possible_board)
-                    print('___________')
                     
 
                                 
