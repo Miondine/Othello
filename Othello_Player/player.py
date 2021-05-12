@@ -1,5 +1,5 @@
 import othello_game.constants as c
-import othello_game.board as b
+import othello_game.board as board
 from copy import deepcopy
 
 class Player:
