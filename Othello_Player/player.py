@@ -1,4 +1,3 @@
-import othello_game.constants as c
 import othello_game.board as board
 from copy import deepcopy
 
@@ -42,8 +41,8 @@ class Player:
         self.possible_moves = []
         self.possible_positions = []
         
-        for row in range(c.NUM_ROWS):
-            for col in range(c.NUM_COLS):
+        for row in range(board.num_rows):
+            for col in range(board.num_cols):
                 if(board.positions[row][col] != 0):
                      continue
                 else:
@@ -55,9 +54,9 @@ class Player:
                         counter = 1
                         while True:
                             # case one
-                            if(row+direction[0]*counter < 0 or row+direction[0]*counter >= c.NUM_ROWS):     
+                            if(row+direction[0]*counter < 0 or row+direction[0]*counter >= board.num_rows):     
                                 break
-                            elif(col+direction[1]*counter < 0 or col+direction[1]*counter >= c.NUM_COLS):     
+                            elif(col+direction[1]*counter < 0 or col+direction[1]*counter >= board.num_cols):     
                                 break
                             # case two
                             elif(board.positions[row+direction[0]*counter][col+direction[1]*counter] == 0):   

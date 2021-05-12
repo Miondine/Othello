@@ -14,14 +14,16 @@ class Board:
         self.disks_white = 2
         self.num_positions = (c.NUM_ROWS * c.NUM_ROWS)
         self.empty_positions = self.num_positions - 4
+        self.num_rows = c.NUM_ROWS
+        self.num_cols = c.NUM_COLS
         self.create_board()
 
     def create_board(self):
 
         # initialise board with unoccupied positions
-        for row in range(c.NUM_ROWS):
+        for row in range(self.num_rows):
             self.positions.append([])
-            for col in range(c.NUM_COLS):
+            for col in range(self.num_cols):
                 self.positions[row].append(0)
 
         # initialise starting postition
@@ -33,8 +35,8 @@ class Board:
     def update_num_diks(self):
         temp_disks_black = 0
         temp_disks_white = 0
-        for row in range(c.NUM_ROWS):
-            for col in range(c.NUM_COLS):
+        for row in range(self.num_rows):
+            for col in range(self.num_cols):
                 if (self.positions[row][col] == 1):
                     temp_disks_white += 1
                 elif (self.positions[row][col] == -1):
