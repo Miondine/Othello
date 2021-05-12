@@ -27,6 +27,8 @@ class Human(player.Player):
                 break
             elif(position in self.possible_positions):
                 selected_position = position
+                self.graphical_interface.draw_board(board)
+                self.graphical_interface.draw_possible_positions(self.possible_positions, self.colour)
                 self.graphical_interface.draw_selected_position(selected_position)
         index = self.possible_positions.index(selected_position)
         return quit_val, made_move,self.possible_moves[index]
