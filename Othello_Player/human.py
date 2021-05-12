@@ -7,20 +7,26 @@ class Human(player.Player):
         self.graphical_interface = graphical_interface
 
     def make_move(self,board):
+        quit_val = False
+        made_move = True
         self.get_possible_moves(board)
         if(self.possible_positions == []):
-            return 0, 1, board
+            print('no move possible')
+            made_move = False
+            return quit_val, made_move, board
         self.graphical_interface.draw_possible_positions(self.possible_positions, self.colour)
         selected_position = None
         while True:
             position = self.graphical_interface.get_mouse_position()
             if(position[0] == 100):
+                quit_val = True
+                made_move = False
                 pygame.quit()
-                return 1, 1, board
+                return True, False, board
             if(position == selected_position):
                 break
             elif(position in self.possible_positions):
                 selected_position = position
                 self.graphical_interface.draw_selected_position(selected_position)
         index = self.possible_positions.index(selected_position)
-        return 0, 0,self.possible_moves[index]
+        return quit_val, made_move,self.possible_moves[index]
