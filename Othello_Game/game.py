@@ -69,9 +69,9 @@ class Game:
             self.graphical_interaction.draw_board(self.game_board)
             if(not p1_made_move and not p2_made_move):
                 if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = -1
+                    self.winner = self.name_player2
                 else:
-                    self.winner = 1
+                    self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
                 break
@@ -79,9 +79,9 @@ class Game:
 
             if(self.game_board.empty_positions == 0):
                 if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = -1
+                    self.winner = self.name_player2
                 else:
-                    self.winner = 1
+                    self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
                 break
