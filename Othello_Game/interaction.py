@@ -1,13 +1,13 @@
 import pygame
 import othello_game.constants as c
 
+clock = pygame.time.Clock()
+FPS = 60 
 
 class Interaction:
 
     def __init__(self):
         self.window = pygame.display.set_mode((c.WIDTH,c.HEIGHT))
-        self.FPS = 60
-        self.clock = pygame.time.Clock()
         pygame.display.set_caption('Othello')
 
     #draw board and 
@@ -45,7 +45,7 @@ class Interaction:
     def get_mouse_position(self):
 
         while True:
-            self.clock.tick(self.FPS)
+            Interaction.clock.tick(Interaction.FPS)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     return [100,0]
