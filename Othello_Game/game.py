@@ -7,6 +7,7 @@ import othello_game.board as board
 import othello_game.interaction as interaction
 import othello_player.player as player
 import othello_player.human as human
+import pygame
 
 
 class Game:
@@ -68,6 +69,7 @@ class Game:
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
+            pygame.time.delay(200)
 
             # player1 moves
             p1_quit, p1_made_move, self.game_board = self.player1.make_move_graphical(self.game_board)
@@ -78,9 +80,10 @@ class Game:
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
+            pygame.time.delay(200)
 
             # player2 moves
-            p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphcial(self.game_board)
+            p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p2_quit:    
@@ -88,6 +91,7 @@ class Game:
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
+            pygame.time.delay(200)
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
