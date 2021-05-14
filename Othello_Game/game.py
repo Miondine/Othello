@@ -70,7 +70,7 @@ class Game:
             self.graphical_interaction.draw_board(self.game_board)
 
             # player1 moves
-            p1_quit, p1_made_move, self.game_board = self.player1.make_move(self.game_board)
+            p1_quit, p1_made_move, self.game_board = self.player1.make_move_graphical(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p1_quit:               
@@ -80,7 +80,7 @@ class Game:
             self.graphical_interaction.draw_board(self.game_board)
 
             # player2 moves
-            p2_quit, p2_made_move, self.game_board = self.player2.make_move(self.game_board)
+            p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphcial(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p2_quit:    
@@ -109,3 +109,38 @@ class Game:
                 self.num_disks_player1 = self.game_board.disks_white
                 break
                 
+    # simulates one game between player1/2. Loops over turn player1, turn player2 until no more empty positions are available or both
+    # players passed. For turn from player1/2 calls player object function make_move(self.game_board). 
+    # Changes: self.game_board, self.winner, self.num_disks_player1/2.
+    def run_game_non_graphical(self):
+
+        p1_made_move = 0
+        p2_made_move = 0
+
+        while(self.game_board.empty_positions > 0):
+
+            # player1 moves
+            p1_made_move, self.game_board = self.player1.make_move(self.game_board)
+
+            # player2 moves
+            p2_made_move, self.game_board = self.player2.make_move(self.game_board)
+
+            # if both players passed calculate number of diks for each player, determine winner leave game loop
+            if(not p1_made_move and not p2_made_move):
+                if(self.game_board.disks_black > self.game_board.disks_white):
+                    self.winner = self.name_player2
+                else:
+                    self.winner = self.name_player1
+                self.num_disks_player2 = self.game_board.disks_black
+                self.num_disks_player1 = self.game_board.disks_white
+                break
+                
+            # if no more empty positions calculate number of diks for each player, determine winner leave game loop
+            if(self.game_board.empty_positions == 0):
+                if(self.game_board.disks_black > self.game_board.disks_white):
+                    self.winner = self.name_player2
+                else:
+                    self.winner = self.name_player1
+                self.num_disks_player2 = self.game_board.disks_black
+                self.num_disks_player1 = self.game_board.disks_white
+                break
