@@ -13,6 +13,8 @@ graphical: (Boolean) If true then game will be with graphical output, if false n
 '''
 class Game:
 
+    player_types = {'HUMAN' : human.Human, 'PLAYER' : player.Player}
+
     def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical):
 
         if(graphical or type_player1 == 'HUMAN' or type_player2 == 'HUMAN'):
@@ -21,16 +23,14 @@ class Game:
         else:
             self.graphical = False
 
-        self.player_types = {'HUMAN' : human.Human, 'PLAYER' : player.Player}
-
         if(type_player1 == 'HUMAN'):
             self.player1 = human.Human(1,self.graphical_interaction)
         else:
-            self.player1 = self.player_types[type_player1](1)
+            self.player1 = Game.player_types[type_player1](1)
         if(type_player2 == 'HUMAN'):
             self.player2 = human.Human(-1,self.graphical_interaction)
         else:
-            self.player2 = self.player_types[type_player2](-1)
+            self.player2 = Game.player_types[type_player2](-1)
         
         self.name_player1 = name_player1
         self.name_player2 = name_player2
