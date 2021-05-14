@@ -7,10 +7,10 @@ constants. To implement the output and the interaction possibilities, the packag
 import pygame
 import othello_game.constants as c
 
-clock = pygame.time.Clock() # (pygame object) needed for pygame implementations when user input needs to be checked regularly.
-FPS = 60 # determines how fast the pygame clock works.
-
 class Interaction:
+
+    clock = pygame.time.Clock() # (pygame object) needed for pygame implementations when user input needs to be checked regularly.
+    FPS = 60 # determines how fast the pygame clock works.
 
     
     # initialises object attributes; setup of output/interaction window; sets caption of window to ‘Othello‘. 
