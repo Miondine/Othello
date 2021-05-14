@@ -6,7 +6,7 @@ class Human(player.Player):
         super().__init__(colour)
         self.graphical_interface = graphical_interface
 
-    def make_move(self,board):
+    def make_move_graphical(self,board):
         quit_val = False
         made_move = True
         self.get_possible_moves(board)
