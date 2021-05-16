@@ -1,11 +1,14 @@
+'''
+This class represents a player, it contains functions and attributes all different player types use. 
+'''
+
 import othello_game.board as board
 from copy import deepcopy
 
 class Player:
 
-    '''
-    Each player has a colour (1 (white) or -1 (black)) opponent has the other one. 
-    '''
+    # initialises player attributes, colour of player is determined by input colour. Colour = 1 if white player, -1 if black player 
+    # Input: colour 
     def __init__(self,colour):
         self.colour = colour
         if(self.colour == 1):
@@ -16,26 +19,24 @@ class Player:
         self.possible_moves = []
 
 
-    '''
-    Input: board configuration
+
             
-    Function calculates all possible moves for the calling player for the input board. Function iterates over all board positions. 
-    For all empty positions it checks whether they could be a valid move or not. Therefore, the function expands from the current position
-    in all possible directions and checks if therer is a configuration for flipping. 
+    # Function calculates all possible moves for the calling player for the input board. Function iterates over all board positions. 
+    # For all empty positions it checks whether they could be a valid move or not. Therefore, the function expands from the current position
+    # in all possible directions and checks if there is a configuration for flipping. 
+    # Possible cases while expanding (Pretend player has colour 1):
+    # case one: [1 -1 ... out_of_board] or [1 out of board]
+    # case two: [1 -1 ... 0] or [1 0]
+    # case three [1 -1 ...]
+    # case four: [1 -1 ... 1] 
+    # case five: [1 1 ...]
+    # If function arrives at case four position is a valid move option, function flips in temporary board the enclosed positions for this direction
+    # then expands in the remaining direction. 
+    # After expanding in all direction, function checks if position is valid (flipping at least one opponents disk). If it is valid it adds position 
+    # to possible_positions and adds temporary board to possible_moves
+    # Input: board (Board object) board for which player calculates possible possition
+    # Changes: possible_positions, possible_moves
 
-    Possible cases while expanding (Pretend player has colour 1):
-    case one: [1 -1 ... out_of_board] or [1 out of board]
-    case two: [1 -1 ... 0] or [1 0]
-    case three [1 -1 ...]
-    case four: [1 -1 ... 1] 
-    case five: [1 1 ...]
-
-    If function arrives at case four position is a valid move option, function flipps in temporary board the enclosed positions for this direction
-    then expands in the remaining direction. 
-
-    After expanding in all direction, function checks if position is valid (flipping at least one opponents disk). If it is valid it adds position 
-    to possible_positions and adds temporary board to possible_moves
-    '''
     def get_possible_moves(self,board):
         directions = [[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[-1,-1]]
         self.possible_moves = []
