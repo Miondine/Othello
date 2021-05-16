@@ -31,7 +31,6 @@ class Human(player.Player):
 
         #no move available
         if(self.possible_positions == []):
-            print('no move possible')
             made_move = False
             return quit_val, made_move, board
 
