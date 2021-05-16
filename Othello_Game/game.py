@@ -56,7 +56,7 @@ class Game:
     
     # simulates one game between player1/2 with graphical output/interaction. loops over turn player1, turn player2 until
     # no more empty positions are available, both players passed or a human player clicked quit. For turn from player1/2 
-    # calls player object function make_move(self.game_board). After each turn draws new board on window 
+    # calls player object function make_move_graphical(self.game_board). After each turn draws new board on window 
     # Changes: self.game_board, self.winner, self.num_disks_player1/2, self.window
     def run_game_graphical(self):
 
