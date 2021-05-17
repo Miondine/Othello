@@ -7,11 +7,14 @@ constants. To implement the output and the interaction possibilities, the packag
 import pygame
 import othello_game.constants as c
 
+pygame.font.init()
+
 class Interaction:
 
     clock = pygame.time.Clock() # (pygame object) needed for pygame implementations when user input needs to be checked regularly.
     FPS = 60 # determines how fast the pygame clock works.
-
+    next_font = pygame.font.SysFont('helvetica',72)
+    next_img = next_font.render('Next', True, c.BLACK)
     
     # initialises object attributes; setup of output/interaction window; sets caption of window to ‘Othello‘. 
     # Changes: self.window.
@@ -23,9 +26,16 @@ class Interaction:
     # Input: board (Board object). 
     # Changes: self.window.
     def draw_board(self,board):
+
         self.window.fill(c.BLACK)
+
         # draw board background
         pygame.draw.rect(self.window,c.GREY,(c.MARGIN,c.MARGIN,c.BOARD_HEIGHT,c.BOARD_WIDTH))
+        
+        #draw next button
+        pygame.draw.rect(self.window,c.GREY,(c.NEXT_BUTTON_x,c.NEXT_BUTTON_y,c.SQUARE_SIZE,c.SQUARE_SIZE))
+        self.window.blit(Interaction.next_img, (c.NEXT_BUTTON_x,c.NEXT_BUTTON_y))
+
         # draw squares on board
         for row in range(c.NUM_ROWS):
             pygame.draw.line(self.window,c.BLACK,(c.MARGIN, c.MARGIN + row * c.SQUARE_SIZE),(c.MARGIN + c.BOARD_HEIGHT, c.MARGIN + row * c.SQUARE_SIZE),2)
@@ -72,7 +82,24 @@ class Interaction:
                     return [100,0]
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     x,y = pygame.mouse.get_pos()
-                    row = int((y - c.MARGIN) / c.SQUARE_SIZE)
-                    col = int((x - c.MARGIN) / c.SQUARE_SIZE)
+                    row = int((y - c.MARGIN_SIDE) / c.SQUARE_SIZE)
+                    col = int((x - c.MARGIN_TOP) / c.SQUARE_SIZE)
                     return [row,col]
+
+
+    def get_next_click(self):
+
+        quit_val = None
+        while (quit_val == None):
+            Interaction.clock.tick(Interaction.FPS)
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    quit_val = True
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    x,y = pygame.mouse.get_pos()
+                    #check if in nextbutton:
+                    if(c.NEXT_BUTTON_x <= x <= (c.NEXT_BUTTON_x + c.NEXT_BUTTON_WIDTH) and c.NEXT_BUTTON_y <= y <= (c.NEXT_BUTTON_y + c.NEXT_BUTTON_HEIGHT)):
+                        quit_val = False
+
+        return quit_val
 
