@@ -56,10 +56,10 @@ class Interaction:
 
         if(colour == 1):
             for position in possible_positions:
-                pygame.draw.circle(self.window, c.YELLOW, (c.MARGIN + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+                pygame.draw.circle(self.window, c.YELLOW, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         if(colour == -1):
             for position in possible_positions:
-                pygame.draw.circle(self.window, c.ORANGE, (c.MARGIN + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+                pygame.draw.circle(self.window, c.ORANGE, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         pygame.display.update()
     
     # draws from human player selected position on window.
@@ -67,7 +67,7 @@ class Interaction:
     # Changes: self.window.
     def draw_selected_position(self,position):
 
-        pygame.draw.circle(self.window, c.DARK_RED, (c.MARGIN + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+        pygame.draw.circle(self.window, c.DARK_RED, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         pygame.display.update()
 
     # waits for user mouse click, if user clicks exit returns exit code, if user clicks somewhere else function calculates from pixel position 
@@ -82,8 +82,8 @@ class Interaction:
                     return [100,0]
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     x,y = pygame.mouse.get_pos()
-                    row = int((y - c.MARGIN_SIDE) / c.SQUARE_SIZE)
-                    col = int((x - c.MARGIN_TOP) / c.SQUARE_SIZE)
+                    row = int((y - c.MARGIN_TOP) / c.SQUARE_SIZE)
+                    col = int((x - c.MARGIN_SIDE) / c.SQUARE_SIZE)
                     return [row,col]
 
 
