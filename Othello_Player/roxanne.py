@@ -2,10 +2,10 @@ import othello_player.player as player
 import random
 
 '''
-This class represents the AI Roxanne. Roxanne plays after a value table. The value table 
-contains for each position on the board a value reflecting how good the position is. If it
-is her move she looks up the values for all possible moves and then randomly picks on of 
-the positions with the best value. 
+This class represents the AI Roxanne. This class is derived from Player class. Roxanne plays
+after a value table. The value table contains for each position on the board a value reflecting
+how good the position is. If itis her move she looks up the values for all possible moves and
+then randomly picks on of the positions with the best value. 
 '''
 
 class Roxanne(player.Player):
