@@ -13,10 +13,11 @@ class Interaction:
 
     clock = pygame.time.Clock() # (pygame object) needed for pygame implementations when user input needs to be checked regularly.
     FPS = 60 # determines how fast the pygame clock works.
-    next_font = pygame.font.SysFont('helvetica',c.NEXT_BUTTON_FONTSIZE) # font object for next button 
-    next_img = next_font.render('Next', True, c.BLACK) # next button text
-    start_font = pygame.font.SysFont('helvetica',c.NEXT_BUTTON_FONTSIZE) # font object for start button
-    start_img = next_font.render('Start', True, c.BLACK) # start button text
+    next_font = pygame.font.SysFont('helvetica',c.NEXT_BUTTON_FONTSIZE) # font object for next button. 
+    next_img = next_font.render('Next', True, c.BLACK) # next button text.
+    start_font = pygame.font.SysFont('helvetica',c.NEXT_BUTTON_FONTSIZE) # font object for start button.
+    start_img = next_font.render('Start', True, c.BLACK) # start button text.
+    string_font = pygame.font.SysFont('helvetica',c.INFO_FONT_SIZE) # font object for information for user in top margin.
 
     # initialises object attributes; setup of output/interaction window; sets caption of window to ‘Othello‘. 
     # Changes: self.window.
@@ -120,7 +121,11 @@ class Interaction:
                         quit_val = False
         return quit_val
 
+    # draws Input string centered in top margin. 
+    # Input: string (string). 
+    # Changes: self.window.
     def display_string(self,string):
 
-        font = pygame.draw.rect(self.window,c.DARK_GREY,(c.NEXT_BUTTON_x,c.NEXT_BUTTON_y,c.NEXT_BUTTON_WIDTH,c.NEXT_BUTTON_HEIGHT))
-        self.window.blit(Interaction.next_img, (c.NEXT_BUTTON_x + int(c.NEXT_BUTTON_WIDTH * 0.05),c.NEXT_BUTTON_y + int(c.NEXT_BUTTON_HEIGHT * 0.2)))
+        string_width, string_height = Interaction.string_font.size(string)
+        string_img = Interaction.string_font.render(string, True, c.WHITE)
+        self.window.blit(string_img, (int(0.5 * (c.WIDTH - string_width)),(int(0.5 * (c.MARGIN_TOP - string_height)))))
