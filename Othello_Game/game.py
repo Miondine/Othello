@@ -5,14 +5,13 @@ Can either handle a game without graphical output or with. Sets winner and numbe
 
 import othello_game.board as board
 import othello_game.interaction as interaction
-import othello_player.player as player
 import othello_player.human as human
-import pygame
+import othello_player.roxanne as roxanne
 
 
 class Game:
 
-    player_types = {'HUMAN' : human.Human, 'PLAYER' : player.Player} # (dic) key: String connected to possible players, value: function for player objects initialisation.
+    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne} # (dic) key: String connected to possible players, value: function for player objects initialisation.
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
@@ -65,11 +64,11 @@ class Game:
         p1_quit = 0
         p2_quit = 0
 
-        while(self.game_board.empty_positions > 0):
+        # draw board on screen, wait for next click
+        self.graphical_interaction.draw_board(self.game_board)
+        self.graphical_interaction.get_next_click()
 
-            # draw board on screen, wait for some time such that user can see board
-            self.graphical_interaction.draw_board(self.game_board)
-            pygame.time.delay(200)
+        while(self.game_board.empty_positions > 0):
 
             # player1 moves
             p1_quit, p1_made_move, self.game_board = self.player1.make_move_graphical(self.game_board)
@@ -80,7 +79,7 @@ class Game:
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
-            pygame.time.delay(200)
+            self.graphical_interaction.get_next_click()
 
             # player2 moves
             p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
@@ -91,7 +90,7 @@ class Game:
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
-            pygame.time.delay(200)
+            self.graphical_interaction.get_next_click()
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
