@@ -15,7 +15,7 @@ class Game:
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
-    # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.num_disks_player1/2, self.winner, self.game_board.
+    # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.type_player1/2, self.num_disks_player1/2, self.winner, self.game_board.
     def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical):
 
         # If at least one player is human or graphcial = True then graphical is True and graphcial_interaction is initialised else graphical is False 
@@ -35,6 +35,9 @@ class Game:
         else:
             self.player2 = Game.player_types[type_player2](-1)
         
+        self.type_player1 = type_player1
+        self.type_player2 = type_player2
+
         # names of players are used for output
         self.name_player1 = name_player1
         self.name_player2 = name_player2
@@ -55,7 +58,8 @@ class Game:
     
     # simulates one game between player1/2 with graphical output/interaction. loops over turn player1, turn player2 until
     # no more empty positions are available, both players passed or a human player clicked quit. For turn from player1/2 
-    # calls player object function make_move_graphical(self.game_board). After each turn draws new board on window 
+    # calls player object function make_move_graphical(self.game_board). After each turn draws new board on window. If 
+    # player is not human, asks user to click next.
     # Changes: self.game_board, self.winner, self.num_disks_player1/2, self.window
     def run_game_graphical(self):
 
@@ -64,11 +68,15 @@ class Game:
         p1_quit = 0
         p2_quit = 0
 
-        # draw board on screen, wait for next click
+        # draw board on screen, wait for start click
         self.graphical_interaction.draw_board(self.game_board)
+        self.graphical_interaction.draw_start_button()
         quit_val = self.graphical_interaction.get_next_click()               
         if quit_val:
             exit()
+
+
+        self.graphical_interaction.draw_board(self.game_board)
 
         while(self.game_board.empty_positions > 0):
 
@@ -79,11 +87,14 @@ class Game:
             if p1_quit:               
                 exit()
 
-            # draw board on screen, wait for some time such that user can see board
+            # draw board on screen, wait until user clicks next if player 1 not human
             self.graphical_interaction.draw_board(self.game_board)
-            quit_val = self.graphical_interaction.get_next_click()
-            if quit_val:
-                exit()
+            if (self.type_player1 != 'HUMAN'):
+                self.graphical_interaction.draw_next_button()
+                quit_val = self.graphical_interaction.get_next_click()
+                if quit_val:
+                    exit()
+            self.graphical_interaction.draw_board(self.game_board)
 
             # player2 moves
             p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
@@ -92,11 +103,14 @@ class Game:
             if p2_quit:    
                 exit()
 
-            # draw board on screen, wait for some time such that user can see board
+            # draw board on screen, wait until user clicks next if player 2 not human
             self.graphical_interaction.draw_board(self.game_board)
-            quit_val = self.graphical_interaction.get_next_click()
-            if quit_val:
-                exit()
+            if (self.type_player2 != 'HUMAN'):
+                self.graphical_interaction.draw_next_button()
+                quit_val = self.graphical_interaction.get_next_click()
+                if quit_val:
+                    exit()
+            self.graphical_interaction.draw_board(self.game_board)
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
