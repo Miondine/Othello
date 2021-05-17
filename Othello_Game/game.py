@@ -42,6 +42,10 @@ class Game:
         self.name_player1 = name_player1
         self.name_player2 = name_player2
 
+        # string to show who's turn it is
+        self.turn_player1 = f"{name_player1}'s turn!"
+        self.turn_player2 = f"{name_player2}'s turn!"
+
         self.winner = None
         self.num_disks_player1 = 2 # (int) number of disks player 1 has after game was played.
         self.num_disks_player2 = 2 # (int) number of disks player 2 has after game was played.
@@ -80,6 +84,7 @@ class Game:
 
         while(self.game_board.empty_positions > 0):
 
+            self.graphical_interaction.display_string(self.turn_player1)
             # player1 moves
             p1_quit, p1_made_move, self.game_board = self.player1.make_move_graphical(self.game_board)
 
@@ -95,7 +100,7 @@ class Game:
                 if quit_val:
                     exit()
             self.graphical_interaction.draw_board(self.game_board)
-
+            self.graphical_interaction.display_string(self.turn_player2)
             # player2 moves
             p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
 
