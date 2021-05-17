@@ -66,7 +66,9 @@ class Game:
 
         # draw board on screen, wait for next click
         self.graphical_interaction.draw_board(self.game_board)
-        self.graphical_interaction.get_next_click()
+        quit_val = self.graphical_interaction.get_next_click()               
+        if quit_val:
+            exit()
 
         while(self.game_board.empty_positions > 0):
 
@@ -75,22 +77,26 @@ class Game:
 
             # exit game loop if player 2 selected quit
             if p1_quit:               
-                break
+                exit()
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
-            self.graphical_interaction.get_next_click()
+            quit_val = self.graphical_interaction.get_next_click()
+            if quit_val:
+                exit()
 
             # player2 moves
             p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p2_quit:    
-                break
+                exit()
 
             # draw board on screen, wait for some time such that user can see board
             self.graphical_interaction.draw_board(self.game_board)
-            self.graphical_interaction.get_next_click()
+            quit_val = self.graphical_interaction.get_next_click()
+            if quit_val:
+                exit()
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
