@@ -13,7 +13,7 @@ class Interaction:
 
     clock = pygame.time.Clock() # (pygame object) needed for pygame implementations when user input needs to be checked regularly.
     FPS = 60 # determines how fast the pygame clock works.
-    next_font = pygame.font.SysFont('helvetica',72)
+    next_font = pygame.font.SysFont('helvetica',c.NEXT_BUTTON_FONTSIZE)
     next_img = next_font.render('Next', True, c.BLACK)
     
     # initialises object attributes; setup of output/interaction window; sets caption of window to ‘Othello‘. 
@@ -30,22 +30,22 @@ class Interaction:
         self.window.fill(c.BLACK)
 
         # draw board background
-        pygame.draw.rect(self.window,c.GREY,(c.MARGIN,c.MARGIN,c.BOARD_HEIGHT,c.BOARD_WIDTH))
+        pygame.draw.rect(self.window,c.GREY,(c.MARGIN_SIDE,c.MARGIN_TOP,c.BOARD_SIZE,c.BOARD_SIZE))
         
         #draw next button
-        pygame.draw.rect(self.window,c.GREY,(c.NEXT_BUTTON_x,c.NEXT_BUTTON_y,c.SQUARE_SIZE,c.SQUARE_SIZE))
-        self.window.blit(Interaction.next_img, (c.NEXT_BUTTON_x,c.NEXT_BUTTON_y))
+        pygame.draw.rect(self.window,c.DARK_GREY,(c.NEXT_BUTTON_x,c.NEXT_BUTTON_y,c.NEXT_BUTTON_WIDTH,c.NEXT_BUTTON_HEIGHT))
+        self.window.blit(Interaction.next_img, (c.NEXT_BUTTON_x + int(c.NEXT_BUTTON_WIDTH * 0.05),c.NEXT_BUTTON_y + int(c.NEXT_BUTTON_HEIGHT * 0.2)))
 
         # draw squares on board
         for row in range(c.NUM_ROWS):
-            pygame.draw.line(self.window,c.BLACK,(c.MARGIN, c.MARGIN + row * c.SQUARE_SIZE),(c.MARGIN + c.BOARD_HEIGHT, c.MARGIN + row * c.SQUARE_SIZE),2)
-            pygame.draw.line(self.window,c.BLACK,(c.MARGIN + row * c.SQUARE_SIZE, c.MARGIN),(c.MARGIN + row * c.SQUARE_SIZE, c.MARGIN + c.BOARD_WIDTH),2)
+            pygame.draw.line(self.window,c.BLACK,(c.MARGIN_SIDE, c.MARGIN_TOP + row * c.SQUARE_SIZE),(c.MARGIN_SIDE + c.BOARD_SIZE, c.MARGIN_TOP + row * c.SQUARE_SIZE),2)
+            pygame.draw.line(self.window,c.BLACK,(c.MARGIN_SIDE + row * c.SQUARE_SIZE, c.MARGIN_TOP),(c.MARGIN_SIDE + row * c.SQUARE_SIZE, c.MARGIN_TOP + c.BOARD_SIZE),2)
             #draw current pieces
             for col in range(c.NUM_COLS):
                 if(board.positions[row][col] == 1):
-                    pygame.draw.circle(self.window, c.WHITE, (c.MARGIN + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)   
+                    pygame.draw.circle(self.window, c.WHITE, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)   
                 elif(board.positions[row][col] == -1):         
-                    pygame.draw.circle(self.window, c.BLACK, (c.MARGIN + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+                    pygame.draw.circle(self.window, c.BLACK, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         pygame.display.update()
 
     # draws all possible positions on the window (only the positions, the board needs to be drawn on the window first). Colour of positions depends
@@ -100,6 +100,5 @@ class Interaction:
                     #check if in nextbutton:
                     if(c.NEXT_BUTTON_x <= x <= (c.NEXT_BUTTON_x + c.NEXT_BUTTON_WIDTH) and c.NEXT_BUTTON_y <= y <= (c.NEXT_BUTTON_y + c.NEXT_BUTTON_HEIGHT)):
                         quit_val = False
-
         return quit_val
 
