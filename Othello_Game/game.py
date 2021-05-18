@@ -7,11 +7,13 @@ import othello_game.board as board
 import othello_game.interaction as interaction
 import othello_player.human as human
 import othello_player.roxanne as roxanne
+import othello_player.gambler as gambler
 
 
 class Game:
 
-    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne} # (dic) key: String connected to possible players, value: function for player objects initialisation.
+    # (dic) key: String connected to possible players, value: function for player objects initialisation.
+    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler} 
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
