@@ -36,7 +36,7 @@ class Roxanne(player.Player):
     def make_move(self, board):
 
         made_move = True
-        player.get_possible_move(board)
+        self.get_possible_moves(board)
 
         # no move possible
         if(self.possible_positions == []):
@@ -50,8 +50,31 @@ class Roxanne(player.Player):
 
         # find indices of positions with best values:
         min_value = min(position_values)
-        indices_best_positions = [index for index, value in position_values if value == min_value]
+        indices_best_positions = [index for index, value in enumerate(position_values) if value == min_value]
 
         #return board state which corresponds to random choice of positions with best values
         return made_move, self.possible_moves[random.choice(indices_best_positions)]
+
+    def make_move_graphical(self, board):
+
+        made_move = True
+        quit_val = False
+        self.get_possible_moves(board)
+
+        # no move possible
+        if(self.possible_positions == []):
+            made_move = False
+            return quit_val, made_move, board
+        
+        # calculate board value for all possible_positions:
+        position_values = []
+        for position in self.possible_positions:
+            position_values.append(Roxanne.board_values[position[0]][position[1]])
+
+        # find indices of positions with best values:
+        min_value = min(position_values)
+        indices_best_positions = [index for index, value in enumerate(position_values)  if value == min_value]
+
+        #return board state which corresponds to random choice of positions with best values
+        return quit_val, made_move, self.possible_moves[random.choice(indices_best_positions)]
 
