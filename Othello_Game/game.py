@@ -95,6 +95,7 @@ class Game:
             # draw board on screen, wait until user clicks next if player 1 not human
             self.graphical_interaction.draw_board(self.game_board)
             if (self.type_player1 != 'HUMAN'):
+                self.graphical_interaction.display_string(self.turn_player1)
                 self.graphical_interaction.draw_next_button()
                 quit_val = self.graphical_interaction.get_next_click()
                 if quit_val:
@@ -111,6 +112,7 @@ class Game:
             # draw board on screen, wait until user clicks next if player 2 not human
             self.graphical_interaction.draw_board(self.game_board)
             if (self.type_player2 != 'HUMAN'):
+                self.graphical_interaction.display_string(self.turn_player2)
                 self.graphical_interaction.draw_next_button()
                 quit_val = self.graphical_interaction.get_next_click()
                 if quit_val:
