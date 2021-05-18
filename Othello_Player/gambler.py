@@ -38,7 +38,6 @@ class Gambler(player.Player):
     # Input: board (Board objects). 
     # Output: quit_val (always False), made_move (True if player made a move, False if passed), 
     # board (new board state, or input if player passed)
-
     def make_move_graphical(self, board):
 
         quit_val = False
