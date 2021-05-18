@@ -54,7 +54,13 @@ class Roxanne(player.Player):
 
         #return board state which corresponds to random choice of positions with best values
         return made_move, self.possible_moves[random.choice(indices_best_positions)]
-
+        
+    # calls get_possible_positions(board). If no positions available returns made_move = False and input board
+    # state, else calculates values of all possible positions and returns one of the positions with the best 
+    # value randomly chosen. 
+    # Input: board (Board objects). 
+    # Output: quit_val (always False), made_move (True if player made a move, False if passed), 
+    # board (new board state, or input if player passed)
     def make_move_graphical(self, board):
 
         made_move = True
