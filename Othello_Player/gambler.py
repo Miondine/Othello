@@ -46,7 +46,7 @@ class Gambler(player.Player):
         # no move possible
         if(self.possible_positions == []):
             made_move = False
-            return made_move, board
+            return quit_val, made_move, board
         else: 
             made_move = True
 
