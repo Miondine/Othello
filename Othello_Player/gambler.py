@@ -33,7 +33,7 @@ class Gambler(player.Player):
         #return radom board state from possible_moves
         return made_move, random.choice(self.possible_moves)
         
-    #calls get_possible_positions(board). If no positions available returns made_move = False and input board
+    # calls get_possible_positions(board). If no positions available returns made_move = False and input board
     # state, else picks one board state randomly from possible_moves and returns it.
     # Input: board (Board objects). 
     # Output: quit_val (always False), made_move (True if player made a move, False if passed), 
