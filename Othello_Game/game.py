@@ -69,11 +69,6 @@ class Game:
     # Changes: self.game_board, self.winner, self.num_disks_player1/2, self.window
     def run_game_graphical(self):
 
-        p1_made_move = 0
-        p2_made_move = 0
-        p1_quit = 0
-        p2_quit = 0
-
         # draw board on screen, wait for start click
         self.graphical_interaction.draw_board(self.game_board)
         self.graphical_interaction.draw_start_button()
@@ -125,7 +120,7 @@ class Game:
             if(not p1_made_move and not p2_made_move):
                 if(self.game_board.disks_black > self.game_board.disks_white):
                     self.winner = self.name_player2
-                else:
+                elif(self.game_board.disks_black < self.game_board.disks_white):
                     self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
@@ -135,7 +130,7 @@ class Game:
             if(self.game_board.empty_positions == 0):
                 if(self.game_board.disks_black > self.game_board.disks_white):
                     self.winner = self.name_player2
-                else:
+                elif(self.game_board.disks_black < self.game_board.disks_white):
                     self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
@@ -145,9 +140,6 @@ class Game:
     # players passed. For turn from player1/2 calls player object function make_move(self.game_board). 
     # Changes: self.game_board, self.winner, self.num_disks_player1/2.
     def run_game_non_graphical(self):
-
-        p1_made_move = 0
-        p2_made_move = 0
 
         while(self.game_board.empty_positions > 0):
 
@@ -161,7 +153,7 @@ class Game:
             if(not p1_made_move and not p2_made_move):
                 if(self.game_board.disks_black > self.game_board.disks_white):
                     self.winner = self.name_player2
-                else:
+                elif(self.game_board.disks_black < self.game_board.disks_white):
                     self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
@@ -171,7 +163,7 @@ class Game:
             if(self.game_board.empty_positions == 0):
                 if(self.game_board.disks_black > self.game_board.disks_white):
                     self.winner = self.name_player2
-                else:
+                elif(self.game_board.disks_black < self.game_board.disks_white):
                     self.winner = self.name_player1
                 self.num_disks_player2 = self.game_board.disks_black
                 self.num_disks_player1 = self.game_board.disks_white
