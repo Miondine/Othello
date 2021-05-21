@@ -9,8 +9,9 @@ class Greedy(player.Player):
     def __init__(self, colour):
         super().__init__(colour)
     
-    # calls get_possible_positions(board). If no positions available returns made_move = False and input board
-    # state, else picks one board state randomly from possible_moves and returns it. 
+    # calls get_possible_positions(board). If no positions available returns made_move = False and input board state,
+    # else calculates for each move how many disks would be flipped.  Returns one of the moves, where the most disks 
+    # get flipped randomly chosen. 
     # Input: board (Board objects).
     # Output: made_move (True if player made a move, False if passed), board (new board state, or input if player passed
     def make_move(self, board):
@@ -48,10 +49,9 @@ class Greedy(player.Player):
         #return board state which corresponds to random choice of positions where most disks are flipped
         return made_move, self.possible_moves[random.choice(indices_best_positions)]
         
-
-        
-    # calls get_possible_positions(board). If no positions available returns made_move = False and input board
-    # state, else picks one board state randomly from possible_moves and returns it.
+    # calls get_possible_positions(board). If no positions available returns made_move = False and input board state,
+    # else calculates for each move how many disks would be flipped.  Returns one of the moves, where the most disks 
+    # get flipped randomly chosen. 
     # Input: board (Board objects). 
     # Output: quit_val (always False), made_move (True if player made a move, False if passed), 
     # board (new board state, or input if player passed)
