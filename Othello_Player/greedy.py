@@ -1,7 +1,11 @@
 import othello_player.player as player
 import random
 
-
+'''
+This Class represents a player, who plays such that he flips with every move the maximum amount of disks. 
+This class is derived from Player class. If more two or more moves would flip the maximum amount of disks,
+the greedy player choses one randomly.
+'''
 class Greedy(player.Player):
 
     # calls __init__(colour) to initialise player attributes.
