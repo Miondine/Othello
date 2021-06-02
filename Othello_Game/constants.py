@@ -1,6 +1,7 @@
 # constants for board setup
 NUM_COLS = 8
 NUM_ROWS = 8
+NUM_DIAGONALS = 13
 
 # constants for graphical interface
 HEIGHT = 800
