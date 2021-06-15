@@ -30,6 +30,7 @@ class Heuristic(player.Player):
         self.coin_parity = 0
         self.stability = 0
         self.corners = 0
+        self.heuristical_value = 0
     
     def update_heuristic_values(self, board):
 
@@ -39,6 +40,8 @@ class Heuristic(player.Player):
         self.update_corners(board)
         self.update_stability_boards(board)
         self.update_stability(board)
+
+        self.heuristical_value = 0.35 * self.corners + 0.06 * self.mobility + 0.295 * self.stability + 0.295 * self.coin_parity
 
     def next_moves(self, board):
 
@@ -468,12 +471,7 @@ class Heuristic(player.Player):
 
     def update_stability(self,board):
         opponent_stability_value = sum([sum(row) for row in self.opponent_stability_board])
-        print(f'opponent stability vaue: {opponent_stability_value}')
         own_stability_value = sum([sum(row) for row in self.stability_board])
-        print(f'own stability value: {own_stability_value}')
-        if(opponent_stability_value + own_stability_value == 0):
-            self.stability = 0
-        else:
-            self.stability = 100 * (own_stability_value -opponent_stability_value)/(board.disks_white + board.disks_black)
+        self.stability = 100 * (own_stability_value - opponent_stability_value)/(board.disks_white + board.disks_black)
     
     
