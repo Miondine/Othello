@@ -81,7 +81,7 @@ class Player:
 
                     if (valid_position == True):
                         possible_board.positions[row][col] = self.colour
-                        possible_board.update_num_diks()
+                        possible_board.update_num_disks()
                         self.possible_positions.append([row,col])
                         self.possible_moves.append(possible_board)
                     
