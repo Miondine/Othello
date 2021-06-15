@@ -1,0 +1,48 @@
+# read in data from Roxanne vs. Greedy
+df1 = pandas.read_csv('Roxanne_Greedy_15000.txt',header=2) # Roxanne white
+df2 = pandas.read_csv('Greedy_Roxanne_15000.txt',header=2) # Greedy white
+df3 = pandas.concat([df1,df2],ignore_index='True') # both mixed, Roxanne and Greedy are same ampount of time white player
+results_greedy_roxanne = {}
+results_greedy_roxanne['Roxanne'] = {}
+results_greedy_roxanne['Greedy'] = {}
+results_greedy_roxanne['Draw'] = {} 
+#mixed results
+wins_roxanne, wins_greedy, x,y = df3.sum(axis=0)
+wins_roxanne_percentage = wins_roxanne/30000
+wins_greedy_percentage = wins_greedy/30000
+draws = 30000 - wins_greedy - wins_roxanne
+draws_percentage = draws / 30000
+results_greedy_roxanne['Roxanne']['total wins'] = wins_roxanne
+results_greedy_roxanne['Roxanne']['percentage wins'] = wins_roxanne_percentage
+results_greedy_roxanne['Greedy']['total wins'] = wins_greedy
+results_greedy_roxanne['Greedy']['percentage wins'] = wins_greedy_percentage
+results_greedy_roxanne['Draw']['total'] = draws
+results_greedy_roxanne['Draw']['percentage'] = draws_percentage
+
+# roxanne white results
+wins_roxanne, wins_greedy, x,y = df1.sum(axis=0)
+wins_roxanne_percentage = wins_roxanne/15000
+wins_greedy_percentage = wins_greedy/15000
+draws = 15000 - wins_greedy - wins_roxanne
+draws_percentage = draws / 15000
+
+results_greedy_roxanne['Roxanne']['total wins white'] = wins_roxanne
+results_greedy_roxanne['Roxanne']['percentage wins white'] = wins_roxanne_percentage
+results_greedy_roxanne['Greedy']['total wins black'] = wins_greedy
+results_greedy_roxanne['Greedy']['percentage wins black'] = wins_greedy_percentage
+results_greedy_roxanne['Draw']['total roxanne white'] = draws
+results_greedy_roxanne['Draw']['percentage roxanne white'] = draws_percentage
+
+# roxanne black results
+wins_roxanne, wins_greedy, x,y = df2.sum(axis=0)
+wins_roxanne_percentage = wins_roxanne/15000
+wins_greedy_percentage = wins_greedy/15000
+draws = 15000 - wins_greedy - wins_roxanne
+draws_percentage = draws / 15000
+
+results_greedy_roxanne['Roxanne']['total wins black'] = wins_roxanne
+results_greedy_roxanne['Roxanne']['percentage wins black'] = wins_roxanne_percentage
+results_greedy_roxanne['Greedy']['total wins white'] = wins_greedy
+results_greedy_roxanne['Greedy']['percentage wins white'] = wins_greedy_percentage
+results_greedy_roxanne['Draw']['total Greedy white'] = draws
+results_greedy_roxanne['Draw']['percentage Greedy white'] = draws_percentage
