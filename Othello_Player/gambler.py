@@ -12,8 +12,8 @@ class Gambler(player.Player):
 
     # calls __init__(colour) to initialise player attributes.
     # Input: colour (int)
-    def __init__(self, colour):
-        super().__init__(colour)
+    def __init__(self, colour, graphical_interface):
+        super().__init__(colour,graphical_interface)
     
     # calls get_possible_positions(board). If no positions available returns made_move = False and input board
     # state, else picks one board state randomly from possible_moves and returns it. 
