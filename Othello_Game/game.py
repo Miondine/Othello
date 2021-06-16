@@ -9,12 +9,13 @@ import othello_player.human as human
 import othello_player.roxanne as roxanne
 import othello_player.gambler as gambler
 import othello_player.greedy as greedy
+import othello_player.negamax as negamax
 
 
 class Game:
 
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
-    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy} 
+    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy, 'NEGAMAX' : negamax.Negamax} 
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
@@ -29,14 +30,8 @@ class Game:
             self.graphical = False
 
         # initialistion of player1/2 according to input variable type_player1/2
-        if(type_player1 == 'HUMAN'):
-            self.player1 = human.Human(1,self.graphical_interaction)
-        else:
-            self.player1 = Game.player_types[type_player1](1)
-        if(type_player2 == 'HUMAN'):
-            self.player2 = human.Human(-1,self.graphical_interaction)
-        else:
-            self.player2 = Game.player_types[type_player2](-1)
+        self.player1 = Game.player_types[type_player1](1, self.graphical_interaction)
+        self.player2 = Game.player_types[type_player2](-1, self.graphical_interaction)
         
         self.type_player1 = type_player1
         self.type_player2 = type_player2
