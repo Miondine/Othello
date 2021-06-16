@@ -40,7 +40,7 @@ class Board:
     
     # calculates current number of disks in each colour and the empty positions. 
     # Changes: self.disks_black/white, self.empty_positions.
-    def update_num_diks(self):
+    def update_num_disks(self):
         temp_disks_black = 0
         temp_disks_white = 0
         for row in range(self.num_rows):
