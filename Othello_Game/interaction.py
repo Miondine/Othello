@@ -129,3 +129,4 @@ class Interaction:
         string_width, string_height = Interaction.string_font.size(string)
         string_img = Interaction.string_font.render(string, True, c.WHITE)
         self.window.blit(string_img, (int(0.5 * (c.WIDTH - string_width)),(int(0.5 * (c.MARGIN_TOP - string_height)))))
+        pygame.display.update()
