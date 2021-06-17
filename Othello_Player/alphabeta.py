@@ -1,6 +1,4 @@
 import othello_player.heuritics as heuristics
-import othello_game.board as board
-import pygame
 from copy import deepcopy
 
 class AlphaBeta(heuristics.Heuristic):
