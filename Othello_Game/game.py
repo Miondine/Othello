@@ -10,12 +10,13 @@ import othello_player.roxanne as roxanne
 import othello_player.gambler as gambler
 import othello_player.greedy as greedy
 import othello_player.negamax as negamax
+import othello_player.alphabeta as alphabeta
 
 
 class Game:
 
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
-    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy, 'NEGAMAX' : negamax.Negamax} 
+    player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy, 'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta} 
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
