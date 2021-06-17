@@ -30,8 +30,12 @@ class Game:
             self.graphical = False
 
         # initialistion of player1/2 according to input variable type_player1/2
-        self.player1 = Game.player_types[type_player1](1, self.graphical_interaction)
-        self.player2 = Game.player_types[type_player2](-1, self.graphical_interaction)
+        if graphical:
+            self.player1 = Game.player_types[type_player1](1, True, self.graphical_interaction)
+            self.player2 = Game.player_types[type_player2](-1, True, self.graphical_interaction)
+        else:
+            self.player1 = Game.player_types[type_player1](1,False, None)
+            self.player2 = Game.player_types[type_player2](-1,False, None)
         
         self.type_player1 = type_player1
         self.type_player2 = type_player2
@@ -43,7 +47,10 @@ class Game:
         # string to show who's turn it is
         self.turn_player1 = f"{name_player1}'s turn!"
         self.turn_player2 = f"{name_player2}'s turn!"
-
+        self.moved_player1 = f"{name_player1} moved"
+        self.moved_player2 = f"{name_player2} moved"
+        self.passed_player1 = f"{name_player1} passed"
+        self.passed_player2 = f"{name_player2} passsed"
         self.winner = None
         self.num_disks_player1 = 2 # (int) number of disks player 1 has after game was played.
         self.num_disks_player2 = 2 # (int) number of disks player 2 has after game was played.
@@ -72,95 +79,141 @@ class Game:
         if quit_val:
             exit()
 
-
-        self.graphical_interaction.draw_board(self.game_board)
+        
+        p1_made_move = True
+        p2_made_move = True
 
         while(self.game_board.empty_positions > 0):
 
+            self.graphical_interaction.draw_board(self.game_board)
             self.graphical_interaction.display_string(self.turn_player1)
+            pygame.time.wait(1000)
+
             # player1 moves
-            p1_quit, p1_made_move, self.game_board = self.player1.make_move_graphical(self.game_board)
+            p1_quit, p1_made_move, position, self.game_board = self.player1.make_move_graphical(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p1_quit:               
                 exit()
 
-            # draw board on screen, wait until user clicks next if player 1 not human
-            self.graphical_interaction.draw_board(self.game_board)
-            if (self.type_player1 != 'HUMAN'):
-                self.graphical_interaction.display_string(self.turn_player1)
-                self.graphical_interaction.draw_next_button()
-                quit_val = self.graphical_interaction.get_next_click()
-                if quit_val:
-                    exit()
+            # if both players passed calculate number of diks for each player, determine winner leave game loop
+            if(not p1_made_move and not p2_made_move):
+                self.game_finish_graphical()
+                break
+                
+            # if no more empty positions calculate number of diks for each player, determine winner leave game loop
+            if(self.game_board.empty_positions == 0):
+                self.game_finish_graphical()
+                break
+
+            # draw board on screen and if player moved selected position.
+            if p1_made_move:
+                self.graphical_interaction.draw_board(self.game_board)
+                self.graphical_interaction.display_string(self.moved_player1)
+                self.graphical_interaction.draw_selected_position(position)
+            else:
+                self.graphical_interaction.draw_board(self.game_board)
+                self.graphical_interaction.display_string(self.passed_player1)
+
+            # wait until user clicks next
+            self.graphical_interaction.draw_next_button()
+            quit_val = self.graphical_interaction.get_next_click()
+            if quit_val:
+                exit()
+
             self.graphical_interaction.draw_board(self.game_board)
             self.graphical_interaction.display_string(self.turn_player2)
+            pygame.time.wait(1000)
+
             # player2 moves
-            p2_quit, p2_made_move, self.game_board = self.player2.make_move_graphical(self.game_board)
+            p2_quit, p2_made_move, position, self.game_board = self.player2.make_move_graphical(self.game_board)
 
             # exit game loop if player 2 selected quit
             if p2_quit:    
                 exit()
 
-            # draw board on screen, wait until user clicks next if player 2 not human
-            self.graphical_interaction.draw_board(self.game_board)
-            if (self.type_player2 != 'HUMAN'):
-                self.graphical_interaction.display_string(self.turn_player2)
-                self.graphical_interaction.draw_next_button()
-                quit_val = self.graphical_interaction.get_next_click()
-                if quit_val:
-                    exit()
-            self.graphical_interaction.draw_board(self.game_board)
-
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
-                if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = self.name_player2
-                elif(self.game_board.disks_black < self.game_board.disks_white):
-                    self.winner = self.name_player1
-                self.num_disks_player2 = self.game_board.disks_black
-                self.num_disks_player1 = self.game_board.disks_white
+                self.game_finish_graphical()
                 break
                 
             # if no more empty positions calculate number of diks for each player, determine winner leave game loop
             if(self.game_board.empty_positions == 0):
-                if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = self.name_player2
-                elif(self.game_board.disks_black < self.game_board.disks_white):
-                    self.winner = self.name_player1
-                self.num_disks_player2 = self.game_board.disks_black
-                self.num_disks_player1 = self.game_board.disks_white
+                self.game_finish_graphical()
                 break
-                
+
+            # draw board on screen and if player moved selected position 
+            if p2_made_move:
+                self.graphical_interaction.draw_board(self.game_board)
+                self.graphical_interaction.display_string(self.moved_player2)
+                self.graphical_interaction.draw_selected_position(position)
+            else:
+                self.graphical_interaction.draw_board(self.game_board)
+                self.graphical_interaction.display_string(self.passed_player2)
+
+            # wait until user clicks next
+            self.graphical_interaction.draw_next_button()
+            quit_val = self.graphical_interaction.get_next_click()
+            if quit_val:
+                exit()
+
+
+
+    def game_finish_graphical(self):
+
+        if(self.game_board.disks_black > self.game_board.disks_white):
+            self.winner = self.name_player2
+        elif(self.game_board.disks_black < self.game_board.disks_white):
+            self.winner = self.name_player1
+        self.num_disks_player2 = self.game_board.disks_black
+        self.num_disks_player1 = self.game_board.disks_white
+        self.graphical_interaction.display_string(f"The winner is {self.winner}. {self.name_player1} has {self.num_disks_player1} disks and {self.name_player2} has {self.num_disks_player2} disks")
+        # wait until player clicks next button or quit to exit game
+        self.graphical_interaction.draw_next_button()
+        quit_val = self.graphical_interaction.get_next_click()
+        if quit_val:
+            exit()
+
     # simulates one game between player1/2. Loops over turn player1, turn player2 until no more empty positions are available or both
     # players passed. For turn from player1/2 calls player object function make_move(self.game_board). 
     # Changes: self.game_board, self.winner, self.num_disks_player1/2.
     def run_game_non_graphical(self):
 
+        p1_made_move = True
+        p2_made_move = True
         while(self.game_board.empty_positions > 0):
 
             # player1 moves
             p1_made_move, self.game_board = self.player1.make_move(self.game_board)
+
+            # if both players passed calculate number of diks for each player, determine winner leave game loop
+            if(not p1_made_move and not p2_made_move):
+                self.game_finish()
+                break
+                
+            # if no more empty positions calculate number of diks for each player, determine winner leave game loop
+            if(self.game_board.empty_positions == 0):
+                self.game_finish()
+                break
 
             # player2 moves
             p2_made_move, self.game_board = self.player2.make_move(self.game_board)
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
-                if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = self.name_player2
-                elif(self.game_board.disks_black < self.game_board.disks_white):
-                    self.winner = self.name_player1
-                self.num_disks_player2 = self.game_board.disks_black
-                self.num_disks_player1 = self.game_board.disks_white
+                self.game_finish()
                 break
                 
             # if no more empty positions calculate number of diks for each player, determine winner leave game loop
             if(self.game_board.empty_positions == 0):
-                if(self.game_board.disks_black > self.game_board.disks_white):
-                    self.winner = self.name_player2
-                elif(self.game_board.disks_black < self.game_board.disks_white):
-                    self.winner = self.name_player1
-                self.num_disks_player2 = self.game_board.disks_black
-                self.num_disks_player1 = self.game_board.disks_white
+                self.game_finish()
                 break
+
+    def game_finish(self):
+
+        if(self.game_board.disks_black > self.game_board.disks_white):
+            self.winner = self.name_player2
+        elif(self.game_board.disks_black < self.game_board.disks_white):
+            self.winner = self.name_player1
+        self.num_disks_player2 = self.game_board.disks_black
+        self.num_disks_player1 = self.game_board.disks_white
