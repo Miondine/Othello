@@ -9,8 +9,8 @@ class Heuristic(player.Player):
 
     # calls __init__(colour) to initialise player attributes. Initialises stability board with None at all positions. 
     # Input: colour (int)
-    def __init__(self, colour, graphical_interface):
-        super().__init__(colour,graphical_interface)
+    def __init__(self, colour, graphical, graphical_interface):
+        super().__init__(colour, graphical ,graphical_interface)
         # stability boards save the status of the disks, None if no own disk is at the position, 1 if stable diks, -1 if not stable, 0 if semi stable
         self.stability_board = [[0 for col in range(c.NUM_COLS)] for row in range(c.NUM_ROWS)] 
         self.opponent_stability_board = [[0 for col in range(c.NUM_COLS)] for row in range(c.NUM_ROWS)]
