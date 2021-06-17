@@ -1,3 +1,4 @@
+from numpy.core.fromnumeric import choose
 import othello_player.player as player
 import random
 
@@ -24,8 +25,8 @@ class Roxanne(player.Player):
 
     # calls __init__(colour) to initialise player attributes.
     # Input: colour (int)
-    def __init__(self, colour, graphical_interface):
-        super().__init__(colour,graphical_interface)
+    def __init__(self, colour, graphical, graphical_interface):
+        super().__init__(colour, graphical ,graphical_interface)
     
     # calls get_possible_positions(board). If no positions available returns made_move = False
     # and input board state, else calculates values of all possible positions and returns one 
@@ -70,7 +71,7 @@ class Roxanne(player.Player):
         # no move possible
         if(self.possible_positions == []):
             made_move = False
-            return quit_val, made_move, board
+            return quit_val, made_move, [0,0],board
         
         # calculate board value for all possible_positions:
         position_values = []
@@ -80,7 +81,7 @@ class Roxanne(player.Player):
         # find indices of positions with best values:
         min_value = min(position_values)
         indices_best_positions = [index for index, value in enumerate(position_values)  if value == min_value]
-
+        choosen_index = random.choice(indices_best_positions)
         #return board state which corresponds to random choice of positions with best values
-        return quit_val, made_move, self.possible_moves[random.choice(indices_best_positions)]
+        return quit_val, made_move, self.possible_positions[choosen_index],self.possible_moves[choosen_index]
 

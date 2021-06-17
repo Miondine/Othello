@@ -11,9 +11,8 @@ class Human(player.Player):
     # Calls __init__(colour) to initialise player attributes, initialises own attributes. 
     # Input: colour (int), graphical_interface (Interaction object). 
     # Changes: self.graphical_interaction
-    def __init__(self,colour, graphical_interface):
-        super().__init__(colour)
-        self.graphical_interface = graphical_interface
+    def __init__(self, colour, graphical, graphical_interface):
+        super().__init__(colour, graphical ,graphical_interface)
 
     # Function handles one move of a human player. First calculates all possible moves. If none
     # is possible returns input board, else draws possible moves on board and get human players

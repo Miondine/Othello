@@ -10,8 +10,8 @@ class Greedy(player.Player):
 
     # calls __init__(colour) to initialise player attributes.
     # Input: colour (int)
-    def __init__(self, colour, graphical_interface):
-        super().__init__(colour,graphical_interface)
+    def __init__(self, colour, graphical, graphical_interface):
+        super().__init__(colour, graphical ,graphical_interface)
     
     # calls get_possible_positions(board). If no positions available returns made_move = False and input board state,
     # else calculates for each move how many disks would be flipped.  Returns one of the moves, where the most disks 

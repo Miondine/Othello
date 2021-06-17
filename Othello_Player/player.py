@@ -10,13 +10,14 @@ class Player:
     # Initialises player attributes, colour of player is determined by input colour. Colour = 1 if white player, -1 if black player 
     # Input: colour. 
     # Changes: self.colour, self.opponents_colour, self.possible_moves, self.possible_positions.
-    def __init__(self,colour, graphical_interface):
+    def __init__(self,colour, graphical, graphical_interface):
         self.colour = colour
         if(self.colour == 1):
             self.opponent_colour = -1
         else:
             self.opponent_colour = 1
-        self.graphical_interface = graphical_interface
+        if graphical:
+            self.graphical_interface = graphical_interface
         self.possible_positions = []
         self.possible_moves = []
 
