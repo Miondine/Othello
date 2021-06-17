@@ -11,6 +11,7 @@ import othello_player.gambler as gambler
 import othello_player.greedy as greedy
 import othello_player.negamax as negamax
 import othello_player.alphabeta as alphabeta
+import pygame
 
 
 class Game:
