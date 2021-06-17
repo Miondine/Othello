@@ -91,7 +91,7 @@ class Negamax(heuristics.Heuristic):
                         value = value - 100
                 # no moves possible next players turn
                 else:
-                    value = self.get_negamax_value(board, waiting_player, playing_player, depth+1, False)
+                    value = - self.get_negamax_value(board, waiting_player, playing_player, depth+1, False)
             else:
                 # go one step further in the tree for all possible moves
                 values = []
