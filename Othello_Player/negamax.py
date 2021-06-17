@@ -13,8 +13,8 @@ class Negamax(heuristics.Heuristic):
 
         self.update_heuristic_values
 
-        max_player = heuristics.Heuristic(self.colour)
-        min_player = heuristics.Heuristic(self.opponent_colour)
+        max_player = heuristics.Heuristic(self.colour, False, None)
+        min_player = heuristics.Heuristic(self.opponent_colour, False, None)
 
         self.get_possible_moves(board)
         if(self.possible_moves == []):
@@ -22,9 +22,8 @@ class Negamax(heuristics.Heuristic):
         else:
             values = []
             for move in self.possible_moves:
-                values.append(self.get_negamax_value(move, min_player, max_player, 1, True))
+                values.append(- self.get_negamax_value(move, min_player, max_player, 1, True))
             max_value = max(values)
-            print(f"empty positions: {board.empty_positions}, value: {round(max_value,2)}")
             index_max_value = values.index(max_value)
             return True, self.possible_moves[index_max_value]
 
@@ -33,8 +32,8 @@ class Negamax(heuristics.Heuristic):
         quit_val = False
         self.update_heuristic_values
 
-        max_player = heuristics.Heuristic(self.colour, self.graphical_interface)
-        min_player = heuristics.Heuristic(self.opponent_colour, self.graphical_interface)
+        max_player = heuristics.Heuristic(self.colour, True, self.graphical_interface)
+        min_player = heuristics.Heuristic(self.opponent_colour, True, self.graphical_interface)
 
         self.get_possible_moves(board)
 
@@ -46,9 +45,8 @@ class Negamax(heuristics.Heuristic):
         else:
             values = []
             for move in self.possible_moves:
-                values.append(self.get_negamax_value(move, min_player, max_player, 1, True))
+                values.append( - self.get_negamax_value(move, min_player, max_player, 1, True))
             max_value = max(values)
-            print(f"empty positions: {board.empty_positions}, value: {round(max_value,2)}")
             index_max_value = values.index(max_value)
             return quit_val, True, self.possible_positions[index_max_value], self.possible_moves[index_max_value]
 
@@ -98,7 +96,6 @@ class Negamax(heuristics.Heuristic):
                 # go one step further in the tree for all possible moves
                 values = []
                 for move in playing_player.possible_moves:
-                    possible_value = self.get_negamax_value(move, waiting_player, playing_player, depth+1 , True)
-                    values.append(-possible_value)
+                    values.append( - self.get_negamax_value(move, waiting_player, playing_player, depth+1 , True))
                 value = max(values)
         return value            
