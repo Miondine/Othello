@@ -21,14 +21,14 @@ class AlphaBeta(heuristics.Heuristic):
             return False, board
         else:
             alpha = self.min_heuristic_val
-            beta = self.min_heuristic_val
-            current_best_value = alpha
+            beta = self.max_heuristic_val
+            value = alpha
             for move in self.possible_moves:
-                possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -current_best_value)
-                if(possible_value > current_best_value):
-                    current_best_value = possible_value
+                possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
+                if(possible_value > value):
+                    value = possible_value
                     current_best_move = move
-                if(current_best_value >= beta):
+                if(value >= beta):
                     break
 
             return True, current_best_move
@@ -50,7 +50,7 @@ class AlphaBeta(heuristics.Heuristic):
             return quit_val, False, [0,0],board
         else:
             alpha = self.min_heuristic_val
-            beta = self.min_heuristic_val
+            beta = self.max_heuristic_val
             value = alpha
             for move, index in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
