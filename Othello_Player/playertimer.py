@@ -23,7 +23,7 @@ class PlayerTimer:
 
         self.file = open(self.file_string,'w')
 
-        self.file.write(f'Contains move time for player {player_name}\n')
+        self.file.write(f'Contains move time for player {self.player_name}\n')
         self.file.write(f'Colums refer to move numbers, rows to game numer')
 
         self.file.write('move, ')
@@ -48,14 +48,14 @@ class PlayerTimer:
     def stop_game(self):
 
         self.file.write(f'{self.game_time}\n')
-        self.game_time_summed[self.game_counter] += self.game_time
+        self.game_time_summed[self.game_counter - 1] += self.game_time
         self.game_time = 0
         self.move_counter = 1
         self.game_counter += 1
 
     def close_file(self):
         self.file.write('total time per move x, ')
-        for x in self.move_times:
+        for x in self.move_time_summed:
             self.file.write(f'{x}, ')
         self.file.write(f'{sum(self.move_time_summed)}\n')
         self.file.write('average time per move x, ')
