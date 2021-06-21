@@ -1,7 +1,7 @@
 import othello_player.player as player
 from copy import deepcopy
 
-class StaticBoard(heuristics.Heuristic):
+class StaticBoard(player.Player):
 
     static_board = [[4,-3,2,2,2,2,-3,4],
                     [-3,-4,-1,-1,-1,-1,-4,-3],
