@@ -15,8 +15,8 @@ class StaticBoard(player.Player):
     def __init__(self, colour, graphical, graphical_interface):
         super().__init__(colour, graphical ,graphical_interface)
         self.max_depth = 4
-        self.max_heuristic_val = 200
-        self.min_heuristic_val = -200
+        self.max_heuristic_val = 100
+        self.min_heuristic_val = -100
 
     def make_move(self,board):
 
@@ -27,8 +27,8 @@ class StaticBoard(player.Player):
         if(self.possible_moves == []):
             return False, board
         else:
-            alpha = self.min_heuristic_val
-            beta = self.max_heuristic_val
+            alpha = self.min_heuristic_val - 100
+            beta = self.max_heuristic_val + 100
             value = alpha
             for move in self.possible_moves:
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -43,10 +43,9 @@ class StaticBoard(player.Player):
     def make_move_graphical(self,board):
 
         quit_val = False
-        self.update_heuristic_values
 
-        max_player = player.Player(self.colour, True, self.graphical_interface)
-        min_player = player.Player(self.opponent_colour, True, self.graphical_interface)
+        max_player = player.Player(self.colour, False, None)
+        min_player = player.Player(self.opponent_colour, False, None)
 
         self.get_possible_moves(board)
 
@@ -56,10 +55,10 @@ class StaticBoard(player.Player):
         if(self.possible_moves == []):
             return quit_val, False, [0,0],board
         else:
-            alpha = self.min_heuristic_val
-            beta = self.max_heuristic_val
+            alpha = self.min_heuristic_val - 100
+            beta = self.max_heuristic_val + 100
             value = alpha
-            for move, index in enumerate(self.possible_moves):
+            for index, move in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
                 if(possible_value > value):
                     value = possible_value
@@ -82,7 +81,7 @@ class StaticBoard(player.Player):
             else:
                 value = coin_difference - 100
         elif(depth == self.max_depth):
-            playing_player_value, waiting_player_value = self.get_static_board_value(board, playing_player.colour, waiting_player.colour)
+            playing_player_value, waiting_player_value = self.get_static_board_values(board, playing_player.colour, waiting_player.colour)
             value = playing_player_value - waiting_player_value
         else:
             value = alpha
