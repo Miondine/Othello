@@ -11,7 +11,7 @@ class Heuristic(player.Player):
     # Input: colour (int)
     def __init__(self, colour, graphical, graphical_interface):
         super().__init__(colour, graphical ,graphical_interface)
-        # stability boards save the status of the disks, None if no own disk is at the position, 1 if stable diks, -1 if not stable, 0 if semi stable
+        # stability boards save the status of the discs, None if no own disc is at the position, 1 if stable diks, -1 if not stable, 0 if semi stable
         self.stability_board = [[0 for col in range(c.NUM_COLS)] for row in range(c.NUM_ROWS)] 
         self.opponent_stability_board = [[0 for col in range(c.NUM_COLS)] for row in range(c.NUM_ROWS)]
         # full_rows/cols/diagonals saves if row, col, diagonal of board is fully occupied on board
@@ -48,9 +48,13 @@ class Heuristic(player.Player):
         directions = [[-1,0],[-1,1],[0,1],[1,1],[1,0],[1,-1],[0,-1],[-1,-1]]
 
         for row in range(board.num_rows):
+
             for col in range(board.num_cols):
+
                 if(board.positions[row][col] != 0):
+
                         continue
+
                 else:
 
                     own_valid_position = False
@@ -135,11 +139,11 @@ class Heuristic(player.Player):
 
         if(self.colour == 1):
             
-            self.coin_parity = 100 * (board.disks_white - board.disks_black) / (board.disks_white + board.disks_black)
+            self.coin_parity = 100 * (board.discs_black - board.discs_white) / (board.discs_white + board.discs_black)
 
         else:
                 
-            self.coin_parity = 100 *  (board.disks_black - board.disks_white) / (board.disks_white + board.disks_black)
+            self.coin_parity = 100 *  (board.discs_white - board.discs_black) / (board.discs_white + board.discs_black)
 
     def update_mobility(self):
         
@@ -169,14 +173,14 @@ class Heuristic(player.Player):
         own_corner_adjecents = 0
         opponent_corner_adjecents = 0
         
-        #check all corners if occupied if not cal num of adjectent disks, for each player
+        #check all corners if occupied if not cal num of adjectent discs, for each player
         for row,col,dir_row,dir_col in ((0,0,1,1),(0,7,1,-1),(7,0,-1,1),(7,7,-1,-1)):
             if(board.positions[row][col] == self.colour):
                 own_corners += 1
             elif(board.positions[row][col] == self.opponent_colour):
                 opponent_corners += 1
             else:
-                # check for disks adjecent to empty corners
+                # check for discs adjecent to empty corners
                 for pos in [[row + dir_row, col],[row, col + dir_col],[row + dir_row, col + dir_col]]:
                     if(board.positions[pos[0]][pos[1]] == self.colour):
                         own_corner_adjecents += 1
@@ -196,8 +200,8 @@ class Heuristic(player.Player):
     def update_stability_boards(self, board):
 
         # find all occupied positions, which are not yet saved as stable or unstable for either player.
-        own_semi_stable_disks = []
-        opponent_semi_stable_disks = []
+        own_semi_stable_discs = []
+        opponent_semi_stable_discs = []
         for row in range(board.num_rows):
             for col in range(board.num_cols):
                 
@@ -208,14 +212,14 @@ class Heuristic(player.Player):
                 elif(self.opponent_stability_board[row][col] == 1 or self.opponent_stability_board[row][col] == -1):
                     continue
                 elif(board.positions[row][col] == self.colour):
-                    own_semi_stable_disks.append([row,col])
+                    own_semi_stable_discs.append([row,col])
                 else:
-                    opponent_semi_stable_disks.append([row,col])
+                    opponent_semi_stable_discs.append([row,col])
         
-        if(own_semi_stable_disks == [] and opponent_semi_stable_disks == []):
+        if(own_semi_stable_discs == [] and opponent_semi_stable_discs == []):
             return
 
-        # check if one positions necessary for stable disks is already occupied
+        # check if one positions necessary for stable discs is already occupied
         if(self.s_positions == False):
             for row,col in ((0,0),(0,1),(1,0),(0,7),(1,7),(0,6),(7,0),(7,1),(6,0),(7,7),(7,6),(6,7)):
                 if(board.positions[row][col] != 0):
@@ -299,179 +303,179 @@ class Heuristic(player.Player):
                 if diagonal_full:
                     self.full_right_diagonals[diagonal] = True
 
-        # check if own semi stable disk are stable disk.
+        # check if own semi stable disc are stable disc.
         counter = 0
         while True:
             counter += 1
-            old_own_semi_stable_disks = deepcopy(own_semi_stable_disks)
-            for disk in old_own_semi_stable_disks:
+            old_own_semi_stable_discs = deepcopy(own_semi_stable_discs)
+            for disc in old_own_semi_stable_discs:
                 row_stable = False
                 col_stable = False
                 diagonal_left_stable = False
                 diagonal_right_stable = False
                 # if corner then stable
-                if disk in [[0,0],[0,7],[7,0],[7,7]]:
-                    self.stability_board[disk[0]][disk[1]] = 1
-                    own_semi_stable_disks.remove(disk)
+                if disc in [[0,0],[0,7],[7,0],[7,7]]:
+                    self.stability_board[disc[0]][disc[1]] = 1
+                    own_semi_stable_discs.remove(disc)
                     continue
-                # if disk in col 0 or 7 diks cant be flipped in row or diagonal direction
-                if(disk[1] == 0 or disk[1] == 7):
+                # if disc in col 0 or 7 diks cant be flipped in row or diagonal direction
+                if(disc[1] == 0 or disc[1] == 7):
                     row_stable = True
                     diagonal_right_stable = True
                     diagonal_left_stable = True
-                # check if in full row, else check if disk adjecent in this row to stable disk
-                elif(self.full_rows[disk[0]]):
+                # check if in full row, else check if disc adjecent in this row to stable disc
+                elif(self.full_rows[disc[0]]):
                     row_stable = True
                 else:
-                    if(disk[1] < 7):
-                        if(self.stability_board[disk[0]][disk[1]+1] == 1):
+                    if(disc[1] < 7):
+                        if(self.stability_board[disc[0]][disc[1]+1] == 1):
                             row_stable = True
-                    if(disk[1] > 0):
-                        if(self.stability_board[disk[0]][disk[1]-1] == 1):
+                    if(disc[1] > 0):
+                        if(self.stability_board[disc[0]][disc[1]-1] == 1):
                             row_stable = True
                 
-                # if row is not stable, then disks not stable
+                # if row is not stable, then discs not stable
                 if not row_stable:
                     continue
-                # if disk in col 0 or 7 and row stable direction, then disk is stable
-                if(disk[0] == 0 or disk[0] == 7):
-                    self.stability_board[disk[0]][disk[1]] = 1
-                    own_semi_stable_disks.remove(disk)
+                # if disc in col 0 or 7 and row stable direction, then disc is stable
+                if(disc[0] == 0 or disc[0] == 7):
+                    self.stability_board[disc[0]][disc[1]] = 1
+                    own_semi_stable_discs.remove(disc)
                     continue
-                # check if in full col, else check if disk adjecent in this col to stable disk
-                if(self.full_cols[disk[1]]):
+                # check if in full col, else check if disc adjecent in this col to stable disc
+                if(self.full_cols[disc[1]]):
                     col_stable = True
                 else:
-                    if(disk[0] < 7):
-                        if(self.stability_board[disk[0]+1][disk[1]] == 1):
+                    if(disc[0] < 7):
+                        if(self.stability_board[disc[0]+1][disc[1]] == 1):
                             col_stable = True
-                    if(disk[0] > 0):
-                        if(self.stability_board[disk[0]-1][disk[1]] == 1):
+                    if(disc[0] > 0):
+                        if(self.stability_board[disc[0]-1][disc[1]] == 1):
                             col_stable = True
 
-                # if col is not stable, then disks not stable
+                # if col is not stable, then discs not stable
                 if not col_stable:
                     continue
-                # check if in full right diagonal, else check if disk adjecent in this right diagonal to stable disk
-                if(self.full_right_diagonals[disk[0] - 1 + disk[1]]):
+                # check if in full right diagonal, else check if disc adjecent in this right diagonal to stable disc
+                if(self.full_right_diagonals[disc[0] - 1 + disc[1]]):
                     diagonal_right_stable = True
                 else:
-                    if(disk[0] > 0 and disk[1] < 7):
-                        if(self.stability_board[disk[0] - 1][disk[1] + 1] == 1):
+                    if(disc[0] > 0 and disc[1] < 7):
+                        if(self.stability_board[disc[0] - 1][disc[1] + 1] == 1):
                             diagonal_right_stable = True
-                    if(disk[0] < 7 and disk[1] > 0):
-                        if(self.stability_board[disk[0] + 1][disk[1] - 1] == 1):
+                    if(disc[0] < 7 and disc[1] > 0):
+                        if(self.stability_board[disc[0] + 1][disc[1] - 1] == 1):
                             diagonal_right_stable = True
-                # if right diagonal is not stable, then disks not stable
+                # if right diagonal is not stable, then discs not stable
                 if not diagonal_right_stable:
                     continue
-                # check if in full left diagonal, else check if disk adjecent in this right diagonal to stable disk
-                if(self.full_left_diagonals[disk[0] + 6 - disk[1]]):
+                # check if in full left diagonal, else check if disc adjecent in this right diagonal to stable disc
+                if(self.full_left_diagonals[disc[0] + 6 - disc[1]]):
                     diagonal_left_stable = True
                 else:
-                    if( disk[0] > 0 and disk[1] > 0):
-                        if(self.stability_board[disk[0] - 1][disk[1] - 1] == 1):
+                    if( disc[0] > 0 and disc[1] > 0):
+                        if(self.stability_board[disc[0] - 1][disc[1] - 1] == 1):
                             diagonal_left_stable = True
-                    if(disk[0] < 7 and disk[1] < 7):
-                        if(self.stability_board[disk[0] + 1][disk[1] + 1] == 1):
+                    if(disc[0] < 7 and disc[1] < 7):
+                        if(self.stability_board[disc[0] + 1][disc[1] + 1] == 1):
                             diagonal_left_stable = True
-                # if right diagonal is not stable, then disks not stable
+                # if right diagonal is not stable, then discs not stable
                 if not diagonal_left_stable:
                     continue
-                # disks is stable, change stability board accordingly
-                self.stability_board[disk[0]][disk[1]] = 1
-                own_semi_stable_disks.remove(disk) 
-            if (old_own_semi_stable_disks == own_semi_stable_disks):
+                # discs is stable, change stability board accordingly
+                self.stability_board[disc[0]][disc[1]] = 1
+                own_semi_stable_discs.remove(disc) 
+            if (old_own_semi_stable_discs == own_semi_stable_discs):
                 break
                 
-            # check if own semi stable disk are stable disk.
+            # check if own semi stable disc are stable disc.
         counter = 0
         while True:
             counter += 1
-            old_opponent_semi_stable_disks = deepcopy(opponent_semi_stable_disks)
-            for disk in old_opponent_semi_stable_disks:
+            old_opponent_semi_stable_discs = deepcopy(opponent_semi_stable_discs)
+            for disc in old_opponent_semi_stable_discs:
                 row_stable = False
                 col_stable = False
                 diagonal_left_stable = False
                 diagonal_right_stable = False
                 # if corner then stable
-                if disk in [[0,0],[0,7],[7,0],[7,7]]:
-                    self.opponent_stability_board[disk[0]][disk[1]] = 1
-                    opponent_semi_stable_disks.remove(disk)
+                if disc in [[0,0],[0,7],[7,0],[7,7]]:
+                    self.opponent_stability_board[disc[0]][disc[1]] = 1
+                    opponent_semi_stable_discs.remove(disc)
                     continue
-                # if disk in col 0 or 7 diks cant be flipped in row or diagonal direction
-                if(disk[1] == 0 or disk[1] == 7):
+                # if disc in col 0 or 7 diks cant be flipped in row or diagonal direction
+                if(disc[1] == 0 or disc[1] == 7):
                     row_stable = True
                     diagonal_right_stable = True
                     diagonal_left_stable = True
-                # check if in full row, else check if disk adjecent in this row to stable disk
-                elif(self.full_rows[disk[0]]):
+                # check if in full row, else check if disc adjecent in this row to stable disc
+                elif(self.full_rows[disc[0]]):
                     row_stable = True
                 else:
-                    if(disk[1] < 7):
-                        if(self.opponent_stability_board[disk[0]][disk[1]+1] == 1):
+                    if(disc[1] < 7):
+                        if(self.opponent_stability_board[disc[0]][disc[1]+1] == 1):
                             row_stable = True
-                    if(disk[1] > 0):
-                        if(self.opponent_stability_board[disk[0]][disk[1]-1] == 1):
+                    if(disc[1] > 0):
+                        if(self.opponent_stability_board[disc[0]][disc[1]-1] == 1):
                             row_stable = True
                 
-                # if row is not stable, then disks not stable
+                # if row is not stable, then discs not stable
                 if not row_stable:
                     continue
-                # if disk in col 0 or 7 and row stable direction, then disk is stable
-                if(disk[0] == 0 or disk[0] == 7):
-                    self.opponent_stability_board[disk[0]][disk[1]] = 1
-                    opponent_semi_stable_disks.remove(disk)
+                # if disc in col 0 or 7 and row stable direction, then disc is stable
+                if(disc[0] == 0 or disc[0] == 7):
+                    self.opponent_stability_board[disc[0]][disc[1]] = 1
+                    opponent_semi_stable_discs.remove(disc)
                     continue
-                # check if in full col, else check if disk adjecent in this col to stable disk
-                if(self.full_cols[disk[1]]):
+                # check if in full col, else check if disc adjecent in this col to stable disc
+                if(self.full_cols[disc[1]]):
                     col_stable = True
                 else:
-                    if(disk[0] < 7):
-                        if(self.opponent_stability_board[disk[0]+1][disk[1]] == 1):
+                    if(disc[0] < 7):
+                        if(self.opponent_stability_board[disc[0]+1][disc[1]] == 1):
                             col_stable = True
-                    if(disk[0] > 0):
-                        if(self.opponent_stability_board[disk[0]-1][disk[1]] == 1):
+                    if(disc[0] > 0):
+                        if(self.opponent_stability_board[disc[0]-1][disc[1]] == 1):
                             col_stable = True
 
-                # if col is not stable, then disks not stable
+                # if col is not stable, then discs not stable
                 if not col_stable:
                     continue
-                # check if in full right diagonal, else check if disk adjecent in this right diagonal to stable disk
-                if(self.full_right_diagonals[disk[0] - 1 + disk[1]]):
+                # check if in full right diagonal, else check if disc adjecent in this right diagonal to stable disc
+                if(self.full_right_diagonals[disc[0] - 1 + disc[1]]):
                     diagonal_right_stable = True
                 else:
-                    if(disk[0] > 0 and disk[1] < 7):
-                        if(self.opponent_stability_board[disk[0] - 1][disk[1] + 1] == 1):
+                    if(disc[0] > 0 and disc[1] < 7):
+                        if(self.opponent_stability_board[disc[0] - 1][disc[1] + 1] == 1):
                             diagonal_right_stable = True
-                    if(disk[0] < 7 and disk[1] > 0):
-                        if(self.opponent_stability_board[disk[0] + 1][disk[1] - 1] == 1):
+                    if(disc[0] < 7 and disc[1] > 0):
+                        if(self.opponent_stability_board[disc[0] + 1][disc[1] - 1] == 1):
                             diagonal_right_stable = True
-                # if right diagonal is not stable, then disks not stable
+                # if right diagonal is not stable, then discs not stable
                 if not diagonal_right_stable:
                     continue
-                # check if in full left diagonal, else check if disk adjecent in this right diagonal to stable disk
-                if(self.full_left_diagonals[disk[0] + 6 - disk[1]]):
+                # check if in full left diagonal, else check if disc adjecent in this right diagonal to stable disc
+                if(self.full_left_diagonals[disc[0] + 6 - disc[1]]):
                     diagonal_left_stable = True
                 else:
-                    if( disk[0] > 0 and disk[1] > 0):
-                        if(self.opponent_stability_board[disk[0] - 1][disk[1] - 1] == 1):
+                    if( disc[0] > 0 and disc[1] > 0):
+                        if(self.opponent_stability_board[disc[0] - 1][disc[1] - 1] == 1):
                             diagonal_left_stable = True
-                    if(disk[0] < 7 and disk[1] < 7):
-                        if(self.opponent_stability_board[disk[0] + 1][disk[1] + 1] == 1):
+                    if(disc[0] < 7 and disc[1] < 7):
+                        if(self.opponent_stability_board[disc[0] + 1][disc[1] + 1] == 1):
                             diagonal_left_stable = True
-                # if right diagonal is not stable, then disks not stable
+                # if right diagonal is not stable, then discs not stable
                 if not diagonal_left_stable:
                     continue
-                # disks is stable, change stability board accordingly
-                self.opponent_stability_board[disk[0]][disk[1]] = 1
-                opponent_semi_stable_disks.remove(disk) 
-            if (old_opponent_semi_stable_disks == opponent_semi_stable_disks):
+                # discs is stable, change stability board accordingly
+                self.opponent_stability_board[disc[0]][disc[1]] = 1
+                opponent_semi_stable_discs.remove(disc) 
+            if (old_opponent_semi_stable_discs == opponent_semi_stable_discs):
                 break
 
     def update_stability(self,board):
         opponent_stability_value = sum([sum(row) for row in self.opponent_stability_board])
         own_stability_value = sum([sum(row) for row in self.stability_board])
-        self.stability = 100 * (own_stability_value - opponent_stability_value)/(board.disks_white + board.disks_black)
+        self.stability = 100 * (own_stability_value - opponent_stability_value)/(board.discs_white + board.discs_black)
     
     

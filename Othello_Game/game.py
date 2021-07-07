@@ -1,6 +1,6 @@
 '''
 Game object represents one game played between two players. Handles main loop over the game, where each player makes a move or passes each round. 
-Can either handle a game without graphical output or with. Sets winner and number of disks in the end.
+Can either handle a game without graphical output or with. Sets winner and number of discs in the end.
 '''
 
 import othello_game.board as board
@@ -23,7 +23,7 @@ class Game:
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
-    # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.type_player1/2, self.num_disks_player1/2, self.winner, self.game_board.
+    # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.type_player1/2, self.num_discs_player1/2, self.winner, self.game_board.
     def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical):
 
         # If at least one player is human or graphcial = True then graphical is True and graphcial_interaction is initialised else graphical is False 
@@ -56,8 +56,8 @@ class Game:
         self.name_player2 = name_player2
 
         self.winner = None
-        self.num_disks_player1 = 2 # (int) number of disks player 1 has after game was played.
-        self.num_disks_player2 = 2 # (int) number of disks player 2 has after game was played.
+        self.num_discs_player1 = 2 # (int) number of discs player 1 has after game was played.
+        self.num_discs_player2 = 2 # (int) number of discs player 2 has after game was played.
         self.game_board = board.Board() # (board object) current board object (state of the game).
 
 
@@ -73,7 +73,7 @@ class Game:
     # no more empty positions are available, both players passed or a human player clicked quit. For turn from player1/2 
     # calls player object function make_move_graphical(self.game_board). After each turn draws new board on window. If 
     # player is not human, asks user to click next.
-    # Changes: self.game_board, self.winner, self.num_disks_player1/2, self.window
+    # Changes: self.game_board, self.winner, self.num_discs_player1/2, self.window
     def run_game_graphical(self):
 
         # draw board on screen, wait for start click
@@ -87,7 +87,7 @@ class Game:
         p1_made_move = True
         p2_made_move = True
 
-        while(self.game_board.empty_positions > 0):
+        while True:
 
             self.graphical_interaction.draw_board(self.game_board)
             self.graphical_interaction.display_string(self.turn_player1)
@@ -165,13 +165,17 @@ class Game:
 
     def game_finish_graphical(self):
 
-        if(self.game_board.disks_black > self.game_board.disks_white):
-            self.winner = self.name_player2
-        elif(self.game_board.disks_black < self.game_board.disks_white):
+        if(self.game_board.discs_black > self.game_board.discs_white):
             self.winner = self.name_player1
-        self.num_disks_player2 = self.game_board.disks_black
-        self.num_disks_player1 = self.game_board.disks_white
-        self.graphical_interaction.display_string(f"The winner is {self.winner}. {self.name_player1} has {self.num_disks_player1} disks and {self.name_player2} has {self.num_disks_player2} disks")
+            # assign all empty positions to the winner
+            self.game_board.discs_black += self.game_board.empty_positions
+        elif(self.game_board.discs_black < self.game_board.discs_white):
+            self.winner = self.name_player2
+            # assign all empty positions to the winner
+            self.game_board.discs_white += self.game_board.empty_positions
+        self.num_discs_player2 = self.game_board.discs_white
+        self.num_discs_player1 = self.game_board.discs_black
+        self.graphical_interaction.display_string(f"The winner is {self.winner}. {self.name_player1} has {self.num_discs_player1} discs and {self.name_player2} has {self.num_discs_player2} discs")
         # wait until player clicks next button or quit to exit game
         self.graphical_interaction.draw_next_button()
         quit_val = self.graphical_interaction.get_next_click()
@@ -180,12 +184,12 @@ class Game:
 
     # simulates one game between player1/2. Loops over turn player1, turn player2 until no more empty positions are available or both
     # players passed. For turn from player1/2 calls player object function make_move(self.game_board). 
-    # Changes: self.game_board, self.winner, self.num_disks_player1/2.
+    # Changes: self.game_board, self.winner, self.num_discs_player1/2.
     def run_game_non_graphical(self):
 
         p1_made_move = True
         p2_made_move = True
-        while(self.game_board.empty_positions > 0):
+        while True:
 
             # player1 moves
             p1_made_move, self.game_board = self.player1.make_move(self.game_board)
@@ -215,19 +219,23 @@ class Game:
 
     def game_finish(self):
 
-        if(self.game_board.disks_black > self.game_board.disks_white):
-            self.winner = self.name_player2
-        elif(self.game_board.disks_black < self.game_board.disks_white):
+        if(self.game_board.discs_black > self.game_board.discs_white):
             self.winner = self.name_player1
-        self.num_disks_player2 = self.game_board.disks_black
-        self.num_disks_player1 = self.game_board.disks_white
+            # assign all empty positions to the winner
+            self.game_board.discs_black += self.game_board.empty_positions
+        elif(self.game_board.discs_black < self.game_board.discs_white):
+            self.winner = self.name_player2
+            # assign all empty positions to the winner
+            self.game_board.discs_white += self.game_board.empty_positions
+        self.num_discs_player2 = self.game_board.discs_white
+        self.num_discs_player1 = self.game_board.discs_black
 
     def run_game_timed(self,timer_player1,timer_player2):
 
         p1_made_move = True
         p2_made_move = True
 
-        while(self.game_board.empty_positions > 0):
+        while True:
 
             # player1 moves
             timer_player1.start_move()

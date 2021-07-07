@@ -6,8 +6,8 @@ class AlphaBeta(heuristics.Heuristic):
     def __init__(self, colour, graphical, graphical_interface):
         super().__init__(colour, graphical ,graphical_interface)
         self.max_depth = 7
-        self.max_heuristic_val = 200
-        self.min_heuristic_val = -200
+        self.max_heuristic_val = 100
+        self.min_heuristic_val = -100
 
     def make_move(self,board):
 
@@ -20,8 +20,8 @@ class AlphaBeta(heuristics.Heuristic):
         if(self.possible_moves == []):
             return False, board
         else:
-            alpha = self.min_heuristic_val
-            beta = self.max_heuristic_val
+            alpha = self.min_heuristic_val - 128
+            beta = self.max_heuristic_val + 128
             value = alpha
             for move in self.possible_moves:
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -49,8 +49,8 @@ class AlphaBeta(heuristics.Heuristic):
         if(self.possible_moves == []):
             return quit_val, False, [0,0],board
         else:
-            alpha = self.min_heuristic_val
-            beta = self.max_heuristic_val
+            alpha = self.min_heuristic_val - 128
+            beta = self.max_heuristic_val + 128
             value = alpha
             for index, move in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -80,12 +80,14 @@ class AlphaBeta(heuristics.Heuristic):
     def get_alpha_beta_value(self,board, playing_player, waiting_player,depth, moved, alpha, beta):
         # board full, game ends
         if(board.empty_positions == 0):
-            playing_player.update_coin_parity(board)
-            value = playing_player.coin_parity
-            if (value > 0):
-                value = value + 100
+            if (playing_player.colour == 1):
+                coin_difference = board.discs_black - board.discs_white
             else:
-                value = value - 100
+                coin_difference = board.discs_white - board.discs_black
+            if (coin_difference > 0):
+                value = coin_difference + self.max_heuristic_val
+            else:
+                value = coin_difference + self.min_heuristic_val
         elif(depth == self.max_depth):
             self.reset_stability(playing_player)
             playing_player.update_heuristic_values(board)
@@ -96,12 +98,14 @@ class AlphaBeta(heuristics.Heuristic):
             if (playing_player.possible_moves == []):
                 # game ends if both players can't move
                 if (moved == False):
-                    playing_player.update_coin_parity(board)
-                    value = playing_player.coin_parity
-                    if (value > 0):
-                        value = value + 100
+                    if (playing_player.colour == 1):
+                        coin_difference = board.discs_black - board.discs_white
                     else:
-                        value = value - 100
+                        coin_difference = board.discs_white - board.discs_black
+                    if (coin_difference > 0):
+                        value = coin_difference + self.max_heuristic_val
+                    else:
+                        value = coin_difference + self.min_heuristic_val
                 # no moves possible next players turn
                 else:
                     value = - self.get_alpha_beta_value(board, waiting_player, playing_player, depth+1, False, -beta, -value)

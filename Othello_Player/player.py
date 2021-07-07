@@ -7,7 +7,7 @@ from copy import deepcopy
 
 class Player:
 
-    # Initialises player attributes, colour of player is determined by input colour. Colour = 1 if white player, -1 if black player 
+    # Initialises player attributes, colour of player is determined by input colour. Colour = 1 if black player, -1 if white player 
     # Input: colour. 
     # Changes: self.colour, self.opponents_colour, self.possible_moves, self.possible_positions.
     def __init__(self,colour, graphical, graphical_interface):
@@ -35,7 +35,7 @@ class Player:
     # case five: [1 1 ...]
     # If function arrives at case four position is a valid move option, function flips in temporary board the enclosed positions for this direction
     # then expands in the remaining direction. 
-    # After expanding in all direction, function checks if position is valid (flipping at least one opponents disk). If it is valid it adds position 
+    # After expanding in all direction, function checks if position is valid (flipping at least one opponents disc). If it is valid it adds position 
     # to possible_positions and adds temporary board to possible_moves
     # Input: board (Board object) board for which player calculates possible possition
     # Changes: possible_positions, possible_moves
@@ -83,7 +83,7 @@ class Player:
 
                     if (valid_position == True):
                         possible_board.positions[row][col] = self.colour
-                        possible_board.update_num_disks()
+                        possible_board.update_num_discs()
                         self.possible_positions.append([row,col])
                         self.possible_moves.append(possible_board)
                     

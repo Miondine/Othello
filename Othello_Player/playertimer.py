@@ -17,9 +17,9 @@ class PlayerTimer:
     def setup_file(self, colour):
 
         if(colour == 1):
-            self.file_string = f'movetime_{self.player_name}_{self.num_games}_white.txt'
-        else:
             self.file_string = f'movetime_{self.player_name}_{self.num_games}_black.txt'
+        else:
+            self.file_string = f'movetime_{self.player_name}_{self.num_games}_white.txt'
 
         self.file = open(self.file_string,'w')
 

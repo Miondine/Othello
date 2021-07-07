@@ -42,9 +42,9 @@ class Interaction:
             #draw current pieces
             for col in range(c.NUM_COLS):
                 if(board.positions[row][col] == 1):
-                    pygame.draw.circle(self.window, c.WHITE, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)   
+                    pygame.draw.circle(self.window, c.BLACK, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)   
                 elif(board.positions[row][col] == -1):         
-                    pygame.draw.circle(self.window, c.BLACK, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+                    pygame.draw.circle(self.window, c.WHITE, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         pygame.display.update()
 
     # draws start button on board. 
@@ -76,7 +76,7 @@ class Interaction:
                 pygame.draw.circle(self.window, c.YELLOW, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         if(colour == -1):
             for position in possible_positions:
-                pygame.draw.circle(self.window, c.ORANGE, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+                pygame.draw.circle(self.window, c.YELLOW, (c.MARGIN_SIDE + (position[1] + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (position[0] + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
         pygame.display.update()
     
     # draws from human player selected position on window.

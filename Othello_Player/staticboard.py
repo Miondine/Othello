@@ -27,8 +27,8 @@ class StaticBoard(player.Player):
         if(self.possible_moves == []):
             return False, board
         else:
-            alpha = self.min_heuristic_val - 100
-            beta = self.max_heuristic_val + 100
+            alpha = self.min_heuristic_val - 128
+            beta = self.max_heuristic_val + 128
             value = alpha
             for move in self.possible_moves:
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -55,8 +55,8 @@ class StaticBoard(player.Player):
         if(self.possible_moves == []):
             return quit_val, False, [0,0],board
         else:
-            alpha = self.min_heuristic_val - 100
-            beta = self.max_heuristic_val + 100
+            alpha = self.min_heuristic_val - 128
+            beta = self.max_heuristic_val + 128
             value = alpha
             for index, move in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -73,13 +73,13 @@ class StaticBoard(player.Player):
         # board full, game ends
         if(board.empty_positions == 0):
             if (playing_player.colour == 1):
-                coin_difference = board.diks_white - board.disks_black
+                coin_difference = board.discs_black - board.discs_white
             else:
-                coin_difference = board.disks_black - board.disks_white
+                coin_difference = board.discs_white - board.discs_black
             if (coin_difference > 0):
-                value = coin_difference + 100
+                value = coin_difference + self.max_heuristic_val
             else:
-                value = coin_difference - 100
+                value = coin_difference + self.min_heuristic_val
         elif(depth == self.max_depth):
             playing_player_value, waiting_player_value = self.get_static_board_values(board, playing_player.colour, waiting_player.colour)
             value = playing_player_value - waiting_player_value
@@ -90,13 +90,13 @@ class StaticBoard(player.Player):
                 # game ends if both players can't move
                 if (moved == False):
                     if (playing_player.colour == 1):
-                        coin_difference = board.diks_white - board.disks_black
+                        coin_difference = board.discs_black - board.discs_white
                     else:
-                        coin_difference = board.disks_black - board.disks_white
+                        coin_difference = board.discs_white - board.discs_black
                     if (coin_difference > 0):
-                        value = coin_difference + 100
+                        value = coin_difference + self.max_heuristic_val
                     else:
-                        value = coin_difference - 100
+                        value = coin_difference + self.min_heuristic_val
                 # no moves possible next players turn
                 else:
                     value = - self.get_alpha_beta_value(board, waiting_player, playing_player, depth+1, False, -beta, -value)
