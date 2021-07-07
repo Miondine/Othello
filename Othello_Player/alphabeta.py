@@ -5,7 +5,7 @@ class AlphaBeta(heuristics.Heuristic):
 
     def __init__(self, colour, graphical, graphical_interface):
         super().__init__(colour, graphical ,graphical_interface)
-        self.max_depth = 4
+        self.max_depth = 7
         self.max_heuristic_val = 200
         self.min_heuristic_val = -200
 
@@ -52,7 +52,7 @@ class AlphaBeta(heuristics.Heuristic):
             alpha = self.min_heuristic_val
             beta = self.max_heuristic_val
             value = alpha
-            for move, index in enumerate(self.possible_moves):
+            for index, move in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
                 if(possible_value > value):
                     value = possible_value
