@@ -14,9 +14,9 @@ class PlayerTimer:
         self.move_counter = 0
         self.game_time = 0
         self.max_moves = 50
-        self.setup_file(colour)
+        self.setup_file()
 
-    def setup_file(self, colour):
+    def setup_file(self):
 
         
         self.file_string = f'movetime_{self.player_name}_{self.num_games}.txt'
