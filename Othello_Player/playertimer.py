@@ -7,13 +7,13 @@ class PlayerTimer:
         self.num_games = num_games
         self.player_name = player_name
         self.start_time = None
-        self.move_time_summed = [0 for x in range(num_games)]
-        self.move_executed = [0 for x in range(num_games)]
-        self.game_time_summed = [0 for x in range(num_games)]
         self.game_counter = 1
         self.move_counter = 0
         self.game_time = 0
         self.max_moves = 50
+        self.move_time_summed = [0 for x in range(self.max_moves)]
+        self.move_executed = [0 for x in range(self.max_moves)]
+        self.game_time_summed = [0 for x in range(self.max_moves)]
         self.setup_file()
 
     def setup_file(self):
