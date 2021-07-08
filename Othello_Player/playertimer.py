@@ -11,9 +11,9 @@ class PlayerTimer:
         self.move_counter = 0
         self.game_time = 0
         self.max_moves = 50
-        self.move_time_summed = [0 for x in range(self.max_moves)]
+        self.move_time_summed = [0.0 for x in range(self.max_moves)]
         self.move_executed = [0 for x in range(self.max_moves)]
-        self.game_time_summed = [0 for x in range(self.max_moves)]
+        self.game_time_summed = [0.0 for x in range(self.max_moves)]
         self.setup_file()
 
     def setup_file(self):
@@ -64,9 +64,12 @@ class PlayerTimer:
             self.file.write(f'{x}, ')
         self.file.write(f'{sum(self.move_time_summed)}\n')
         self.file.write('average time per move x,')
-        for x, y in (self.move_time_summed,self.move_executed):
-            average = x / y
-            self.file.write(f'{average},')
+        for x, y in zip(self.move_time_summed,self.move_executed):
+            if(y == 0):
+                self.file.write('0.0,')
+            else:
+                average = x / y
+                self.file.write(f'{average},')
         self.file.write(f'{sum(self.move_time_summed)/self.num_games}\n')
         self.file.close()
 
