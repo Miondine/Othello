@@ -2,7 +2,7 @@ import time
 
 class PlayerTimer:
     
-    def __init__(self, player_name, num_games, colour):
+    def __init__(self, player_name, num_games):
         
         self.num_games = num_games
         self.player_name = player_name
