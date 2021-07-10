@@ -12,6 +12,8 @@ import othello_player.greedy as greedy
 import othello_player.negamax as negamax
 import othello_player.alphabeta as alphabeta
 import othello_player.staticboard as staticboard
+import othello_player.dynamicBoard as dynamicBoard
+import othello_player.roxanneDynamic as roxanneDynamic
 import pygame
 
 
@@ -19,7 +21,8 @@ class Game:
 
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
     player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy,
-                    'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard} 
+                    'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard,
+                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'ROXANNE_DYNAMIC' : roxanneDynamic.RoxanneDynamic} 
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
