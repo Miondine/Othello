@@ -1,6 +1,6 @@
 import othello_player.player as player
 
-class StaticBoard(player.Player):
+class DynamicBoard(player.Player):
 
     def __init__(self, colour, graphical, graphical_interface):
         super().__init__(colour, graphical ,graphical_interface)
