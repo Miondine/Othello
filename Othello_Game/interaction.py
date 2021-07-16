@@ -45,6 +45,8 @@ class Interaction:
                     pygame.draw.circle(self.window, c.BLACK, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)   
                 elif(board.positions[row][col] == -1):         
                     pygame.draw.circle(self.window, c.WHITE, (c.MARGIN_SIDE + (col + 0.5) * c.SQUARE_SIZE, c.MARGIN_TOP + (row + 0.5) * c.SQUARE_SIZE ), c.RADIUS_DISK)
+
+        self.draw_next_button()
         pygame.display.update()
 
     # draws start button on board. 
