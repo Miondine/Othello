@@ -14,6 +14,8 @@ import othello_player.alphabeta as alphabeta
 import othello_player.staticboard as staticboard
 import othello_player.dynamicBoard as dynamicBoard
 import othello_player.roxanneDynamic as roxanneDynamic
+import othello_player.mcts as mcts
+import othello_player.mctsRemember as mctsRemember
 import pygame
 
 
@@ -22,7 +24,8 @@ class Game:
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
     player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy,
                     'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard,
-                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'ROXANNE_DYNAMIC' : roxanneDynamic.RoxanneDynamic} 
+                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'ROXANNE_DYNAMIC' : roxanneDynamic.RoxanneDynamic,
+                    'MCTS_MAX_ITER' : mcts.MCTSMaxIter, 'MCTS_REM_MAX_ITER' : mctsRemember.MCTSMaxIterRemember} 
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
@@ -123,7 +126,6 @@ class Game:
                 self.graphical_interaction.display_string(self.passed_player1)
 
             # wait until user clicks next
-            self.graphical_interaction.draw_next_button()
             quit_val = self.graphical_interaction.get_next_click()
             if quit_val:
                 exit()
@@ -159,7 +161,6 @@ class Game:
                 self.graphical_interaction.display_string(self.passed_player2)
 
             # wait until user clicks next
-            self.graphical_interaction.draw_next_button()
             quit_val = self.graphical_interaction.get_next_click()
             if quit_val:
                 exit()
@@ -178,6 +179,8 @@ class Game:
             self.game_board.discs_white += self.game_board.empty_positions
         self.num_discs_player2 = self.game_board.discs_white
         self.num_discs_player1 = self.game_board.discs_black
+
+        self.graphical_interaction.draw_board(self.game_board)
         self.graphical_interaction.display_string(f"The winner is {self.winner}. {self.name_player1} has {self.num_discs_player1} discs and {self.name_player2} has {self.num_discs_player2} discs")
         # wait until player clicks next button or quit to exit game
         self.graphical_interaction.draw_next_button()
