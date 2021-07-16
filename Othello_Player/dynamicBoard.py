@@ -30,28 +30,28 @@ class DynamicBoard(player.Player):
         min_player = player.Player(self.opponent_colour, False, None)
 
         # update static board if agent or opponent occupied a corner
-        if(board.positions[0,0] == self.colour):
+        if(board.positions[0][0] == self.colour):
             self.static_board[0][1] = 2
             self.static_board[1][0] = 2
             self.static_board[1][1] = 2
             self.opponent_static_board[0][1] = 0
             self.opponent_static_board[1][0] = 0
             self.opponent_static_board[1][1] = 0
-        elif(board.positions[0,0] == self.opponent_colour):
+        elif(board.positions[0][0] == self.opponent_colour):
             self.static_board[0][1] = 0
             self.static_board[1][0] = 0
             self.static_board[1][1] = 0
             self.opponent_static_board[0][1] = 2
             self.opponent_static_board[1][0] = 2
             self.opponent_static_board[1][1] = 2
-        elif(board.positions[0,7] == self.colour):
+        elif(board.positions[0][7] == self.colour):
             self.static_board[0][6] = 2
             self.static_board[1][7] = 2
             self.static_board[1][6] = 2
             self.opponent_static_board[0][6] = 0
             self.opponent_static_board[1][7] = 0
             self.opponent_static_board[1][6] = 0
-        elif(board.positions[0,7] == self.opponent_colour):
+        elif(board.positions[0][7] == self.opponent_colour):
             self.static_board[0][6] = 0
             self.static_board[1][7] = 0
             self.static_board[1][6] = 0
@@ -65,21 +65,21 @@ class DynamicBoard(player.Player):
             self.opponent_static_board[7][1] = 0
             self.opponent_static_board[6][0] = 0
             self.opponent_static_board[6][1] = 0
-        elif(board.positions[7,0] == self.opponent_colour):
+        elif(board.positions[7][0] == self.opponent_colour):
             self.static_board[7][1] = 0
             self.static_board[6][0] = 0
             self.static_board[6][1] = 0
             self.opponent_static_board[7][1] = 2
             self.opponent_static_board[6][0] = 2
             self.opponent_static_board[6][1] = 2
-        elif(board.positions[7,7] == self.colour):
+        elif(board.positions[7][7] == self.colour):
             self.static_board[7][6] = 2
             self.static_board[6][7] = 2
             self.static_board[6][6] = 2
             self.opponent_static_board[7][6] = 0
             self.opponent_static_board[6][7] = 0
             self.opponent_static_board[6][6] = 0
-        elif(board.positions[7,7] == self.opponent_colour):
+        elif(board.positions[7][7] == self.opponent_colour):
             self.static_board[7][6] = 0
             self.static_board[6][7] = 0
             self.static_board[6][6] = 0
@@ -112,56 +112,56 @@ class DynamicBoard(player.Player):
         min_player = player.Player(self.opponent_colour, False, None)
 
         # update static board if agent or opponent occupied a corner
-        if(board.positions[0,0] == self.colour):
+        if(board.positions[0][0] == self.colour):
             self.static_board[0][1] = 2
             self.static_board[1][0] = 2
             self.static_board[1][1] = 2
             self.opponent_static_board[0][1] = 0
             self.opponent_static_board[1][0] = 0
             self.opponent_static_board[1][1] = 0
-        elif(board.positions[0,0] == self.opponent_colour):
+        elif(board.positions[0][0] == self.opponent_colour):
             self.static_board[0][1] = 0
             self.static_board[1][0] = 0
             self.static_board[1][1] = 0
             self.opponent_static_board[0][1] = 2
             self.opponent_static_board[1][0] = 2
             self.opponent_static_board[1][1] = 2
-        elif(board.positions[0,7] == self.colour):
+        elif(board.positions[0][7] == self.colour):
             self.static_board[0][6] = 2
             self.static_board[1][7] = 2
             self.static_board[1][6] = 2
             self.opponent_static_board[0][6] = 0
             self.opponent_static_board[1][7] = 0
             self.opponent_static_board[1][6] = 0
-        elif(board.positions[0,7] == self.opponent_colour):
+        elif(board.positions[0][7] == self.opponent_colour):
             self.static_board[0][6] = 0
             self.static_board[1][7] = 0
             self.static_board[1][6] = 0
             self.opponent_static_board[0][6] = 2
             self.opponent_static_board[1][7] = 2
             self.opponent_static_board[1][6] = 2
-        elif(board.positions[7,0] == self.colour):
+        elif(board.positions[7][0] == self.colour):
             self.static_board[7][1] = 2
             self.static_board[6][0] = 2
             self.static_board[6][1] = 2
             self.opponent_static_board[7][1] = 0
             self.opponent_static_board[6][0] = 0
             self.opponent_static_board[6][1] = 0
-        elif(board.positions[7,0] == self.opponent_colour):
+        elif(board.positions[7][0] == self.opponent_colour):
             self.static_board[7][1] = 0
             self.static_board[6][0] = 0
             self.static_board[6][1] = 0
             self.opponent_static_board[7][1] = 2
             self.opponent_static_board[6][0] = 2
             self.opponent_static_board[6][1] = 2
-        elif(board.positions[7,7] == self.colour):
+        elif(board.positions[7][7] == self.colour):
             self.static_board[7][6] = 2
             self.static_board[6][7] = 2
             self.static_board[6][6] = 2
             self.opponent_static_board[7][6] = 0
             self.opponent_static_board[6][7] = 0
             self.opponent_static_board[6][6] = 0
-        elif(board.positions[7,7] == self.opponent_colour):
+        elif(board.positions[7][7] == self.opponent_colour):
             self.static_board[7][6] = 0
             self.static_board[6][7] = 0
             self.static_board[6][6] = 0
