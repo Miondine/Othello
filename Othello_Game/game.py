@@ -16,6 +16,7 @@ import othello_player.dynamicBoard as dynamicBoard
 import othello_player.roxanneDynamic as roxanneDynamic
 import othello_player.mcts as mcts
 import othello_player.mctsRemember as mctsRemember
+import othello_player.edax as edax
 import pygame
 
 
@@ -25,12 +26,13 @@ class Game:
     player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy,
                     'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard,
                     'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'ROXANNE_DYNAMIC' : roxanneDynamic.RoxanneDynamic,
-                    'MCTS_MAX_ITER' : mcts.MCTSMaxIter, 'MCTS_REM_MAX_ITER' : mctsRemember.MCTSMaxIterRemember} 
+                    'MCTS_MAX_ITER' : mcts.MCTSMaxIter, 'MCTS_REM_MAX_ITER' : mctsRemember.MCTSMaxIterRemember, 'EDAX': edax.Edax} 
+    depth_players = ['NEGAMAX','ALPHA_BETA','STATIC_BOARD','DYNAMIC_BOARD','MCTS_MAX_ITER','MCTS_REM_MAX_ITER','EDAX']
 
     # initialises object attributes according to input values. 
     # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
     # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.type_player1/2, self.num_discs_player1/2, self.winner, self.game_board.
-    def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical):
+    def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical = None, depth_player1 = None, depth_player2 = None):
 
         # If at least one player is human or graphcial = True then graphical is True and graphcial_interaction is initialised else graphical is False 
         if(graphical or type_player1 == 'HUMAN' or type_player2 == 'HUMAN'):
@@ -45,14 +47,19 @@ class Game:
             self.passed_player2 = f"{name_player2} passsed"
         else:
             self.graphical = False
+            self.graphical_interaction = None
 
         # initialistion of player1/2 according to input variable type_player1/2
-        if graphical:
-            self.player1 = Game.player_types[type_player1](1, True, self.graphical_interaction)
-            self.player2 = Game.player_types[type_player2](-1, True, self.graphical_interaction)
-        else:
-            self.player1 = Game.player_types[type_player1](1,False, None)
-            self.player2 = Game.player_types[type_player2](-1,False, None)
+        
+            if(type_player1 in Game.depth_players):
+                self.player1 = Game.player_types[type_player1](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player1)
+            else:
+                self.player1 = Game.player_types[type_player1](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+            if(type_player2 in Game.depth_players):
+                self.player2 = Game.player_types[type_player2](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player2)
+            else:
+                self.player2 = Game.player_types[type_player2](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+            
         
         self.type_player1 = type_player1
         self.type_player2 = type_player2
@@ -66,6 +73,10 @@ class Game:
         self.num_discs_player2 = 2 # (int) number of discs player 2 has after game was played.
         self.game_board = board.Board() # (board object) current board object (state of the game).
 
+    def close_game(self):
+
+        self.player1.close_player()
+        self.player2.close_player()
 
     # calls function run_game_graphical() or run_game_non_graphical() depending on the value of self.graphical.
     def run_game(self):
@@ -87,6 +98,7 @@ class Game:
         self.graphical_interaction.draw_start_button()
         quit_val = self.graphical_interaction.get_next_click()               
         if quit_val:
+            self.close_game()
             exit()
 
         
@@ -104,6 +116,7 @@ class Game:
 
             # exit game loop if player 2 selected quit
             if p1_quit:               
+                self.close_game()
                 exit()
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
@@ -128,6 +141,7 @@ class Game:
             # wait until user clicks next
             quit_val = self.graphical_interaction.get_next_click()
             if quit_val:
+                self.close_game()
                 exit()
 
             self.graphical_interaction.draw_board(self.game_board)
@@ -139,6 +153,7 @@ class Game:
 
             # exit game loop if player 2 selected quit
             if p2_quit:    
+                self.close_game()
                 exit()
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
@@ -163,6 +178,7 @@ class Game:
             # wait until user clicks next
             quit_val = self.graphical_interaction.get_next_click()
             if quit_val:
+                self.close_game()
                 exit()
 
 
@@ -186,6 +202,7 @@ class Game:
         self.graphical_interaction.draw_next_button()
         quit_val = self.graphical_interaction.get_next_click()
         if quit_val:
+            self.close_game()
             exit()
 
     # simulates one game between player1/2. Loops over turn player1, turn player2 until no more empty positions are available or both
