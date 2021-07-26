@@ -1,0 +1,28 @@
+digraph "ggs_parse_clock"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ggs_parse_clock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="ggs_parse_clock"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ggs_parse_int",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#ac17593eca953b5b02fa56abb7b1ef42d",tooltip="ggs_parse_int"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="parse_int",height=0.2,width=0.4,color="black",URL="$util_8c.html#a0fad57b1fd6851c6cde5258a897b7a61",tooltip="Parse an integer."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="parse_skip_spaces",height=0.2,width=0.4,color="black",URL="$util_8c.html#a35508e8fcec689d875231b2f93fbe4a5",tooltip="Skip spaces."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="ggs_parse_time",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#a6b2f2f03bb067952199d314fbd88f17d",tooltip="ggs_parse_move"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="string_to_time",height=0.2,width=0.4,color="black",URL="$util_8c.html#ae7e1797deb6cddf421419046a869bb7c",tooltip="Read time as \"D:HH:MM:SS.C\"."];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="parse_real",height=0.2,width=0.4,color="black",URL="$util_8c.html#a6afb4032b94c4505472fe147fa9a7d37",tooltip="Parse a real number (as a double floating point)."];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="parse_field",height=0.2,width=0.4,color="black",URL="$util_8c.html#a80ed7d41ac3a6c656ad36013d632a793",tooltip="Parse a field."];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

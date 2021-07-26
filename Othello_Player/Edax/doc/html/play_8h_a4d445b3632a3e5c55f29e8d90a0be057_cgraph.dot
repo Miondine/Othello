@@ -1,0 +1,31 @@
+digraph "play_free"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="play_free",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Free resources."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="play_stop_pondering",height=0.2,width=0.4,color="black",URL="$play_8c.html#a4a4b7bf94f1ee79c788fbcca3ddc347f",tooltip="Stop pondering."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="relax",height=0.2,width=0.4,color="black",URL="$util_8c.html#ae20ec7bae5f5bc33f169d416601e2eea",tooltip="sleep for t ms."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="search_stop_all",height=0.2,width=0.4,color="black",URL="$search_8c.html#ad775910af78c46412b5ee4b8bc887b67",tooltip="Stop the search."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="thread_join",height=0.2,width=0.4,color="black",URL="$util_8c.html#a52efa84f4cfd49921787886d9543ab64",tooltip="Join a thread."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="search_free",height=0.2,width=0.4,color="black",URL="$search_8c.html#a40c54ba43b59f852d5a56836c1a1005f",tooltip="Free the search allocated ressource."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="eval_free",height=0.2,width=0.4,color="black",URL="$eval_8c.html#a0d216a5fcecd600abd20798da218f730",tooltip="Free resources used by the evaluation function."];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="hash_free",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#ad7cf2d92557b55871bb4c719ed86553d",tooltip="Free the hashtable."];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="task_stack_free",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#a014d09308199e359679ee70d35346b97",tooltip="Free resources used by the stack of tasks."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="task_free",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#a7ac944c5b45b2c8870c2eea4d4a140bb",tooltip="Free resources used by a task."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="task_search_destroy",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#aeb7bd64f0f200af48220e3dc4fc4c168",tooltip="Free a search structure of a task."];
+  Node11 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

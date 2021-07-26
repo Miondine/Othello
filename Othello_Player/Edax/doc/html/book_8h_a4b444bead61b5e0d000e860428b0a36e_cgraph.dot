@@ -1,0 +1,13 @@
+digraph "book_free"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="book_free",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Free resources used by the opening book."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="position_array_free",height=0.2,width=0.4,color="black",URL="$book_8c.html#a179fc8c7f78f2e653840c1d297ccac32",tooltip="Free resources used by a position array."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="position_free",height=0.2,width=0.4,color="black",URL="$book_8c.html#afe76ed1891952cff94868af23806d294",tooltip="Free resources used by a position."];
+}

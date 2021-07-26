@@ -1,0 +1,28 @@
+digraph "seek_position"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="seek_position",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="seek a game that reach to a position"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_equal",height=0.2,width=0.4,color="black",URL="$board_8c.html#a8b5bfe9db13bf07894a8bc77e3ebfbbe",tooltip="Compare two board for equality."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="board_next",height=0.2,width=0.4,color="black",URL="$board_8c.html#aa02d38e320edf6b9d695e2b1eed6c85f",tooltip="Compute a board resulting of a move played on a previous board."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="can_move",height=0.2,width=0.4,color="black",URL="$board_8c.html#ae1a532d6eaa0e55357d0f4b9cd659b88",tooltip="Check if a player can move."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="get_some_moves",height=0.2,width=0.4,color="black",URL="$board_8c.html#a5db071e3e4d26a0b7d6425bb6333dd7f",tooltip="Get a part of the moves."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="P",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a11481f01e169aee1117c83a352c22222",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="get_moves",height=0.2,width=0.4,color="black",URL="$board_8c.html#a7610dc936a6aea22b3c5e162f722a7a1",tooltip="Get legal moves."];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="line_pop",height=0.2,width=0.4,color="black",URL="$move_8c.html#ab330080705f097311193b1b35d83d3ee",tooltip="Remove the last move from a sequence."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="line_push",height=0.2,width=0.4,color="black",URL="$move_8c.html#a1781d0a89d5c0c8831bb7eb845d19976",tooltip="Add a move to the sequence."];
+}

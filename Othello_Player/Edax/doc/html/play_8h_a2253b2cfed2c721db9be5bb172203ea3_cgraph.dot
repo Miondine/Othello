@@ -1,0 +1,35 @@
+digraph "play_show_opening_name"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="play_show_opening_name",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Print the opening name."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_update",height=0.2,width=0.4,color="black",URL="$board_8c.html#a2d24dea46d67d71b1d9fe9f515d8d675",tooltip="Update a board."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="board_check",height=0.2,width=0.4,color="black",URL="$board_8c.html#a849436f17b60e89ed91f8e5013ed9d04",tooltip="Check board consistency."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="bitboard_write",height=0.2,width=0.4,color="black",URL="$bit_8c.html#a519b18f67de9b8edbd98f687a13b45f5",tooltip="Print an unsigned long long as a board."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="board_print",height=0.2,width=0.4,color="black",URL="$board_8c.html#a27ccb92684d9e7194eeb3bc34311ad55",tooltip="Print out the board."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="bit_count",height=0.2,width=0.4,color="black",URL="$bit_8c.html#a830fec0a90989da1f1900ff609b92167",tooltip="Count the number of bits set to one in an unsigned long long."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="count",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a1a1d6a2cdbded5c35040f6555e948770",tooltip=" "];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="get_mobility",height=0.2,width=0.4,color="black",URL="$board_8c.html#a7509639c4e49c56fe83b3d978580ed42",tooltip="Count legal moves."];
+  Node8 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="get_moves",height=0.2,width=0.4,color="black",URL="$board_8c.html#a7610dc936a6aea22b3c5e162f722a7a1",tooltip="Get legal moves."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="get_some_moves",height=0.2,width=0.4,color="black",URL="$board_8c.html#a5db071e3e4d26a0b7d6425bb6333dd7f",tooltip="Get a part of the moves."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="P",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a11481f01e169aee1117c83a352c22222",tooltip=" "];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="board_swap_players",height=0.2,width=0.4,color="black",URL="$board_8c.html#a4d389fb0245969a39744349230ce7703",tooltip="Swap players."];
+}

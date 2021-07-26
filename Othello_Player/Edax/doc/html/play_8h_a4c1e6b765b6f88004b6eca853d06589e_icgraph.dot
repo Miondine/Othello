@@ -1,0 +1,29 @@
+digraph "play_print"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="play_print",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Print the game state."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="ui_loop_gtp",height=0.2,width=0.4,color="black",URL="$gtp_8c.html#aa036470059be60da73acd63418093e1e",tooltip="Loop event."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="ui_loop_nboard",height=0.2,width=0.4,color="black",URL="$nboard_8c.html#a13ec69450a157e8cbf526b11d1a27be6",tooltip="Loop event."];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="ui_loop_xboard",height=0.2,width=0.4,color="black",URL="$ui_8h.html#af80ec70d3d08eb4c17c84d3997aaba0f",tooltip="Loop event."];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="xboard_loop_analyze",height=0.2,width=0.4,color="black",URL="$xboard_8c.html#a6ec4f7e4a6e59e32b5eb95b566f098c8",tooltip="Analyze."];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

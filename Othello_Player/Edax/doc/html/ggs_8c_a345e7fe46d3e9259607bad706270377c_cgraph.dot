@@ -1,0 +1,13 @@
+digraph "ggs_client_refresh"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ggs_client_refresh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="ggs_client_refresh"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ggs_client_send",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#a946ad3d921468d2abac0b9a3a4bb3406",tooltip="ggs_client_send"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="real_clock",height=0.2,width=0.4,color="black",URL="$util_8h.html#a358b4c5eab4941b90bb9ef1676e5f7e5",tooltip=" "];
+}

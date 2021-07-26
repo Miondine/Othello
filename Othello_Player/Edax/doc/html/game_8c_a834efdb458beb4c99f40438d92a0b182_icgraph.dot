@@ -1,0 +1,39 @@
+digraph "game_to_text"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="game_to_text",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Convert game to a text (ascii)."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="game_export_text",height=0.2,width=0.4,color="black",URL="$game_8c.html#a62b6bc0719281a1beb368799478f8332",tooltip="Write a game to a text file."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="base_analyze",height=0.2,width=0.4,color="black",URL="$base_8c.html#a130adf3915feeb8dd21edd8c715c220f",tooltip="Base analysis."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="base_save",height=0.2,width=0.4,color="black",URL="$base_8c.html#a290adf2a96f38b6d37874b1486027ec8",tooltip="Save a game database."];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="game_analyze",height=0.2,width=0.4,color="black",URL="$game_8c.html#a17775ff0efa3d8592bed935dedb31a45",tooltip="Analyze an endgame."];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="pv_check",height=0.2,width=0.4,color="black",URL="$base_8c.html#ae5fd96b2c5fc0853715832158d172eb0",tooltip="Verify that a PV does not contain errors."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="wthor_test",height=0.2,width=0.4,color="black",URL="$base_8c.html#acd4aaf9717e79148da6c763b1c022016",tooltip="Test Search with a wthor base."];
+  Node10 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="play_save",height=0.2,width=0.4,color="black",URL="$play_8c.html#a6bfab22913b749330068bde2bb80afa3",tooltip="Save a played game."];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="wthor_print_game",height=0.2,width=0.4,color="black",URL="$base_8c.html#a8e5fad7957b25e222378c9704bef3593",tooltip="print a wthor game."];
+  Node12 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

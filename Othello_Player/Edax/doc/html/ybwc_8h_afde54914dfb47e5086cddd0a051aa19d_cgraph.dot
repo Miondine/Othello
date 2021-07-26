@@ -1,0 +1,13 @@
+digraph "node_next_move"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="node_next_move",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Get the next move of the move list."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="node_next_move_lockless",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#afa0e58a0825e315ec77c2504f4f3f1fe",tooltip="Get the next move of the move list."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="move_next",height=0.2,width=0.4,color="black",URL="$move_8c.html#a70f7e30cf2aa1dffdcde82ad10badab4",tooltip="Return the next move from the list."];
+}

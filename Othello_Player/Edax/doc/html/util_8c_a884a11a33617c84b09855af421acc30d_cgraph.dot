@@ -1,0 +1,24 @@
+digraph "parse_move"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="parse_move",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Parse a move."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_is_occupied",height=0.2,width=0.4,color="black",URL="$board_8c.html#acad11415527107f161c9f2a3b909dc2b",tooltip="Check if a square is occupied."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="board_is_pass",height=0.2,width=0.4,color="black",URL="$board_8c.html#a7bd9c47885415e0ae2aed4fb2f8cb241",tooltip="Check if current player should pass."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="can_move",height=0.2,width=0.4,color="black",URL="$board_8c.html#ae1a532d6eaa0e55357d0f4b9cd659b88",tooltip="Check if a player can move."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="get_some_moves",height=0.2,width=0.4,color="black",URL="$board_8c.html#a5db071e3e4d26a0b7d6425bb6333dd7f",tooltip="Get a part of the moves."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="P",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a11481f01e169aee1117c83a352c22222",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="parse_skip_spaces",height=0.2,width=0.4,color="black",URL="$util_8c.html#a35508e8fcec689d875231b2f93fbe4a5",tooltip="Skip spaces."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="string_to_coordinate",height=0.2,width=0.4,color="black",URL="$util_8c.html#a5648be0e41416bac513e53441d3cfd36",tooltip="Convert the two first chars of a string into a coordinate."];
+}

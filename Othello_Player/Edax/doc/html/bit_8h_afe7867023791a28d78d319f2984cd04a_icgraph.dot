@@ -1,0 +1,11 @@
+digraph "first_bit"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="first_bit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Search the first bit set."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="next_bit",height=0.2,width=0.4,color="black",URL="$bit_8c.html#adfa26d202be21ef86dbfbcf4c16ac9d5",tooltip="Search the next bit set."];
+}

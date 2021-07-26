@@ -1,0 +1,23 @@
+digraph "get_helper"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_helper",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Seek for & use an helper node."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="search_clone",height=0.2,width=0.4,color="black",URL="$search_8c.html#a7af3e3571b317c44cd1f669ec2eb4be8",tooltip="Clone a search for parallel search."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="search_setup",height=0.2,width=0.4,color="black",URL="$search_8c.html#ad93ea95428d09b19c1491ee9378ad2b3",tooltip="Set up various structure once the board has been set."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="eval_set",height=0.2,width=0.4,color="black",URL="$eval_8c.html#ac0a65ec1475760424179051a43328b42",tooltip="Set up evaluation features from a board."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="board_get_square_color",height=0.2,width=0.4,color="black",URL="$board_8c.html#a6c2fad499875a4e9d775d9f23ede8aac",tooltip="Get square color."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="task_init",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#a638ff15b10d60e8dde5b78cf7d32f4cb",tooltip="Initialize a task."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="task_search_create",height=0.2,width=0.4,color="black",URL="$ybwc_8c.html#a45b9a17df0c2e4680a301bf4a854b3f6",tooltip="Create a search structure for a task."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="eval_init",height=0.2,width=0.4,color="black",URL="$eval_8c.html#a8eef3217a4129901069390c85e6ff12a",tooltip="Initialize a new evaluation function."];
+}

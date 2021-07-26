@@ -1,0 +1,17 @@
+digraph "book_remove"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="book_remove",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Remove a position from the book."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_get_hash_code",height=0.2,width=0.4,color="black",URL="$board_8c.html#a0e6cff6e714bcb714e2b9b2d7b9fbec6",tooltip="Compute a hash code."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="position_array_remove",height=0.2,width=0.4,color="black",URL="$book_8c.html#aac0b9534e708b9b5c2d89b3a44ea5474",tooltip="Remove a position from an array."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="board_equal",height=0.2,width=0.4,color="black",URL="$board_8c.html#a8b5bfe9db13bf07894a8bc77e3ebfbbe",tooltip="Compare two board for equality."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="position_free",height=0.2,width=0.4,color="black",URL="$book_8c.html#afe76ed1891952cff94868af23806d294",tooltip="Free resources used by a position."];
+}

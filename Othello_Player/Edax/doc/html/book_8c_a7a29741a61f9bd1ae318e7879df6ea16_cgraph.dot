@@ -1,0 +1,11 @@
+digraph "position_merge"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="position_merge",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Merge a position with another one."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="position_init",height=0.2,width=0.4,color="black",URL="$book_8c.html#afb0f6cc3910d40165c8350150e0a5ca4",tooltip="Initialize a position."];
+}

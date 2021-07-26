@@ -1,0 +1,13 @@
+digraph "hash_cleanup"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="hash_cleanup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Clear the hashtable."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="hash_clear",height=0.2,width=0.4,color="black",URL="$hash-lock_8c.html#a8e816e06f47bd2f37528bef5ae64cf8d",tooltip="Clear the hashtable."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="hash_init",height=0.2,width=0.4,color="black",URL="$hash-lock_8c.html#aa53b616d0e04626af0097b9cd26551b0",tooltip="Initialise the hashtable."];
+}

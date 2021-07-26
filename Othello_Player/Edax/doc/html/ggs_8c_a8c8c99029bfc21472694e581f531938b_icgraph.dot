@@ -1,0 +1,23 @@
+digraph "ggs_parse_line"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ggs_parse_line",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="ggs_parse_line"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="ggs_parse_text",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#a811f461c63c66d4a7d8ed0f8c6d783ff",tooltip="ggs_parse_text"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="ggs_event_peek",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#af981e6472672ae2a2d0fc6248dd0ecb0",tooltip="ggs_event_peek"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="ui_loop_ggs",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#a245d5c8f964506584b8d505c7305eb94",tooltip="ui_loop_ggs"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

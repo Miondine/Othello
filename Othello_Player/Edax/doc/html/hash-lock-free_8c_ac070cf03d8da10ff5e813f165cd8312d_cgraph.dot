@@ -1,0 +1,17 @@
+digraph "hash_move_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hash_move_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialize global hash move data."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="bit_count",height=0.2,width=0.4,color="black",URL="$bit_8c.html#a830fec0a90989da1f1900ff609b92167",tooltip="Count the number of bits set to one in an unsigned long long."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="count",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a1a1d6a2cdbded5c35040f6555e948770",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="random_get",height=0.2,width=0.4,color="black",URL="$util_8c.html#a9787f9579ffe8e42bf7e4e8e179723ab",tooltip="Pseudo-random number generator."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="random_seed",height=0.2,width=0.4,color="black",URL="$util_8c.html#ac844263eac6d959af4f2c9ca1a916e58",tooltip="Pseudo-random number seed."];
+}

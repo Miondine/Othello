@@ -1,0 +1,27 @@
+digraph "options_parse"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="options_parse",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="parse options from a file"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="options_read",height=0.2,width=0.4,color="black",URL="$options_8c.html#abd70399170415e56d89b303e3ecf7f5a",tooltip="Read an option."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="option_parse",height=0.2,width=0.4,color="black",URL="$options_8c.html#a4ed43b013f2dae7fdf45172f563ca067",tooltip="parse an option from a string"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="options_parse",height=0.2,width=0.4,color="black",URL="$options_8c.html#af1c6b2900c17be817795401ee70e0901",tooltip="parse options from a file"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node6 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node7 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

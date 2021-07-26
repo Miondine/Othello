@@ -1,0 +1,22 @@
+digraph "search_SC_PVS"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="search_SC_PVS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Stability Cutoff (SC)."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="get_stability",height=0.2,width=0.4,color="black",URL="$board_8c.html#a60e2b7416c26d30fd43e091c954d43b8",tooltip="Estimate the stability."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="bit_count",height=0.2,width=0.4,color="black",URL="$bit_8c.html#a830fec0a90989da1f1900ff609b92167",tooltip="Count the number of bits set to one in an unsigned long long."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="count",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a1a1d6a2cdbded5c35040f6555e948770",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="get_full_lines",height=0.2,width=0.4,color="black",URL="$board_8c.html#a95361f5ad60bdcee3139f74bf3f111b7",tooltip="Get full lines."];
+  Node2 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="get_stable_edge",height=0.2,width=0.4,color="black",URL="$board_8c.html#a2d71c0e083142ec8316c0df0b2e83e42",tooltip="Get stable edge."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="P",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a11481f01e169aee1117c83a352c22222",tooltip=" "];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

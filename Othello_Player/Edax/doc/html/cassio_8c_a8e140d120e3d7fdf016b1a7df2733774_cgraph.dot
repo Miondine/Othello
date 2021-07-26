@@ -1,0 +1,17 @@
+digraph "is_position_new"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="is_position_new",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_equal",height=0.2,width=0.4,color="black",URL="$board_8c.html#a8b5bfe9db13bf07894a8bc77e3ebfbbe",tooltip="Compare two board for equality."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="board_get_hash_code",height=0.2,width=0.4,color="black",URL="$board_8c.html#a0e6cff6e714bcb714e2b9b2d7b9fbec6",tooltip="Compute a hash code."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="hash_clear",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a8e816e06f47bd2f37528bef5ae64cf8d",tooltip="Clear the hashtable."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="hash_cleanup",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aab69792f6f434c8466eca07c469850f1",tooltip="Clear the hashtable."];
+}

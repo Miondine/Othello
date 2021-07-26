@@ -1,0 +1,42 @@
+digraph "engine_input_loop"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="engine_input_loop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Read event loop."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="engine_get_input",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#aab15f6387b615a919bfb679368d97cba",tooltip="Read an input line."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="engine_send",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#afe0305f2a8b426ca767c7b2f128c53af",tooltip="Send a message on stdout."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="time_stamp",height=0.2,width=0.4,color="black",URL="$util_8c.html#a24bf37cbb71f6a0ce700fc72741d6016",tooltip="Print local time."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="engine_stop",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a23f168b93ca01f2c78010889cbc8e113",tooltip="Stop searching."];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="search_stop_all",height=0.2,width=0.4,color="black",URL="$search_8c.html#ad775910af78c46412b5ee4b8bc887b67",tooltip="Stop the search."];
+  Node2 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="event_add_message",height=0.2,width=0.4,color="black",URL="$event_8c.html#aefbd9acd1c18b8cd8c34acecb21754fa",tooltip="Add a new message at the bottom of the list."];
+  Node2 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="event_clear_messages",height=0.2,width=0.4,color="black",URL="$event_8c.html#a0e2fbb5495bf31df04d1eaa75034d891",tooltip="Remove all unprocessed messages."];
+  Node2 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="parse_word",height=0.2,width=0.4,color="black",URL="$util_8c.html#a37223454580e3fd41f4bddb3c3970da5",tooltip="Parse a word."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="parse_skip_spaces",height=0.2,width=0.4,color="black",URL="$util_8c.html#a35508e8fcec689d875231b2f93fbe4a5",tooltip="Skip spaces."];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="search_count_nodes",height=0.2,width=0.4,color="black",URL="$search_8c.html#a66fbe49d1b42845bef2a07d0219a525c",tooltip="Return the number of nodes searched."];
+  Node2 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="search_time",height=0.2,width=0.4,color="black",URL="$search_8c.html#afcdfa9c4ac42ff535885efeb671ffe8d",tooltip="Return the time spent by the search."];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="search_clock",height=0.2,width=0.4,color="black",URL="$search_8c.html#a5710e38d5c67dd03d99307b442d00a63",tooltip="Return the time spent by the search."];
+  Node13 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="string_duplicate",height=0.2,width=0.4,color="black",URL="$util_8c.html#ac3369230f66963a04a0e62b04685ae3c",tooltip="Duplicate a string."];
+  Node2 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="string_read_line",height=0.2,width=0.4,color="black",URL="$util_8c.html#a69d6b32355eb8f18ae34c14eadfe7e9e",tooltip="Read a line."];
+  Node2 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node16 [label="string_to_lowercase",height=0.2,width=0.4,color="black",URL="$util_8c.html#a63f0d8023994d5b47de94f80738870e8",tooltip="Change all char of a string to lowercase."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

@@ -1,0 +1,20 @@
+digraph "search_check_timeout"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="search_check_timeout",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Check if it can iterate more..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="search_adjust_time",height=0.2,width=0.4,color="black",URL="$search_8c.html#a7efa994089b97a5515654b48a8040238",tooltip="Give more time."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="search_time",height=0.2,width=0.4,color="black",URL="$search_8c.html#afcdfa9c4ac42ff535885efeb671ffe8d",tooltip="Return the time spent by the search."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="search_clock",height=0.2,width=0.4,color="black",URL="$search_8c.html#a5710e38d5c67dd03d99307b442d00a63",tooltip="Return the time spent by the search."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="search_count_nodes",height=0.2,width=0.4,color="black",URL="$search_8c.html#a66fbe49d1b42845bef2a07d0219a525c",tooltip="Return the number of nodes searched."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="search_stop_all",height=0.2,width=0.4,color="black",URL="$search_8c.html#ad775910af78c46412b5ee4b8bc887b67",tooltip="Stop the search."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

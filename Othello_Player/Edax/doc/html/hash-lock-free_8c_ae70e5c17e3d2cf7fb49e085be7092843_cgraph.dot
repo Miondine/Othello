@@ -1,0 +1,25 @@
+digraph "hash_store"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="hash_store",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Store an hashtable item."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="hash_new",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#ad5221370b52335bbd99bc7032f212481",tooltip="Initialize a new hash table item."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="data_new",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a2b54fb82510eda54054d5b44a706f566",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="hash_key",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aeafd0b4e6665b357afcff5dd30723c15",tooltip="Transform hash data into a 64 bits key."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="hash_update",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a8cd45c12c1c253e7c40e12dd2b3a310c",tooltip="update the hash entry"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="data_update",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a47753cf3fd941538e52cd282b3d49e20",tooltip="update an hash table item."];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="data_upgrade",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a88da9c021a86d5958925d7cca64920f3",tooltip="Upgrade an hash table item."];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="writeable_level",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aa41c220979591f6be05f9c30fae53261",tooltip="make a level from date, cost, depth & selectivity."];
+}

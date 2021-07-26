@@ -1,0 +1,45 @@
+digraph "search_ETC_NWS"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="search_ETC_NWS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Enhanced Transposition Cutoff (ETC)."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_get_hash_code",height=0.2,width=0.4,color="black",URL="$board_8c.html#a0e6cff6e714bcb714e2b9b2d7b9fbec6",tooltip="Compute a hash code."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="get_stability",height=0.2,width=0.4,color="black",URL="$board_8c.html#a60e2b7416c26d30fd43e091c954d43b8",tooltip="Estimate the stability."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="bit_count",height=0.2,width=0.4,color="black",URL="$bit_8c.html#a830fec0a90989da1f1900ff609b92167",tooltip="Count the number of bits set to one in an unsigned long long."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="count",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a1a1d6a2cdbded5c35040f6555e948770",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="get_full_lines",height=0.2,width=0.4,color="black",URL="$board_8c.html#a95361f5ad60bdcee3139f74bf3f111b7",tooltip="Get full lines."];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="get_stable_edge",height=0.2,width=0.4,color="black",URL="$board_8c.html#a2d71c0e083142ec8316c0df0b2e83e42",tooltip="Get stable edge."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="P",height=0.2,width=0.4,color="black",URL="$generate__flip_8c.html#a11481f01e169aee1117c83a352c22222",tooltip=" "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="hash_get",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a6f54ce833279fec9ac110dcce45565ad",tooltip="Find an hash table entry according to the evaluated board hash codes."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="hash_key",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aeafd0b4e6665b357afcff5dd30723c15",tooltip="Transform hash data into a 64 bits key."];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="hash_store",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#ae70e5c17e3d2cf7fb49e085be7092843",tooltip="Store an hashtable item."];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="hash_new",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#ad5221370b52335bbd99bc7032f212481",tooltip="Initialize a new hash table item."];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="data_new",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a2b54fb82510eda54054d5b44a706f566",tooltip=" "];
+  Node12 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="hash_update",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a8cd45c12c1c253e7c40e12dd2b3a310c",tooltip="update the hash entry"];
+  Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="data_update",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a47753cf3fd941538e52cd282b3d49e20",tooltip="update an hash table item."];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node16 [label="data_upgrade",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a88da9c021a86d5958925d7cca64920f3",tooltip="Upgrade an hash table item."];
+  Node14 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node17 [label="writeable_level",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aa41c220979591f6be05f9c30fae53261",tooltip="make a level from date, cost, depth & selectivity."];
+}

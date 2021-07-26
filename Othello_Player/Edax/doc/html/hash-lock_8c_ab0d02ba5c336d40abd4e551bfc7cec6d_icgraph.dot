@@ -1,0 +1,11 @@
+digraph "hash_set"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="hash_set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Set a new hash table item."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="hash_feed",height=0.2,width=0.4,color="black",URL="$hash-lock_8c.html#a941a32930218f6b555e5884edd7226ff",tooltip="feed hash table (from Cassio)."];
+}

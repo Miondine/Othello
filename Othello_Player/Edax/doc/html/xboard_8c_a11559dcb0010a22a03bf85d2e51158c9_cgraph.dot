@@ -1,0 +1,13 @@
+digraph "xboard_observer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="xboard_observer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Search oberver."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="line_print",height=0.2,width=0.4,color="black",URL="$move_8c.html#a0ae53ce219676b29cf33f8e7586f75a9",tooltip="Print a move sequence."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="move_print",height=0.2,width=0.4,color="black",URL="$move_8c.html#a2ec4fa6e50ff377157eddba43ff1d010",tooltip="Print out a move."];
+}

@@ -1,0 +1,51 @@
+digraph "engine_send"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="engine_send",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Send a message on stdout."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="engine_create_search",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a11a5cdab7fa3b7498c05a4e9c24301ba",tooltip="Create engine search."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="engine_init",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#ab072fb80ef54455dae0b96a71d5ee845",tooltip="Create a new Othello engine."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="engine_loop",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a3c5b977358cdb105de103ac2c2829f01",tooltip="Loop event."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="engine_endgame_search",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a59118e647ced4f05560b431b30ad73b9",tooltip="Endgame search."];
+  Node8 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="engine_get_input",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#aab15f6387b615a919bfb679368d97cba",tooltip="Read an input line."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="engine_input_loop",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a3a3dca65e82e7e3e8d6c0de91b8bc4b7",tooltip="Read event loop."];
+  Node10 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="engine_midgame_search",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a71ebe2bfb187238a48c94edd82cb3024",tooltip="Midgame search."];
+  Node11 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="engine_observer",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#add889aa10a8a9fb9ad3a6e429389bc07",tooltip="Call back function use by search to print its results."];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="engine_close",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a342856ac4315f73ed0e434ee48b0eb71",tooltip="Finalize search."];
+  Node13 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="skip_search",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a9d4678777a6a7d2828934b2c8f0dc182",tooltip="Check if a search has already been done here."];
+  Node14 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node15 [label="engine_stop",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a23f168b93ca01f2c78010889cbc8e113",tooltip="Stop searching."];
+  Node15 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

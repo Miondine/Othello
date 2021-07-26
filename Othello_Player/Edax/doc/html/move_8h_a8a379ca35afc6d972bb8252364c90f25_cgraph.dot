@@ -1,0 +1,11 @@
+digraph "movelist_best"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="movelist_best",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Return the best move of the list."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="move_next_best",height=0.2,width=0.4,color="black",URL="$move_8c.html#af32bd5c1897e4e470f7cafd35e409dbf",tooltip="Return the next best move from the list."];
+}

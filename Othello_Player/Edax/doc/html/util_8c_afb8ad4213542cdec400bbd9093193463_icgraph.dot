@@ -1,0 +1,45 @@
+digraph "thread_self"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="thread_self",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Current thread."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="search_init",height=0.2,width=0.4,color="black",URL="$search_8c.html#a1b7d29da171f6927ea8212ee768f37c9",tooltip="Init the main search."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="engine_create_search",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a11a5cdab7fa3b7498c05a4e9c24301ba",tooltip="Create engine search."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="engine_init",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#ab072fb80ef54455dae0b96a71d5ee845",tooltip="Create a new Othello engine."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="engine_loop",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#a3c5b977358cdb105de103ac2c2829f01",tooltip="Loop event."];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="main",height=0.2,width=0.4,color="black",URL="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627",tooltip="edax main function."];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 [label="ui_loop_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a2354b96c7688bae32bedb6203d672f50",tooltip="Loop event."];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 [label="ui_switch",height=0.2,width=0.4,color="black",URL="$ui_8c.html#a4234d6b0fd690186ef0ec2fc2eba2d4d",tooltip="Switch between different User Interface."];
+  Node8 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 [label="play_init",height=0.2,width=0.4,color="black",URL="$play_8c.html#a6d31b5bcf034cd633bd2b93e634db42e",tooltip="Initialization."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 [label="ui_init_edax",height=0.2,width=0.4,color="black",URL="$edax_8c.html#a81c315385e722ec80548a441fb48f2d1",tooltip="initialize edax protocol."];
+  Node10 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node10 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node11 [label="ui_init_ggs",height=0.2,width=0.4,color="black",URL="$ggs_8c.html#aca24423d5b56d3910b76408a0f9712f7",tooltip="ui_init_ggs"];
+  Node11 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="ui_init_gtp",height=0.2,width=0.4,color="black",URL="$gtp_8c.html#a7b42dec8ff972c87d5daee524f7e1cc1",tooltip="initialize edax protocol"];
+  Node12 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="ui_init_nboard",height=0.2,width=0.4,color="black",URL="$nboard_8c.html#ab5139f1429f56d5e64bdd2172193d01f",tooltip="initialize edax protocol"];
+  Node13 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node9 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node14 [label="ui_init_xboard",height=0.2,width=0.4,color="black",URL="$ui_8h.html#a5ec1cf7d2d607dd20072ae467b3c16e4",tooltip="initialize xboard protocol."];
+  Node14 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

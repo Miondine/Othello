@@ -1,0 +1,18 @@
+digraph "engine_observer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="engine_observer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Call back function use by search to print its results."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="engine_send",height=0.2,width=0.4,color="black",URL="$cassio_8c.html#afe0305f2a8b426ca767c7b2f128c53af",tooltip="Send a message on stdout."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="time_stamp",height=0.2,width=0.4,color="black",URL="$util_8c.html#a24bf37cbb71f6a0ce700fc72741d6016",tooltip="Print local time."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="line_to_string",height=0.2,width=0.4,color="black",URL="$move_8c.html#a4776e05a37b5a43f0e7d74d8703c66b8",tooltip="Line to string."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="move_to_string",height=0.2,width=0.4,color="black",URL="$move_8c.html#a5d61a3318dc80a3171250974a921055d",tooltip="Print out a move."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+}

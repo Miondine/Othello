@@ -1,0 +1,19 @@
+digraph "xboard_hint"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="xboard_hint",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Send a hint."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="move_print",height=0.2,width=0.4,color="black",URL="$move_8c.html#a2ec4fa6e50ff377157eddba43ff1d010",tooltip="Print out a move."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="search_guess",height=0.2,width=0.4,color="black",URL="$search_8c.html#a9fa359ba4258797eb3d62436c72a5821",tooltip="Guess the bestmove of a given board."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="board_get_hash_code",height=0.2,width=0.4,color="black",URL="$board_8c.html#a0e6cff6e714bcb714e2b9b2d7b9fbec6",tooltip="Compute a hash code."];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="hash_get",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#a6f54ce833279fec9ac110dcce45565ad",tooltip="Find an hash table entry according to the evaluated board hash codes."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node6 [label="hash_key",height=0.2,width=0.4,color="black",URL="$hash-lock-free_8c.html#aeafd0b4e6665b357afcff5dd30723c15",tooltip="Transform hash data into a 64 bits key."];
+}

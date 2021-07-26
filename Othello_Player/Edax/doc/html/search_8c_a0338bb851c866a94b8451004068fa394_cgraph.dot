@@ -1,0 +1,13 @@
+digraph "search_time_init"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="search_time_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Initialize the alloted time."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="search_count_tasks",height=0.2,width=0.4,color="black",URL="$search_8c.html#abd4fe1079f4e08e92ebc3ebf3281654f",tooltip="Count the number of tasks used in parallel search."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="solvable_depth",height=0.2,width=0.4,color="black",URL="$search_8c.html#aa17dda6648796a36ac6b8dcf827586a9",tooltip="Compute the deepest level that can be solved given a limited time..."];
+}

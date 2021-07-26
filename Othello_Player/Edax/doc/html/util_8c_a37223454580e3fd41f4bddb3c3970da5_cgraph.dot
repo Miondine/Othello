@@ -1,0 +1,11 @@
+digraph "parse_word"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="parse_word",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Parse a word."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="parse_skip_spaces",height=0.2,width=0.4,color="black",URL="$util_8c.html#a35508e8fcec689d875231b2f93fbe4a5",tooltip="Skip spaces."];
+}

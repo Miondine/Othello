@@ -1,0 +1,13 @@
+digraph "position_export"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="position_export",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="write a position."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="board_to_string",height=0.2,width=0.4,color="black",URL="$board_8c.html#a5f43645a89dd567f64bc91de6fed5b5a",tooltip="convert the to a compact string."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="move_to_string",height=0.2,width=0.4,color="black",URL="$move_8c.html#a5d61a3318dc80a3171250974a921055d",tooltip="Print out a move."];
+}

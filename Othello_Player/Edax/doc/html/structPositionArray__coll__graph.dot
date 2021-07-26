@@ -1,0 +1,14 @@
+digraph "PositionArray"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="PositionArray",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="An array with positions."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" positions" ,fontname="FreeSans"];
+  Node2 [label="Position",height=0.2,width=0.4,color="black",URL="$structPosition.html",tooltip="A position stored in the book."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" board" ,fontname="FreeSans"];
+  Node3 [label="Board",height=0.2,width=0.4,color="black",URL="$structBoard.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" leaf\nlink" ,fontname="FreeSans"];
+  Node4 [label="Link",height=0.2,width=0.4,color="black",URL="$structLink.html",tooltip="a move (with its score) linking to another Position."];
+}
