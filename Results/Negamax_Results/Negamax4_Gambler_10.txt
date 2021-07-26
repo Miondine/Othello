@@ -1,0 +1,14 @@
+"10 games Negamax4 agains Gambler for Negamax4: black and Gambler: white."
+"In first two columns winner gets 1 looser 0"
+
+Negamax4_Winning,Gambler_Winning,Discs_Negamax4,Discs_Gambler
+1, 0, 56, 8 
+1, 0, 49, 15 
+1, 0, 58, 6 
+1, 0, 55, 9 
+1, 0, 48, 16 
+1, 0, 41, 23 
+1, 0, 50, 14 
+1, 0, 61, 2 
+1, 0, 49, 15 
+1, 0, 50, 14 

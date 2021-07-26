@@ -1,0 +1,19 @@
+15 games MCTSMaxIterRemember50 against Roxanne for MCTSMaxIterRemember50: black and Roxanne: white.
+"In first two columns winner gets 1 looser 0"
+
+MCTSMaxIterRemember50_Winning,Roxanne_Winning,Discs_MCTSMaxIterRemember50,Discs_Roxanne
+0,1,16,48
+0,1,25,39
+0,1,0,64
+0,1,27,37
+0,1,28,36
+0,1,14,50
+1,0,39,25
+1,0,42,22
+1,0,42,22
+0,1,15,49
+0,1,18,46
+1,0,37,27
+1,0,37,27
+1,0,40,24
+0,1,11,53

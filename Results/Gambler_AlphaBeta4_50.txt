@@ -1,0 +1,72 @@
+50 games Gambler against AlphaBeta4 for Gambler: black and AlphaBeta4: white.
+"In first two columns winner gets 1 looser 0"
+
+AlphaBeta4_Winning,Gambler_Winning,Discs_AlphaBeta4,Discs_Gambler
+1,0,53,11
+1,0,56,8
+1,0,57,7
+1,0,60,4
+1,0,64,0
+1,0,64,0
+1,0,57,7
+1,0,62,2
+1,0,60,4
+1,0,57,7
+1,0,60,4
+1,0,46,18
+1,0,64,0
+1,0,55,9
+1,0,62,2
+1,0,64,0
+1,0,53,11
+1,0,64,0
+1,0,57,7
+1,0,64,0
+1,0,55,9
+1,0,64,0
+1,0,63,1
+1,0,51,13
+1,0,55,9
+1,0,56,8
+1,0,55,9
+1,0,56,8
+1,0,57,7
+1,0,55,9
+1,0,63,1
+1,0,60,4
+1,0,63,1
+1,0,58,6
+1,0,58,6
+1,0,64,0
+1,0,64,0
+1,0,64,0
+1,0,64,0
+1,0,56,8
+1,0,59,5
+1,0,57,7
+1,0,56,8
+1,0,64,0
+1,0,60,4
+1,0,55,9
+1,0,64,0
+1,0,58,6
+1,0,62,2
+1,0,58,6
+
+Results for AlphaBeta4 black and Gambler white:
+Information,AlphaBeta4,Gambler,Draw
+total wins,50,0,0
+percentage wins,1.0,0.0,0.0
+disc difference winnig,50.52,0
+
+Results for AlphaBeta4 white and Gambler black:
+Information,AlphaBeta4,Gambler,Draw
+total wins,50,0,0
+percentage wins,1.0,0.0,0.0
+disc difference winnig,54.12,0
+
+Total Results:
+Information,AlphaBeta4,Gambler,Draw
+total wins,100,0,0
+percentage wins,1.0,0.0,0.0
+disc difference winnig,52.32,0

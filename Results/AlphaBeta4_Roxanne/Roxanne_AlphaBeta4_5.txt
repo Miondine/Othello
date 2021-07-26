@@ -1,0 +1,10 @@
+5 games Roxanne against AlphaBeta4 for Roxanne: black and AlphaBeta4: white.
+"In first two columns winner gets 1 looser 0"
+
+AlphaBeta4_Winning,Roxanne_Winning,Discs_AlphaBeta4,Discs_Roxanne
+1,0,56,8
+1,0,58,6
+1,0,56,8
+1,0,58,6
+1,0,55,9
+5

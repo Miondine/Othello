@@ -1,0 +1,14 @@
+"10 games Greedy against Negamax for Greedy: black and Negamax: white."
+"In first two columns winner gets 1 looser 0"
+
+Negamax_Winning,Greedy_Winning,Discs_Negamax,Discs_Greedy
+1, 0, 60, 4 
+1, 0, 60, 4 
+1, 0, 55, 0 
+1, 0, 60, 4 
+1, 0, 60, 4 
+1, 0, 57, 7 
+1, 0, 57, 7 
+1, 0, 58, 6 
+1, 0, 59, 5 
+1, 0, 54, 10 
