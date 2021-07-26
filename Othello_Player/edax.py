@@ -10,9 +10,9 @@ class Edax(player.Player):
     EXEC_FILE = './bin/mEdax'
     PATH = '/Users/paula/Documents/Programmieren/project/Othello/othello_player/Edax'
 
-    def __init__(self, colour, graphical, graphical_interface):
+    def __init__(self, colour, graphical, graphical_interface, depth):
         super().__init__(colour, graphical ,graphical_interface)
-        self.depth = 1
+        self.depth = depth
         self.working_dir = os.getcwd()
         self.args = ['-q','-l',f'{self.depth}']
         os.chdir(Edax.PATH)

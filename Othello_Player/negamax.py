@@ -3,9 +3,9 @@ from copy import deepcopy
 
 class Negamax(heuristics.Heuristic):
 
-    def __init__(self, colour, graphical, graphical_interface):
+    def __init__(self, colour, graphical, graphical_interface, depth):
         super().__init__(colour, graphical ,graphical_interface)
-        self.max_depth = 4
+        self.max_depth = depth
         self.max_heuristic_value = 100
         self.min_heuristic_value = -100
 

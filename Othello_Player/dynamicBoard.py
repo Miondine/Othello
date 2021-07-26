@@ -2,9 +2,9 @@ import othello_player.player as player
 
 class DynamicBoard(player.Player):
 
-    def __init__(self, colour, graphical, graphical_interface):
+    def __init__(self, colour, graphical, graphical_interface, depth):
         super().__init__(colour, graphical ,graphical_interface)
-        self.max_depth = 4
+        self.max_depth = depth
         self.max_heuristic_val = 100
         self.min_heuristic_val = -100
         self.static_board = [[4,-3,2,2,2,2,-3,4],

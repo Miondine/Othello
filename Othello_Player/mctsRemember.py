@@ -54,9 +54,9 @@ class Node:
 
 class MCTSMaxIterRemember(player.Player):
 
-    def __init__(self, colour, graphical, graphical_interface):
+    def __init__(self, colour, graphical, graphical_interface, depth):
         super().__init__(colour, graphical ,graphical_interface)
-        self.max_iterations = 30 # maximum number of iterations
+        self.max_iterations = depth # maximum number of iterations
         self.root_node = None
 
     def make_move(self,board):
