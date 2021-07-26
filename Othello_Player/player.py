@@ -21,9 +21,9 @@ class Player:
         self.possible_positions = []
         self.possible_moves = []
 
-
-
-            
+    def close_player(self):
+        return
+        
     # Function calculates all possible moves for the calling player for the input board. Function iterates over all board positions. 
     # For all empty positions it checks whether they could be a valid move or not. Therefore, the function expands from the current position
     # in all possible directions and checks if there is a configuration for flipping. 
