@@ -51,5 +51,6 @@ class Gambler(player.Player):
             made_move = True
 
         #return radom board state from possible_moves
-        return quit_val, made_move, random.choice(self.possible_moves)
+        index = random.randrange(len(self.possible_positions))
+        return quit_val, made_move, self.possible_positions[index], self.possible_moves[index]
         
