@@ -25,48 +25,48 @@ class Game:
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
     player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy,
                     'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard,
-                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'ROXANNE_DYNAMIC' : roxanneDynamic.RoxanneDynamic,
+                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'DYNAMIC_ROXANNE' : roxanneDynamic.RoxanneDynamic,
                     'MCTS_MAX_ITER' : mcts.MCTSMaxIter, 'MCTS_REM_MAX_ITER' : mctsRemember.MCTSMaxIterRemember, 'EDAX': edax.Edax} 
     depth_players = ['NEGAMAX','ALPHA_BETA','STATIC_BOARD','DYNAMIC_BOARD','MCTS_MAX_ITER','MCTS_REM_MAX_ITER','EDAX']
 
     # initialises object attributes according to input values. 
-    # Input: type_player1/2 (string, key to dictionary player_types), name_player1/2 (string, name of player1/2) 
-    # Changes: self.graphcial, (self.graphical_interaction), self.name_player1/2, self.type_player1/2, self.num_discs_player1/2, self.winner, self.game_board.
-    def __init__(self, type_player1, name_player1, type_player2, name_player2, graphical = None, depth_player1 = None, depth_player2 = None):
+    # Input: type_black/white_player (string, key to dictionary player_types), name_black/white_player (string, name of player1/2) 
+    # Changes: self.graphcial, (self.graphical_interaction), self.name_black/white_player, self.type_black/white_player, self.num_discs_player1/2, self.winner, self.game_board.
+    def __init__(self, type_black_player, name_black_player, type_white_player, name_white_player, graphical = None, depth_player1 = None, depth_player2 = None):
 
         # If at least one player is human or graphcial = True then graphical is True and graphcial_interaction is initialised else graphical is False 
-        if(graphical or type_player1 == 'HUMAN' or type_player2 == 'HUMAN'):
+        if(graphical or type_black_player == 'HUMAN' or type_white_player == 'HUMAN'):
             self.graphical = True
             self.graphical_interaction = interaction.Interaction()
             # strings for gui information
-            self.turn_player1 = f"{name_player1}'s turn!"
-            self.turn_player2 = f"{name_player2}'s turn!"
-            self.moved_player1 = f"{name_player1} moved"
-            self.moved_player2 = f"{name_player2} moved"
-            self.passed_player1 = f"{name_player1} passed"
-            self.passed_player2 = f"{name_player2} passsed"
+            self.turn_player1 = f"{name_black_player}'s turn!"
+            self.turn_player2 = f"{name_white_player}'s turn!"
+            self.moved_player1 = f"{name_black_player} moved"
+            self.moved_player2 = f"{name_white_player} moved"
+            self.passed_player1 = f"{name_black_player} passed"
+            self.passed_player2 = f"{name_white_player} passsed"
         else:
             self.graphical = False
             self.graphical_interaction = None
 
-        # initialistion of player1/2 according to input variable type_player1/2
+        # initialistion of player1/2 according to input variable type_black/white_player
         
-            if(type_player1 in Game.depth_players):
-                self.player1 = Game.player_types[type_player1](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player1)
+            if(type_black_player in Game.depth_players):
+                self.player1 = Game.player_types[type_black_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player1)
             else:
-                self.player1 = Game.player_types[type_player1](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
-            if(type_player2 in Game.depth_players):
-                self.player2 = Game.player_types[type_player2](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player2)
+                self.player1 = Game.player_types[type_black_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+            if(type_white_player in Game.depth_players):
+                self.player2 = Game.player_types[type_white_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player2)
             else:
-                self.player2 = Game.player_types[type_player2](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+                self.player2 = Game.player_types[type_white_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
             
         
-        self.type_player1 = type_player1
-        self.type_player2 = type_player2
+        self.type_player1 = type_black_player
+        self.type_player2 = type_white_player
 
         # names of players are used for output
-        self.name_player1 = name_player1
-        self.name_player2 = name_player2
+        self.name_player1 = name_black_player
+        self.name_player2 = name_white_player
 
         self.winner = None
         self.num_discs_player1 = 2 # (int) number of discs player 1 has after game was played.
