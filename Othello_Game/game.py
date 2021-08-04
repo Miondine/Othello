@@ -56,9 +56,9 @@ class Game:
             else:
                 self.player1 = Game.player_types[type_black_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
             if(type_white_player in Game.depth_players):
-                self.player2 = Game.player_types[type_white_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player2)
+                self.player2 = Game.player_types[type_white_player](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_player2)
             else:
-                self.player2 = Game.player_types[type_white_player](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+                self.player2 = Game.player_types[type_white_player](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
             
         
         self.type_player1 = type_black_player
@@ -258,18 +258,20 @@ class Game:
         p1_made_move = True
         p2_made_move = True
 
+        
+     
         while True:
 
             # player1 moves
             timer_player1.start_move()
             p1_made_move, self.game_board = self.player1.make_move(self.game_board)
             timer_player1.stop_move()
-
+            
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
                 self.game_finish()
                 break
-                
+
             # if no more empty positions calculate number of diks for each player, determine winner leave game loop
             if(self.game_board.empty_positions == 0):
                 self.game_finish()
@@ -279,11 +281,12 @@ class Game:
             timer_player2.start_move()
             p2_made_move, self.game_board = self.player2.make_move(self.game_board)
             timer_player2.stop_move()
+
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not p1_made_move and not p2_made_move):
                 self.game_finish()
                 break
-                
+       
             # if no more empty positions calculate number of diks for each player, determine winner leave game loop
             if(self.game_board.empty_positions == 0):
                 self.game_finish()
