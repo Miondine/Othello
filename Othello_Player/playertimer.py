@@ -1,4 +1,5 @@
 import time
+import scipy.stats
 
 class PlayerTimer:
     
@@ -12,8 +13,7 @@ class PlayerTimer:
         self.move_counter = 0
         self.game_time = 0
         self.max_moves = 50
-        self.move_time_summed = [0.0 for x in range(self.max_moves)]
-        self.move_executed = [0 for x in range(self.max_moves)]
+        self.move_time = [[] for x in range(self.max_moves)]
         self.game_time_summed = [0.0 for x in range(self.num_games)]
         self.setup_file()
 
@@ -41,8 +41,7 @@ class PlayerTimer:
     def stop_move(self):
 
         elapsed_time = time.perf_counter() - self.start_time
-        self.move_time_summed[self.move_counter] += elapsed_time
-        self.move_executed[self.move_counter] += 1
+        self.move_time[self.move_counter].append(elapsed_time)
         self.game_time += elapsed_time
         self.move_counter += 1
         self.file.write(f'{elapsed_time},')
@@ -59,23 +58,40 @@ class PlayerTimer:
         self.game_counter += 1
 
     def close_file(self):
+
         self.file.write('\n')
+
         self.file.write('total time per move x,')
-        for x in self.move_time_summed:
-            self.file.write(f'{x}, ')
-        self.file.write(f'{sum(self.move_time_summed)}\n')
-        self.file.write('number move x executed,')
-        for x in self.move_executed:
-            self.file.write(f'{x},')
-        self.file.write(f'{self.num_games}\n')
+        for move in range(self.max_moves):
+            self.file.write(f'{sum(self.move_time[move])},')
+        self.file.write(f'{sum(self.game_time_summed)}\n')
+
         self.file.write('average time per move x,')
-        for x, y in zip(self.move_time_summed,self.move_executed):
-            if(y == 0):
-                self.file.write('0.0,')
+        for move in range(self.max_moves):
+            if(len(self.move_time[move]) > 1):
+                self.file.write(f'{scipy.stats.tmean(self.move_time[move])},')
+            elif(len(self.move_time[move]) == 1):
+                self.file.write(f'{self.move_time[move][0]},')
             else:
-                average = x / y
-                self.file.write(f'{average},')
-        self.file.write(f'{sum(self.move_time_summed)/self.num_games}\n')
+                self.file.write(f'nan,')
+        self.file.write(f'{scipy.stats.tmean(self.game_time_summed)}\n')
+        
+        self.file.write('std of time per move x,')
+        for move in range(self.max_moves):
+            if(len(self.move_time[move]) > 1):
+                self.file.write(f'{scipy.stats.tstd(self.move_time[move])},')
+            else:
+                self.file.write('nan,')
+        self.file.write(f'{scipy.stats.tstd(self.game_time_summed)}\n')
+
+        self.file.write('err of average time,')
+        for move in range(self.max_moves):
+            if(len(self.move_time[move]) > 1):
+                self.file.write(f'{scipy.stats.sem(self.move_time[move])},')
+            else:
+                self.file.write('nan,')
+        self.file.write(f'{scipy.stats.sem(self.game_time_summed)}\n')
+
         self.file.close()
 
 
