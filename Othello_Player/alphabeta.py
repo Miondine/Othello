@@ -15,7 +15,6 @@ class AlphaBeta(heuristics.Heuristic):
 
         max_player = heuristics.Heuristic(self.colour, False, None)
         min_player = heuristics.Heuristic(self.opponent_colour, False, None)
-
         self.get_possible_moves(board)
         if(self.possible_moves == []):
             return False, board
