@@ -18,8 +18,6 @@ class Edax(player.Player):
         os.chdir(Edax.PATH)
         self.process = pexpect.spawn(Edax.EXEC_FILE,self.args)
         os.chdir(self.working_dir)
-       # self.process = subprocess.Popen(args, stdin=subprocess.PIPE,stdout = subprocess.PIPE, stderr = subprocess.PIPE,text=True)
-     
 
 
     def make_move(self, board):
@@ -29,23 +27,19 @@ class Edax(player.Player):
         if(self.possible_positions == []):
             return False, board
         elif(len(self.possible_positions) == 1):
-            return True, self.possible_moves[1]
+            return True, self.possible_moves[0]
         
-        # open process, set edax to board state and read output 
-        s = self.to_edax_str(board, self.colour)
-        str = f'setboard {s}'
-        self.process.sendline(str)
-        self.process.sendline('go')
-        out = self.process.readline(1)
-        print('Output: ',out)
-        selected_position = [0,0]
-
+        self.reset(board)
+        self.play_move()
+        selected_position = self.read_move()
+        
         for index,position in enumerate(self.possible_positions):
             if(position == selected_position):
                 return True, self.possible_moves[index]
 
         print('Error: Edax made invalid move')
-        return True, random.random_choice(self.possible_moves)
+        index = random.randrange(len(self.possible_positions))
+        return True, self.possible_moves[index]
 
     def make_move_graphical(self,board):
 
