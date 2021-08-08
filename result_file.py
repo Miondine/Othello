@@ -3,7 +3,7 @@ import numpy as np
 
 class ResultFile:
 
-    def __init__(self,name_player1,name_player2,num_games,num_iter,player1_file_name = None, player2_file_name = None):
+    def __init__(self,name_player1,name_player2,num_games,num_iter,player1_filename = None, player2_filename = None):
 
         self.name_player1 = name_player1
         self.name_player2 = name_player2
@@ -11,14 +11,14 @@ class ResultFile:
         self.num_games = num_games
         self.num_iter = num_iter
 
-        if(player1_file_name != None):
-            self.player1_file_name = player1_file_name
+        if(player1_filename != None):
+            self.player1_filename = player1_filename
             self.player1_file = True
         else:
             self.player1_file = False
         
-        if(player2_file_name != None):
-            self.player2_file_name = player2_file_name
+        if(player2_filename != None):
+            self.player2_filename = player2_filename
             self.player2_file = True
         else:
             self.player2_file = False
@@ -62,37 +62,37 @@ class ResultFile:
                                                    'percentage' : [0 for x in range(num_iter)],
                                                    'mean' : 0, 'std' : 0, 'err' : 0}}
 
-        self.file_name_raw = f'{name_player1}_{name_player2}_{self.num_iter}_{self.num_games}.txt'
-        self.file_name_stats = f'{name_player1}_{name_player2}_{self.num_iter}_{self.num_games}_stats.txt'
+        self.filename_raw = f'{name_player1}_{name_player2}_{self.num_iter}_{self.num_games}.txt'
+        self.filename_stats = f'{name_player1}_{name_player2}_{self.num_iter}_{self.num_games}_stats.txt'
 
         self.init_files()
 
     def init_files(self):
-        file_raw = open(self.file_name_raw,'w')
+        file_raw = open(self.filename_raw,'w')
         file_raw.write(f'Results for game {self.name_player1} against {self.name_player2}\n')
         file_raw.write(f'Each cycle contains {self.num_games} games, where first half of games {self.name_player1} is black and second half {self.name_player2} is black\n')
         file_raw.write(f'Number of cycles: {self.num_iter}\n')
         file_raw.write('In first two columns winner gets 1 looser 0\n')
         file_raw.write('last two columns refers to number of disc each player has at the end of the game\n')
-        file_raw.write('\n')
         file_raw.close()
-        file_stats = open(self.file_name_stats,'w')
+        file_stats = open(self.filename_stats,'w')
         file_stats.write(f'Statistical evaluation for games between {self.name_player1} against {self.name_player2}\n')
         file_stats.write(f'Each cycle contains {self.num_games} games, where first half of games {self.name_player1} is black and second half {self.name_player2} is black\n')
         file_stats.write(f'Number of cycles: {self.num_iter}\n')
+        file_stats.write(f'\n')
         file_stats.close()
 
     def new_cycle(self, cycle_num):
 
-        file_raw = open(self.file_name_raw, 'a')
+        file_raw = open(self.filename_raw, 'a')
+        file_raw.write('\n')
         file_raw.write(f'Cycle: {cycle_num}\n')
         file_raw.write(f'{self.name_player1},{self.name_player2},Discs_{self.name_player1},Discs_{self.name_player2}\n')
-        file_raw.write('\n')
         file_raw.close()
 
     def save_game_result(self,winner,colour_player1,colour_player2,discs_player1, discs_player2,cycle):
 
-        file_raw = open(self.file_name_raw,'a')
+        file_raw = open(self.filename_raw,'a')
 
         if(winner == None):
             file_raw.write(f'0,0,{discs_player1},{discs_player2}\n')
@@ -191,7 +191,7 @@ class ResultFile:
 
     def save_stats(self):
 
-        file_stats = open(self.file_name_stats,'a')
+        file_stats = open(self.filename_stats,'a')
 
         file_stats.write(f'Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black\n')
         file_stats.write(f'Cycle,{self.name_player1},{self.name_player2},  Cycle,{self.name_player1},{self.name_player2},   Cycle,{self.name_player1},{self.name_player2}\n')
@@ -230,13 +230,13 @@ class ResultFile:
         file_stats.close()
 
         if(self.player1_file == True):
-            f = open(self.player1_file_name,'a')
+            f = open(self.player1_filename,'a')
             f.write(f"{self.name_player2},{self.wins_player1['total']['mean']},{self.wins_player1['total']['std']},{self.wins_player1['total']['err']},")
             f.write(f"{self.discs_player1['total']['mean']},{self.discs_player1['total']['std']},{self.discs_player1['total']['err']}\n")
             f.close()
         
         if(self.player2_file == True):
-            f = open(self.player2_file_name,'a')
+            f = open(self.player2_filename,'a')
             f.write(f"{self.name_player1},{self.wins_player2['total']['mean']},{self.wins_player2['total']['std']},{self.wins_player2['total']['err']},")
             f.write(f"{self.discs_player2['total']['mean']},{self.discs_player2['total']['std']},{self.discs_player2['total']['err']}\n")
             f.close()
