@@ -51,17 +51,15 @@ class Game:
 
         # initialistion of black/2 according to input variable type_black/white
         
-            if(type_black in Game.depth_players):
-                self.black = Game.player_types[type_black](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_black)
-            else:
-                self.black = Game.player_types[type_black](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
-            if(type_white in Game.depth_players):
-                self.white = Game.player_types[type_white](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_white)
-            else:
-                self.white = Game.player_types[type_white](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
-                
-            
-        
+        if(type_black in Game.depth_players):
+            self.black = Game.player_types[type_black](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_black)
+        else:
+            self.black = Game.player_types[type_black](colour = 1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+        if(type_white in Game.depth_players):
+            self.white = Game.player_types[type_white](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction, depth = depth_white)
+        else:
+            self.white = Game.player_types[type_white](colour = -1,graphical = self.graphical, graphical_interface = self.graphical_interaction)
+                  
         self.type_black = type_black
         self.type_white = type_white
 
