@@ -1,13 +1,14 @@
+from copy import deepcopy
 import othello_player.player as player
 
 class DynamicBoard(player.Player):
 
-    def __init__(self, colour, graphical, graphical_interface, depth):
+    def __init__(self, colour, graphical, graphical_interface, depth = None):
         super().__init__(colour, graphical ,graphical_interface)
         self.max_depth = depth
         self.max_heuristic_val = 100
         self.min_heuristic_val = -100
-        self.static_board = [[4,-3,2,2,2,2,-3,4],
+        self.value_board = [[4,-3,2,2,2,2,-3,4],
                     [-3,-4,-1,-1,-1,-1,-4,-3],
                     [2,-1,1,0,0,1,-1,2],
                     [2,-1,0,1,1,0,-1,2],
@@ -15,7 +16,7 @@ class DynamicBoard(player.Player):
                     [2,-1,1,0,0,1,-1,2],
                     [-3,-4,-1,-1,-1,-1,-4,-3],
                     [4,-3,2,2,2,2,-3,4]]
-        self.opponent_static_board = [[4,-3,2,2,2,2,-3,4],
+        self.opponent_value_board = [[4,-3,2,2,2,2,-3,4],
                     [-3,-4,-1,-1,-1,-1,-4,-3],
                     [2,-1,1,0,0,1,-1,2],
                     [2,-1,0,1,1,0,-1,2],
@@ -29,67 +30,11 @@ class DynamicBoard(player.Player):
         max_player = player.Player(self.colour, False, None)
         min_player = player.Player(self.opponent_colour, False, None)
 
-        # update static board if agent or opponent occupied a corner
-        if(board.positions[0][0] == self.colour):
-            self.static_board[0][1] = 2
-            self.static_board[1][0] = 2
-            self.static_board[1][1] = 2
-            self.opponent_static_board[0][1] = 0
-            self.opponent_static_board[1][0] = 0
-            self.opponent_static_board[1][1] = 0
-        elif(board.positions[0][0] == self.opponent_colour):
-            self.static_board[0][1] = 0
-            self.static_board[1][0] = 0
-            self.static_board[1][1] = 0
-            self.opponent_static_board[0][1] = 2
-            self.opponent_static_board[1][0] = 2
-            self.opponent_static_board[1][1] = 2
-        elif(board.positions[0][7] == self.colour):
-            self.static_board[0][6] = 2
-            self.static_board[1][7] = 2
-            self.static_board[1][6] = 2
-            self.opponent_static_board[0][6] = 0
-            self.opponent_static_board[1][7] = 0
-            self.opponent_static_board[1][6] = 0
-        elif(board.positions[0][7] == self.opponent_colour):
-            self.static_board[0][6] = 0
-            self.static_board[1][7] = 0
-            self.static_board[1][6] = 0
-            self.opponent_static_board[0][6] = 2
-            self.opponent_static_board[1][7] = 2
-            self.opponent_static_board[1][6] = 2
-        elif(board.positions[7,0] == self.colour):
-            self.static_board[7][1] = 2
-            self.static_board[6][0] = 2
-            self.static_board[6][1] = 2
-            self.opponent_static_board[7][1] = 0
-            self.opponent_static_board[6][0] = 0
-            self.opponent_static_board[6][1] = 0
-        elif(board.positions[7][0] == self.opponent_colour):
-            self.static_board[7][1] = 0
-            self.static_board[6][0] = 0
-            self.static_board[6][1] = 0
-            self.opponent_static_board[7][1] = 2
-            self.opponent_static_board[6][0] = 2
-            self.opponent_static_board[6][1] = 2
-        elif(board.positions[7][7] == self.colour):
-            self.static_board[7][6] = 2
-            self.static_board[6][7] = 2
-            self.static_board[6][6] = 2
-            self.opponent_static_board[7][6] = 0
-            self.opponent_static_board[6][7] = 0
-            self.opponent_static_board[6][6] = 0
-        elif(board.positions[7][7] == self.opponent_colour):
-            self.static_board[7][6] = 0
-            self.static_board[6][7] = 0
-            self.static_board[6][6] = 0
-            self.opponent_static_board[7][6] = 2
-            self.opponent_static_board[6][7] = 2
-            self.opponent_static_board[6][6] = 2
-
         self.get_possible_moves(board)
         if(self.possible_moves == []):
             return False, board
+        elif(len(self.possible_moves) == 1):
+            return True,self.possible_moves[0]
         else:
             alpha = self.min_heuristic_val - 128
             beta = self.max_heuristic_val + 128
@@ -111,64 +56,6 @@ class DynamicBoard(player.Player):
         max_player = player.Player(self.colour, False, None)
         min_player = player.Player(self.opponent_colour, False, None)
 
-        # update static board if agent or opponent occupied a corner
-        if(board.positions[0][0] == self.colour):
-            self.static_board[0][1] = 2
-            self.static_board[1][0] = 2
-            self.static_board[1][1] = 2
-            self.opponent_static_board[0][1] = 0
-            self.opponent_static_board[1][0] = 0
-            self.opponent_static_board[1][1] = 0
-        elif(board.positions[0][0] == self.opponent_colour):
-            self.static_board[0][1] = 0
-            self.static_board[1][0] = 0
-            self.static_board[1][1] = 0
-            self.opponent_static_board[0][1] = 2
-            self.opponent_static_board[1][0] = 2
-            self.opponent_static_board[1][1] = 2
-        elif(board.positions[0][7] == self.colour):
-            self.static_board[0][6] = 2
-            self.static_board[1][7] = 2
-            self.static_board[1][6] = 2
-            self.opponent_static_board[0][6] = 0
-            self.opponent_static_board[1][7] = 0
-            self.opponent_static_board[1][6] = 0
-        elif(board.positions[0][7] == self.opponent_colour):
-            self.static_board[0][6] = 0
-            self.static_board[1][7] = 0
-            self.static_board[1][6] = 0
-            self.opponent_static_board[0][6] = 2
-            self.opponent_static_board[1][7] = 2
-            self.opponent_static_board[1][6] = 2
-        elif(board.positions[7][0] == self.colour):
-            self.static_board[7][1] = 2
-            self.static_board[6][0] = 2
-            self.static_board[6][1] = 2
-            self.opponent_static_board[7][1] = 0
-            self.opponent_static_board[6][0] = 0
-            self.opponent_static_board[6][1] = 0
-        elif(board.positions[7][0] == self.opponent_colour):
-            self.static_board[7][1] = 0
-            self.static_board[6][0] = 0
-            self.static_board[6][1] = 0
-            self.opponent_static_board[7][1] = 2
-            self.opponent_static_board[6][0] = 2
-            self.opponent_static_board[6][1] = 2
-        elif(board.positions[7][7] == self.colour):
-            self.static_board[7][6] = 2
-            self.static_board[6][7] = 2
-            self.static_board[6][6] = 2
-            self.opponent_static_board[7][6] = 0
-            self.opponent_static_board[6][7] = 0
-            self.opponent_static_board[6][6] = 0
-        elif(board.positions[7][7] == self.opponent_colour):
-            self.static_board[7][6] = 0
-            self.static_board[6][7] = 0
-            self.static_board[6][6] = 0
-            self.opponent_static_board[7][6] = 2
-            self.opponent_static_board[6][7] = 2
-            self.opponent_static_board[6][6] = 2
-
         self.get_possible_moves(board)
 
         # draw possible positions
@@ -176,6 +63,8 @@ class DynamicBoard(player.Player):
         
         if(self.possible_moves == []):
             return quit_val, False, [0,0],board
+        elif(len(self.possible_moves)==1):
+            return quit_val,True,self.possible_positions[0],self.possible_moves[0]
         else:
             alpha = self.min_heuristic_val - 128
             beta = self.max_heuristic_val + 128
@@ -233,21 +122,90 @@ class DynamicBoard(player.Player):
                     
         return value            
 
-    def get_static_board_values(self,board, colour, opponent_colour):
+    def get_static_board_values(self,board, playing_player_colour, waiting_player_colour):
         
-        own_value = 0
-        opponent_value = 0
+        playing_player_value = 0
+        waiting_player_value = 0
+        own_value_board, opponent_value_board = self.get_current_value_boards(board)
         for row in range(board.num_rows):
             for col in range(board.num_cols):
-                if(board.positions[row][col] == colour):
+                if(board.positions[row][col] == playing_player_colour):
                     if(board.positions[row][col] == self.colour):
-                        own_value += self.static_board[row][col]
+                        playing_player_value += own_value_board[row][col]
                     else:
-                        own_value += self.opponent_static_board[row][col]
-                elif(board.positions[row][col] == opponent_colour):
+                        playing_player_value += opponent_value_board[row][col]
+                elif(board.positions[row][col] == waiting_player_colour):
                     if(board.positions[row][col] == self.colour):
-                        opponent_value += self.static_board[row][col]
+                        waiting_player_value += own_value_board[row][col]
                     else:
-                        opponent_value += self.opponent_static_board[row][col]
+                        waiting_player_value += opponent_value_board[row][col]
 
-        return own_value, opponent_value
+        return playing_player_value, waiting_player_value
+
+    def get_current_value_boards(self,board):
+
+        own_board = deepcopy(self.value_board)
+        opponent_board = deepcopy(self.opponent_value_board)
+
+        if(board.positions[0][0] == self.colour):
+            own_board[0][1] = 2
+            own_board[1][0] = 2
+            own_board[1][1] = 2
+            opponent_board[0][1] = 0
+            opponent_board[1][0] = 0
+            opponent_board[1][1] = 0
+        elif(board.positions[0][0] == self.opponent_colour):
+            own_board[0][1] = 0
+            own_board[1][0] = 0
+            own_board[1][1] = 0
+            opponent_board[0][1] = 2
+            opponent_board[1][0] = 2
+            opponent_board[1][1] = 2
+
+        if(board.positions[0][7] == self.colour):
+            own_board[0][6] = 2
+            own_board[1][7] = 2
+            own_board[1][6] = 2
+            opponent_board[0][6] = 0
+            opponent_board[1][7] = 0
+            opponent_board[1][6] = 0
+        elif(board.positions[0][7] == self.opponent_colour):
+            own_board[0][6] = 0
+            own_board[1][7] = 0
+            own_board[1][6] = 0
+            opponent_board[0][6] = 2
+            opponent_board[1][7] = 2
+            opponent_board[1][6] = 2
+
+        if(board.positions[7][0] == self.colour):
+            own_board[7][1] = 2
+            own_board[6][0] = 2
+            own_board[6][1] = 2
+            opponent_board[7][1] = 0
+            opponent_board[6][0] = 0
+            opponent_board[6][1] = 0
+        elif(board.positions[7][0] == self.opponent_colour):
+            own_board[7][1] = 0
+            own_board[6][0] = 0
+            own_board[6][1] = 0
+            opponent_board[7][1] = 2
+            opponent_board[6][0] = 2
+            opponent_board[6][1] = 2
+
+        if(board.positions[7][7] == self.colour):
+            own_board[7][6] = 2
+            own_board[6][7] = 2
+            own_board[6][6] = 2
+            opponent_board[7][6] = 0
+            opponent_board[6][7] = 0
+            opponent_board[6][6] = 0
+        elif(board.positions[7][7] == self.opponent_colour):
+            own_board[7][6] = 0
+            own_board[6][7] = 0
+            own_board[6][6] = 0
+            opponent_board[7][6] = 2
+            opponent_board[6][7] = 2
+            opponent_board[6][6] = 2
+
+        return own_board,opponent_board
+        
