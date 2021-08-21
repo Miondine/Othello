@@ -26,9 +26,11 @@ class StaticBoard(player.Player):
         self.get_possible_moves(board)
         if(self.possible_moves == []):
             return False, board
+        elif(len(self.possible_moves) == 1):
+            return True, self.possible_moves[0]
         else:
-            alpha = self.min_heuristic_val - 128
-            beta = self.max_heuristic_val + 128
+            alpha = self.min_heuristic_val - 64
+            beta = self.max_heuristic_val + 64
             value = alpha
             for move in self.possible_moves:
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -54,9 +56,11 @@ class StaticBoard(player.Player):
         
         if(self.possible_moves == []):
             return quit_val, False, [0,0],board
+        elif(len(self.possible_moves) == 1):
+            return quit_val,True,self.possible_positions[0],self.possible_moves[0]
         else:
-            alpha = self.min_heuristic_val - 128
-            beta = self.max_heuristic_val + 128
+            alpha = self.min_heuristic_val - 64
+            beta = self.max_heuristic_val + 64
             value = alpha
             for index, move in enumerate(self.possible_moves):
                 possible_value = - self.get_alpha_beta_value(move, min_player, max_player, 1, True, -beta, -value)
@@ -111,15 +115,15 @@ class StaticBoard(player.Player):
                     
         return value            
 
-    def get_static_board_values(self,board, colour, opponent_colour):
+    def get_static_board_values(self,board, playing_player_colour, waiting_player_colour):
         
-        own_value = 0
-        opponent_value = 0
+        playing_player_value = 0
+        waiting_player_value = 0
         for row in range(board.num_rows):
             for col in range(board.num_cols):
-                if(board.positions[row][col] == colour):
-                    own_value += StaticBoard.static_board[row][col]
-                elif(board.positions[row][col] == opponent_colour):
-                    opponent_value += StaticBoard.static_board[row][col]
+                if(board.positions[row][col] == playing_player_colour):
+                    playing_player_value += StaticBoard.static_board[row][col]
+                elif(board.positions[row][col] == waiting_player_colour):
+                    waiting_player_value += StaticBoard.static_board[row][col]
 
-        return own_value, opponent_value
+        return playing_player_value, waiting_player_value

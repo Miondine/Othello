@@ -74,9 +74,11 @@ class MCTSMaxIterRemember(player.Player):
                     self.root_node = child
                     self.root_node.parents = None
                     found_root = True
+                    print('found root')
             # if root node not found initialise new root node
             if(found_root == False):
                 self.root_node = Node(board,None,self.colour)
+                print('root not found')
                 
         if(self.root_node.moved == False):
             return False, board
@@ -84,7 +86,7 @@ class MCTSMaxIterRemember(player.Player):
             return True, self.root_node.untried_moves[0]
         elif(self.root_node.untried_moves == [] and len(self.root_node.children) == 1):
             return True, self.root_node.children[0].board_state
-        
+        print(f'root node vistits: {self.root_node.number_visits}')
         while(self.root_node.number_visits < self.max_iterations):
             rollout_node = self.tree_policy()
             reward = self.rollout(rollout_node)
