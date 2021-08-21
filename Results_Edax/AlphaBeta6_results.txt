@@ -1,0 +1,10 @@
+Results of player AlphaBeta6 agains different agents
+
+Edax1,1.0,nan,nan,24.0,nan,nan
+Edax2,0.0,nan,nan,0,nan,nan
+Edax3,0.5,nan,nan,64.0,nan,nan
+Edax4,0.0,nan,nan,0,nan,nan
+Edax5,0.0,nan,nan,0,nan,nan
+
+
+

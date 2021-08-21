@@ -1,0 +1,9 @@
+Results of player Roxanne agains different agents
+
+Tournament_simple2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta5,0.01,0.03162277660168379,0.009999999999999998,16.0,nan,nan
+
+End of Tournament_simple2
+

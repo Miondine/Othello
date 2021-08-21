@@ -1,0 +1,26 @@
+Statistical evaluation for games between Edax3 against Gambler
+Each cycle contains 10 games, where first half of games Edax3 is black and second half Gambler is black
+Number of cycles: 5
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax3,Gambler,  Cycle,Edax3,Gambler,   Cycle,Edax3,Gambler
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+Mean,1.0,0.0,    Mean,1.0,0.0,    Mean,1.0,0.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax3,Gambler,  Cycle,Edax3,Gambler,   Cycle,Edax3,Gambler
+0,59.8,None,  0,61.2,None,  0,58.4,None
+1,59.4,None,  1,61.6,None,  1,57.2,None
+2,57.8,None,  2,54.4,None,  2,61.2,None
+3,55.8,None,  3,59.6,None,  3,52.0,None
+4,54.4,None,  4,54.4,None,  4,54.4,None
+Mean,57.44,nan,    Mean,58.239999999999995,nan,    Mean,56.64,nan
+Std,2.3168944732119328,nan,    Std,3.584410690755178,nan,    Std,3.562021897742911,nan
+Err,1.0361467077590893,nan,    Err,1.6029971927611109,nan,    Err,1.5929846201391906,nan
+

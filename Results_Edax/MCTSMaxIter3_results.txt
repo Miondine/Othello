@@ -1,0 +1,12 @@
+Results of player MCTSMaxIter3 agains different agents
+
+Tournament_repeted start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.1,0.1,0.044721359549995794,20.333333333333332,10.214368964029708,5.897268670984711
+
+End of Tournament_repeted
+
+Tournament_repeted start
+
+opponent,win_percentage,std,err,disc_diff,std,err

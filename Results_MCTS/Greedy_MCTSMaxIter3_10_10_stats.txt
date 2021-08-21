@@ -1,0 +1,36 @@
+Statistical evaluation for games between Greedy against MCTSMaxIter3
+Each cycle contains 10 games, where first half of games Greedy is black and second half MCTSMaxIter3 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter3,  Cycle,Greedy,MCTSMaxIter3,   Cycle,Greedy,MCTSMaxIter3
+0,0.0,1.0,  0,0.0,1.0,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.1,0.9,  3,0.2,0.8,  3,0.0,1.0
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.0,1.0,  5,0.0,1.0,  5,0.0,1.0
+6,0.1,0.9,  6,0.2,0.8,  6,0.0,1.0
+7,0.0,1.0,  7,0.0,1.0,  7,0.0,1.0
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.02,0.9800000000000001,    Mean,0.04,0.96,    Mean,0.0,1.0
+Std,0.04216370213557839,0.04216370213557838,    Std,0.08432740427115679,0.08432740427115676,    Std,0.0,0.0
+Err,0.013333333333333332,0.013333333333333329,    Err,0.026666666666666665,0.026666666666666658,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter3,  Cycle,Greedy,MCTSMaxIter3,   Cycle,Greedy,MCTSMaxIter3
+0,None,22.4,  0,None,25.2,  0,None,19.6
+1,None,22.4,  1,None,27.2,  1,None,17.6
+2,None,18.4,  2,None,23.2,  2,None,13.6
+3,64.0,22.0,  3,64.0,15.5,  3,None,27.2
+4,None,14.8,  4,None,12.4,  4,None,17.2
+5,None,21.8,  5,None,22.4,  5,None,21.2
+6,64.0,21.77777777777778,  6,64.0,27.0,  6,None,17.6
+7,None,18.2,  7,None,16.8,  7,None,19.6
+8,None,21.2,  8,None,16.4,  8,None,26.0
+9,None,16.0,  9,None,21.2,  9,None,10.8
+Mean,64.0,19.897777777777776,    Mean,64.0,20.729999999999997,    Mean,nan,19.04
+Std,0.0,2.8303121147086703,    Std,0.0,5.176882373698587,    Std,nan,5.00382076239969
+Err,0.0,0.8950232771647151,    Err,0.0,1.6370739479666492,    Err,nan,1.5823470612423247
+

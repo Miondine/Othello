@@ -1,0 +1,135 @@
+Results for game DynamicRoxanne against AlphaBeta6
+Each cycle contains 10 games, where first half of games DynamicRoxanne is black and second half AlphaBeta6 is black
+Number of cycles: 5
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+DynamicRoxanne,AlphaBeta6,Discs_DynamicRoxanne,Discs_AlphaBeta6
+0,1,9,55
+0,1,0,64
+0,1,9,55
+0,1,1,63
+0,1,0,64
+0,1,0,64
+0,1,14,50
+0,1,13,51
+0,1,1,63
+0,1,7,57
+
+Cycle: 1
+DynamicRoxanne,AlphaBeta6,Discs_DynamicRoxanne,Discs_AlphaBeta6
+0,1,10,54
+0,1,6,58
+0,1,2,62
+0,1,14,50
+0,1,0,64
+0,1,6,58
+0,1,1,63
+0,1,15,49
+0,1,7,57
+0,1,7,57
+
+Cycle: 2
+DynamicRoxanne,AlphaBeta6,Discs_DynamicRoxanne,Discs_AlphaBeta6
+0,1,19,45
+0,1,10,54
+0,1,10,54
+0,1,14,50
+0,1,0,64
+0,1,7,57
+0,1,7,57
+0,1,10,54
+0,1,13,51
+0,1,8,56
+
+Cycle: 3
+DynamicRoxanne,AlphaBeta6,Discs_DynamicRoxanne,Discs_AlphaBeta6
+0,1,9,55
+0,1,10,54
+0,1,0,64
+0,1,11,53
+0,1,14,50
+0,1,17,47
+0,1,0,64
+0,1,7,57
+0,1,1,63
+0,1,4,60
+
+Cycle: 4
+DynamicRoxanne,AlphaBeta6,Discs_DynamicRoxanne,Discs_AlphaBeta6
+0,1,9,55
+0,1,18,46
+0,1,2,62
+0,1,8,56
+0,1,12,52
+0,1,15,49
+0,1,10,54
+0,1,4,60
+0,1,20,44
+0,1,9,55
+
+Cycle: 5
+DynamicRoxanne,AlphaBeta62,Discs_DynamicRoxanne,Discs_AlphaBeta62
+0,1,12,52
+0,1,12,52
+0,1,12,52
+0,1,13,51
+0,1,17,47
+0,1,14,50
+0,1,12,52
+0,1,6,58
+0,1,5,59
+0,1,15,49
+
+Cycle: 6
+DynamicRoxanne,AlphaBeta62,Discs_DynamicRoxanne,Discs_AlphaBeta62
+0,1,2,62
+0,1,2,62
+0,1,22,42
+0,1,17,47
+0,1,15,49
+0,1,14,50
+0,1,10,54
+0,1,12,52
+0,1,9,55
+0,1,2,62
+
+Cycle: 7
+DynamicRoxanne,AlphaBeta62,Discs_DynamicRoxanne,Discs_AlphaBeta62
+0,1,7,57
+0,1,22,42
+0,1,0,64
+0,1,9,55
+0,1,5,59
+0,1,7,57
+0,1,7,57
+0,1,16,48
+0,1,7,57
+0,1,17,47
+
+Cycle: 8
+DynamicRoxanne,AlphaBeta62,Discs_DynamicRoxanne,Discs_AlphaBeta62
+0,1,8,56
+0,1,6,58
+0,1,13,51
+0,1,17,47
+0,1,9,55
+0,1,8,56
+0,1,15,49
+0,1,0,64
+0,1,6,58
+0,1,7,57
+
+Cycle: 9 
+DynamicRoxanne,AlphaBeta62,Discs_DynamicRoxanne,Discs_AlphaBeta62
+0,1,9,55
+0,1,4,60
+0,1,1,63
+0,1,9,55
+0,1,11,53
+0,1,13,51
+0,1,6,58
+0,1,9,55
+0,1,10,54
+0,1,18,46

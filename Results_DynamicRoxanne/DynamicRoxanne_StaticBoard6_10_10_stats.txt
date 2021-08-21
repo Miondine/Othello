@@ -1,0 +1,36 @@
+Statistical evaluation for games between DynamicRoxanne against StaticBoard6
+Each cycle contains 10 games, where first half of games DynamicRoxanne is black and second half StaticBoard6 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,DynamicRoxanne,StaticBoard6,  Cycle,DynamicRoxanne,StaticBoard6,   Cycle,DynamicRoxanne,StaticBoard6
+0,0.2,0.8,  0,0.0,1.0,  0,0.4,0.6
+1,0.1,0.8,  1,0.2,0.6,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.0,1.0,  3,0.0,1.0,  3,0.0,1.0
+4,0.0,0.8,  4,0.0,0.6,  4,0.0,1.0
+5,0.1,0.9,  5,0.0,1.0,  5,0.2,0.8
+6,0.1,0.9,  6,0.2,0.8,  6,0.0,1.0
+7,0.1,0.9,  7,0.0,1.0,  7,0.2,0.8
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.1,0.9,  9,0.2,0.8,  9,0.0,1.0
+Mean,0.07,0.9,    Mean,0.06000000000000001,0.8800000000000001,    Mean,0.08,0.9199999999999999
+Std,0.0674948557710553,0.08164965809277258,    Std,0.0966091783079296,0.16865480854231357,    Std,0.044221663871405324,0.1398411797560202
+Err,0.021343747458109495,0.025819888974716106,    Err,0.030550504633038936,0.05333333333333333,    Err,0.044221663871405324,0.044221663871405324
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,DynamicRoxanne,StaticBoard6,  Cycle,DynamicRoxanne,StaticBoard6,   Cycle,DynamicRoxanne,StaticBoard6
+0,23.0,35.5,  0,None,38.0,  0,23.0,31.333333333333332
+1,28.0,21.0,  1,28.0,21.333333333333332,  1,None,20.8
+2,None,36.6,  2,None,36.8,  2,None,36.4
+3,None,31.2,  3,None,32.8,  3,None,29.6
+4,None,33.25,  4,None,31.333333333333332,  4,None,34.4
+5,8.0,30.0,  5,None,29.2,  5,8.0,31.0
+6,28.0,31.11111111111111,  6,28.0,29.0,  6,None,32.8
+7,24.0,37.55555555555556,  7,None,35.6,  7,24.0,40.0
+8,None,31.4,  8,None,41.6,  8,None,21.2
+9,18.0,22.0,  9,18.0,25.5,  9,None,19.2
+Mean,21.5,30.961666666666666,    Mean,24.666666666666668,32.11666666666667,    Mean,18.333333333333332,29.67333333333333
+Std,7.582875444051551,5.596084542651656,    Std,5.773502691896257,6.128042202414071,    Std,8.962886439832502,7.0612452998876325
+Err,3.095695936834452,1.7696373133640915,    Err,3.3333333333333335,1.937857095726305,    Err,5.174724898753342,2.232961826480363
+

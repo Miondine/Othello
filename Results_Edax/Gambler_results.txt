@@ -1,0 +1,13 @@
+Results of player Gambler agains different agents
+
+Tournament1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.04,0.0699205898780101,0.022110831935702662,64.0,0.0,0.0
+Edax2,0.0,0.0,0.0,nan,nan,nan
+Edax3,0.0,0.0,0.0,nan,nan,nan
+Edax4,0.0,0.0,0.0,nan,nan,nan
+Edax5,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament1
+

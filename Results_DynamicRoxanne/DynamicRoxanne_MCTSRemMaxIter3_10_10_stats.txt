@@ -1,0 +1,36 @@
+Statistical evaluation for games between DynamicRoxanne against MCTSRemMaxIter3
+Each cycle contains 10 games, where first half of games DynamicRoxanne is black and second half MCTSRemMaxIter3 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,DynamicRoxanne,MCTSRemMaxIter3,  Cycle,DynamicRoxanne,MCTSRemMaxIter3,   Cycle,DynamicRoxanne,MCTSRemMaxIter3
+0,0.2,0.8,  0,0.4,0.6,  0,0.0,1.0
+1,0.1,0.9,  1,0.0,1.0,  1,0.2,0.8
+2,0.2,0.8,  2,0.0,1.0,  2,0.4,0.6
+3,0.2,0.8,  3,0.2,0.8,  3,0.2,0.8
+4,0.0,0.9,  4,0.0,1.0,  4,0.0,0.8
+5,0.2,0.7,  5,0.0,0.8,  5,0.4,0.6
+6,0.1,0.9,  6,0.0,1.0,  6,0.2,0.8
+7,0.1,0.8,  7,0.2,0.8,  7,0.0,0.8
+8,0.1,0.9,  8,0.2,0.8,  8,0.0,1.0
+9,0.1,0.9,  9,0.0,1.0,  9,0.2,0.8
+Mean,0.13000000000000003,0.8400000000000001,    Mean,0.1,0.8800000000000001,    Mean,0.16,0.8
+Std,0.0674948557710553,0.06992058987801011,    Std,0.14142135623730953,0.1398411797560202,    Std,0.04988876515698588,0.13333333333333336
+Err,0.021343747458109495,0.02211083193570267,    Err,0.0447213595499958,0.044221663871405324,    Err,0.04988876515698588,0.0421637021355784
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,DynamicRoxanne,MCTSRemMaxIter3,  Cycle,DynamicRoxanne,MCTSRemMaxIter3,   Cycle,DynamicRoxanne,MCTSRemMaxIter3
+0,12.0,18.25,  0,12.0,22.666666666666668,  0,None,15.6
+1,16.0,14.222222222222221,  1,None,16.8,  1,16.0,11.0
+2,16.0,12.25,  2,None,13.2,  2,16.0,10.666666666666666
+3,24.0,11.25,  3,30.0,13.0,  3,18.0,9.5
+4,None,16.666666666666668,  4,None,22.0,  4,None,10.0
+5,16.0,12.571428571428571,  5,None,12.5,  5,16.0,12.666666666666666
+6,10.0,11.11111111111111,  6,None,10.4,  6,10.0,12.0
+7,22.0,9.5,  7,22.0,14.0,  7,None,5.0
+8,20.0,10.444444444444445,  8,20.0,12.5,  8,None,8.8
+9,18.0,14.222222222222221,  9,None,14.0,  9,18.0,14.5
+Mean,17.11111111111111,13.048809523809524,    Mean,21.0,15.106666666666666,    Mean,15.666666666666666,10.973333333333333
+Std,4.48454134902457,2.791419670083735,    Std,7.393691004272944,4.133924688880209,    Std,2.9439202887759492,3.007061647703023
+Err,1.4948471163415233,0.8827244062860382,    Err,3.696845502136472,1.3072617692464403,    Err,1.2018504251546633,0.9509163871280386
+

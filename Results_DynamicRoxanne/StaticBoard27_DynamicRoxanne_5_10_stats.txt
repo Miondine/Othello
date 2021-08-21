@@ -1,0 +1,26 @@
+Statistical evaluation for games between StaticBoard27 against DynamicRoxanne
+Each cycle contains 10 games, where first half of games StaticBoard27 is black and second half DynamicRoxanne is black
+Number of cycles: 5
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,StaticBoard27,DynamicRoxanne,  Cycle,StaticBoard27,DynamicRoxanne,   Cycle,StaticBoard27,DynamicRoxanne
+0,0.9,0.1,  0,1.0,0.0,  0,0.8,0.2
+1,0.8,0.2,  1,1.0,0.0,  1,0.6,0.4
+2,0.9,0.1,  2,0.8,0.2,  2,1.0,0.0
+3,0.9,0.1,  3,0.8,0.2,  3,1.0,0.0
+4,0.8,0.2,  4,0.8,0.2,  4,0.8,0.2
+Mean,0.86,0.13999999999999999,    Mean,0.8799999999999999,0.12000000000000002,    Mean,0.8400000000000001,0.16
+Std,0.0547722557505166,0.05477225575051661,    Std,0.1095445115010332,0.10954451150103323,    Std,0.07483314773547882,0.16733200530681513
+Err,0.024494897427831775,0.024494897427831782,    Err,0.04898979485566355,0.048989794855663564,    Err,0.07483314773547882,0.07483314773547883
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,StaticBoard27,DynamicRoxanne,  Cycle,StaticBoard27,DynamicRoxanne,   Cycle,StaticBoard27,DynamicRoxanne
+0,26.22222222222222,2.0,  0,27.2,None,  0,25.0,2.0
+1,32.0,20.0,  1,32.4,None,  1,31.333333333333332,20.0
+2,32.22222222222222,2.0,  2,40.5,2.0,  2,25.6,None
+3,38.44444444444444,12.0,  3,45.0,12.0,  3,33.2,None
+4,36.0,22.0,  4,38.0,2.0,  4,34.0,42.0
+Mean,32.977777777777774,11.6,    Mean,36.62,5.333333333333333,    Mean,29.826666666666664,21.333333333333332
+Std,4.641732328812776,9.528903399657276,    Std,6.959310310655791,5.773502691896258,    Std,4.249339818005721,20.033305601755625
+Err,2.0758458041167547,4.261455150532503,    Err,3.1122981862283057,3.333333333333334,    Err,1.9003625385114753,11.566234381931649
+

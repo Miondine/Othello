@@ -1,0 +1,9 @@
+Results of player AlphaBeta1 agains different agents
+
+Tournament_simple2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Roxanne,0.621,0.04909175083453433,0.015524174696260029,26.525828034015387,2.9691580801556543,0.9389302266384659
+
+End of Tournament_simple2
+

@@ -1,0 +1,9 @@
+Results of player MCTSRemMaxIter1 agains different agents
+
+Tournament_simple4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+DynamicRoxanne,0.6599999999999999,0.107496769977314,0.033993463423951896,11.214285714285714,2.258440956845132,0.714181738464066
+
+End of Tournament_simple4
+

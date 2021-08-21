@@ -1,0 +1,4 @@
+Statistical evaluation for games between Roxanne against AlphaBeta5
+Each cycle contains 100 games, where first half of games Roxanne is black and second half AlphaBeta5 is black
+Number of cycles: 10
+

@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax2 against MCTSMaxIter2
+Each cycle contains 10 games, where first half of games Edax2 is black and second half MCTSMaxIter2 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax2,MCTSMaxIter2,  Cycle,Edax2,MCTSMaxIter2,   Cycle,Edax2,MCTSMaxIter2
+0,0.9,0.1,  0,0.8,0.2,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,0.9,0.1,  7,1.0,0.0,  7,0.8,0.2
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02
+Std,0.04216370213557838,0.04216370213557839,    Std,0.06324555320336758,0.06324555320336758,    Std,0.019999999999999997,0.06324555320336758
+Err,0.013333333333333329,0.013333333333333332,    Err,0.019999999999999997,0.019999999999999997,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax2,MCTSMaxIter2,  Cycle,Edax2,MCTSMaxIter2,   Cycle,Edax2,MCTSMaxIter2
+0,47.111111111111114,36.0,  0,51.0,36.0,  0,44.0,None
+1,48.0,None,  1,46.8,None,  1,49.2,None
+2,53.4,None,  2,52.4,None,  2,54.4,None
+3,48.8,None,  3,47.2,None,  3,50.4,None
+4,53.4,None,  4,50.4,None,  4,56.4,None
+5,46.0,None,  5,46.8,None,  5,45.2,None
+6,49.6,None,  6,46.4,None,  6,52.8,None
+7,39.55555555555556,2.0,  7,42.0,None,  7,36.5,2.0
+8,51.2,None,  8,54.0,None,  8,48.4,None
+9,50.6,None,  9,49.2,None,  9,52.0,None
+Mean,48.766666666666666,19.0,    Mean,48.62,36.0,    Mean,48.92999999999999,2.0
+Std,4.065313813967583,24.041630560342615,    Std,3.492786216698004,nan,    Std,5.8248605133513705,nan
+Err,1.2855651055483597,16.999999999999996,    Err,1.1045159824808128,nan,    Err,1.8419826274967956,nan
+

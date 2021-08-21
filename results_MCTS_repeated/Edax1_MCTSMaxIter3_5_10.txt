@@ -1,0 +1,70 @@
+Results for game Edax1 against MCTSMaxIter3
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSMaxIter3 is black
+Number of cycles: 5
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Edax1,MCTSMaxIter3,Discs_Edax1,Discs_MCTSMaxIter3
+1,0,58,6
+1,0,55,9
+1,0,41,23
+1,0,49,15
+1,0,52,12
+1,0,55,9
+1,0,59,5
+1,0,50,14
+1,0,38,26
+1,0,46,18
+
+Cycle: 1
+Edax1,MCTSMaxIter3,Discs_Edax1,Discs_MCTSMaxIter3
+1,0,49,15
+1,0,46,18
+1,0,64,0
+1,0,60,4
+1,0,59,5
+1,0,54,10
+1,0,64,0
+1,0,50,14
+1,0,60,4
+1,0,61,3
+
+Cycle: 2
+Edax1,MCTSMaxIter3,Discs_Edax1,Discs_MCTSMaxIter3
+1,0,52,12
+1,0,53,11
+1,0,41,23
+1,0,55,9
+1,0,46,18
+1,0,37,27
+1,0,58,6
+1,0,60,4
+0,1,29,35
+0,1,22,42
+
+Cycle: 3
+Edax1,MCTSMaxIter3,Discs_Edax1,Discs_MCTSMaxIter3
+1,0,63,1
+1,0,58,6
+1,0,58,6
+0,1,16,48
+1,0,57,7
+1,0,61,3
+1,0,57,7
+1,0,54,10
+1,0,51,13
+1,0,46,18
+
+Cycle: 4
+Edax1,MCTSMaxIter3,Discs_Edax1,Discs_MCTSMaxIter3
+1,0,60,4
+1,0,33,31
+0,1,25,39
+1,0,47,17
+1,0,37,27
+1,0,52,12
+1,0,42,22
+1,0,64,0
+0,1,23,41
+1,0,53,11

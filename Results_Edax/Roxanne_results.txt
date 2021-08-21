@@ -1,0 +1,37 @@
+Results of player Roxanne agains different agents
+
+Tournament1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.06000000000000001,0.06992058987801011,0.02211083193570267,20.8,24.355697485393435,10.892199043352083
+
+End of Tournament1
+
+Tournament2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax2,0.01,0.03162277660168379,0.009999999999999998,32.0,nan,nan
+
+End of Tournament2
+
+Tournament3 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax3,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament3
+
+Tournament4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax4,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament4
+
+Tournament5 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax5,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament5
+

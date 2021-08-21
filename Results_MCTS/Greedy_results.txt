@@ -1,0 +1,18 @@
+Results of player Greedy agains different agents
+
+Tournament_mcts1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Tournament_mcts2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+MCTSMaxIter0,0.06999999999999999,0.06749485577105528,0.02134374745810949,42.333333333333336,24.897121654252857,10.164207352819556
+MCTSMaxIter1,0.02,0.04216370213557839,0.013333333333333332,64.0,0.0,0.0
+Tournament_mcts2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+MCTSMaxIter2,0.030000000000000006,0.04830458915396481,0.01527525231651947,64.0,0.0,0.0
+MCTSMaxIter3,0.02,0.04216370213557839,0.013333333333333332,64.0,0.0,0.0
+
+End of Tournament_mcts1
+

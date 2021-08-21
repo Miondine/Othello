@@ -1,0 +1,36 @@
+Statistical evaluation for games between Greedy2 against MCTSRemMaxIter0
+Each cycle contains 10 games, where first half of games Greedy2 is black and second half MCTSRemMaxIter0 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Greedy2,MCTSRemMaxIter0,  Cycle,Greedy2,MCTSRemMaxIter0,   Cycle,Greedy2,MCTSRemMaxIter0
+0,0.0,1.0,  0,0.0,1.0,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.1,0.9,  2,0.0,1.0,  2,0.2,0.8
+3,0.1,0.9,  3,0.2,0.8,  3,0.0,1.0
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.0,1.0,  5,0.0,1.0,  5,0.0,1.0
+6,0.1,0.9,  6,0.2,0.8,  6,0.0,1.0
+7,0.0,1.0,  7,0.0,1.0,  7,0.0,1.0
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.030000000000000006,0.97,    Mean,0.04,0.96,    Mean,0.02,0.9800000000000001
+Std,0.04830458915396481,0.04830458915396478,    Std,0.08432740427115679,0.08432740427115676,    Std,0.019999999999999997,0.06324555320336758
+Err,0.01527525231651947,0.015275252316519461,    Err,0.026666666666666665,0.026666666666666658,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Greedy2,MCTSRemMaxIter0,  Cycle,Greedy2,MCTSRemMaxIter0,   Cycle,Greedy2,MCTSRemMaxIter0
+0,None,17.4,  0,None,15.2,  0,None,19.6
+1,None,16.8,  1,None,18.4,  1,None,15.2
+2,64.0,15.333333333333334,  2,None,19.2,  2,64.0,10.5
+3,14.0,13.11111111111111,  3,14.0,14.0,  3,None,12.4
+4,None,15.8,  4,None,18.8,  4,None,12.8
+5,None,13.0,  5,None,16.4,  5,None,9.6
+6,64.0,20.444444444444443,  6,64.0,27.5,  6,None,14.8
+7,None,19.4,  7,None,18.4,  7,None,20.4
+8,None,14.6,  8,None,18.4,  8,None,10.8
+9,None,14.8,  9,None,17.6,  9,None,12.0
+Mean,47.333333333333336,16.06888888888889,    Mean,39.0,18.389999999999997,    Mean,64.0,13.809999999999999
+Std,28.86751345948129,2.47421711717778,    Std,35.35533905932738,3.618609309297335,    Std,nan,3.7101811875492614
+Err,16.666666666666668,0.7824161516057503,    Err,25.0,1.1443047379668292,    Err,nan,1.1732623084564016
+

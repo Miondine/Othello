@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax1 against MCTSRemMaxIter3
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSRemMaxIter3 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter3,  Cycle,Edax1,MCTSRemMaxIter3,   Cycle,Edax1,MCTSRemMaxIter3
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,0.8,0.2,  2,0.8,0.2,  2,0.8,0.2
+3,0.8,0.2,  3,1.0,0.0,  3,0.6,0.4
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,0.9,0.1,  5,1.0,0.0,  5,0.8,0.2
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,0.8,0.2,  7,0.8,0.2,  7,0.8,0.2
+8,0.8,0.1,  8,1.0,0.0,  8,0.6,0.2
+9,0.9,0.1,  9,1.0,0.0,  9,0.8,0.2
+Mean,0.9000000000000001,0.09,    Mean,0.96,0.04,    Mean,0.8400000000000001,0.13999999999999999
+Std,0.09428090415820631,0.08755950357709132,    Std,0.08432740427115676,0.08432740427115679,    Std,0.04988876515698588,0.13498971154211056
+Err,0.029814239699997188,0.027688746209726917,    Err,0.026666666666666658,0.026666666666666665,    Err,0.04988876515698588,0.04268749491621898
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter3,  Cycle,Edax1,MCTSRemMaxIter3,   Cycle,Edax1,MCTSRemMaxIter3
+0,36.2,None,  0,36.8,None,  0,35.6,None
+1,39.4,None,  1,34.4,None,  1,44.4,None
+2,44.75,7.0,  2,38.0,8.0,  2,51.5,6.0
+3,49.75,14.0,  3,44.8,None,  3,58.0,14.0
+4,46.6,None,  4,42.0,None,  4,51.2,None
+5,43.55555555555556,12.0,  5,40.4,None,  5,47.5,12.0
+6,53.2,None,  6,50.8,None,  6,55.6,None
+7,45.25,35.0,  7,44.0,6.0,  7,46.5,64.0
+8,45.5,28.0,  8,46.8,None,  8,43.333333333333336,28.0
+9,35.77777777777778,6.0,  9,38.0,None,  9,33.0,6.0
+Mean,43.99833333333333,17.0,    Mean,41.6,7.0,    Mean,46.663333333333334,21.666666666666668
+Std,5.564170511785648,11.832159566199232,    Std,5.056129393562277,1.4142135623730951,    Std,8.016517670133059,22.250093632761786
+Err,1.7595452106787413,4.83045891539648,    Err,1.5988885028182684,1.0,    Err,2.5350454740606834,9.083562688235883
+

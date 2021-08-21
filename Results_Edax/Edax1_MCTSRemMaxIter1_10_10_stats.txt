@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax1 against MCTSRemMaxIter1
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSRemMaxIter1 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter1,  Cycle,Edax1,MCTSRemMaxIter1,   Cycle,Edax1,MCTSRemMaxIter1
+0,0.9,0.1,  0,0.8,0.2,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,0.9,0.1,  4,0.8,0.2,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,0.9800000000000001,0.02,    Mean,0.96,0.04,    Mean,1.0,0.0
+Std,0.04216370213557838,0.04216370213557839,    Std,0.08432740427115676,0.08432740427115679,    Std,0.0,0.0
+Err,0.013333333333333329,0.013333333333333332,    Err,0.026666666666666658,0.026666666666666665,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter1,  Cycle,Edax1,MCTSRemMaxIter1,   Cycle,Edax1,MCTSRemMaxIter1
+0,47.111111111111114,64.0,  0,47.0,64.0,  0,47.2,None
+1,40.2,None,  1,40.4,None,  1,40.0,None
+2,45.6,None,  2,47.6,None,  2,43.6,None
+3,41.0,None,  3,36.8,None,  3,45.2,None
+4,45.111111111111114,6.0,  4,48.5,6.0,  4,42.4,None
+5,42.4,None,  5,44.4,None,  5,40.4,None
+6,53.6,None,  6,52.8,None,  6,54.4,None
+7,39.8,None,  7,42.8,None,  7,36.8,None
+8,43.8,None,  8,46.4,None,  8,41.2,None
+9,47.0,None,  9,49.6,None,  9,44.4,None
+Mean,44.56222222222222,35.0,    Mean,45.63,35.0,    Mean,43.559999999999995,nan
+Std,4.152009446244189,41.012193308819754,    Std,4.67381595225524,41.012193308819754,    Std,4.823829737183241,nan
+Err,1.3129806716666081,28.999999999999996,    Err,1.4779903773555345,28.999999999999996,    Err,1.5254289014350466,nan
+

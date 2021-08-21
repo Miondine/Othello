@@ -1,0 +1,9 @@
+Results of player MCTSMaxIter0 agains different agents
+
+Tournament_mcts1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Greedy,0.9200000000000002,0.07888106377466153,0.024944382578492935,16.558333333333334,2.378716859096013,0.7522163183385215
+
+End of Tournament_mcts1
+

@@ -1,0 +1,36 @@
+Statistical evaluation for games between Greedy against MCTSMaxIter1
+Each cycle contains 10 games, where first half of games Greedy is black and second half MCTSMaxIter1 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter1,  Cycle,Greedy,MCTSMaxIter1,   Cycle,Greedy,MCTSMaxIter1
+0,0.0,1.0,  0,0.0,1.0,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.1,0.9,  2,0.0,1.0,  2,0.2,0.8
+3,0.0,1.0,  3,0.0,1.0,  3,0.0,1.0
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.0,1.0,  5,0.0,1.0,  5,0.0,1.0
+6,0.1,0.9,  6,0.2,0.8,  6,0.0,1.0
+7,0.0,1.0,  7,0.0,1.0,  7,0.0,1.0
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.02,0.9800000000000001,    Mean,0.02,0.9800000000000001,    Mean,0.02,0.9800000000000001
+Std,0.04216370213557839,0.04216370213557838,    Std,0.06324555320336758,0.06324555320336758,    Std,0.019999999999999997,0.06324555320336758
+Err,0.013333333333333332,0.013333333333333329,    Err,0.019999999999999997,0.019999999999999997,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter1,  Cycle,Greedy,MCTSMaxIter1,   Cycle,Greedy,MCTSMaxIter1
+0,None,22.2,  0,None,20.4,  0,None,24.0
+1,None,14.8,  1,None,11.6,  1,None,18.0
+2,64.0,18.22222222222222,  2,None,20.4,  2,64.0,15.5
+3,None,18.8,  3,None,22.4,  3,None,15.2
+4,None,20.2,  4,None,18.4,  4,None,22.0
+5,None,19.8,  5,None,17.6,  5,None,22.0
+6,64.0,18.666666666666668,  6,64.0,19.0,  6,None,18.4
+7,None,11.6,  7,None,12.8,  7,None,10.4
+8,None,19.4,  8,None,24.0,  8,None,14.8
+9,None,16.8,  9,None,21.2,  9,None,12.4
+Mean,64.0,18.04888888888889,    Mean,64.0,18.779999999999998,    Mean,64.0,17.270000000000003
+Std,0.0,3.007951054675774,    Std,nan,3.9490645868497904,    Std,nan,4.425695174520922
+Err,0.0,0.9511976423081114,    Err,nan,1.2488038721557162,    Err,nan,1.399527698110251
+

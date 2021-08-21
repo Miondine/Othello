@@ -1,0 +1,15 @@
+Results for game Edax1 against MCTSRemMaxIter0
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSRemMaxIter0 is black
+Number of cycles: 5
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Edax1,MCTSRemMaxIter0,Discs_Edax1,Discs_MCTSRemMaxIter0
+1,0,53,11
+1,0,62,2
+1,0,55,9
+1,0,52,12
+1,0,60,4
+1,0,41,23
+1,0,56,8

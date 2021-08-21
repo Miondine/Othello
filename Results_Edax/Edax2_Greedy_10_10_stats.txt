@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax2 against Greedy
+Each cycle contains 10 games, where first half of games Edax2 is black and second half Greedy is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax2,Greedy,  Cycle,Edax2,Greedy,   Cycle,Edax2,Greedy
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,0.9,0.1,  4,1.0,0.0,  4,0.8,0.2
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,0.9,0.1,  9,0.8,0.2,  9,1.0,0.0
+Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02
+Std,0.04216370213557838,0.04216370213557839,    Std,0.06324555320336757,0.06324555320336758,    Std,0.019999999999999997,0.06324555320336758
+Err,0.013333333333333329,0.013333333333333332,    Err,0.019999999999999993,0.019999999999999997,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax2,Greedy,  Cycle,Edax2,Greedy,   Cycle,Edax2,Greedy
+0,57.2,None,  0,56.4,None,  0,58.0,None
+1,52.8,None,  1,53.6,None,  1,52.0,None
+2,51.8,None,  2,53.2,None,  2,50.4,None
+3,44.4,None,  3,42.8,None,  3,46.0,None
+4,44.0,62.0,  4,41.2,None,  4,47.5,62.0
+5,51.0,None,  5,56.0,None,  5,46.0,None
+6,52.2,None,  6,58.8,None,  6,45.6,None
+7,49.2,None,  7,51.2,None,  7,47.2,None
+8,51.4,None,  8,48.0,None,  8,54.8,None
+9,50.666666666666664,62.0,  9,55.5,62.0,  9,46.8,None
+Mean,50.46666666666667,62.0,    Mean,51.67,62.0,    Mean,49.43000000000001,62.0
+Std,3.901376775029649,0.0,    Std,5.913083422002057,nan,    Std,4.264074733553966,nan
+Err,1.2337236619576015,0.0,    Err,1.8698811608109096,nan,    Err,1.3484188271206141,nan
+

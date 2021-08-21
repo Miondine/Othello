@@ -1,0 +1,36 @@
+Statistical evaluation for games between Gambler0 against DynamicBoard4
+Each cycle contains 100 games, where first half of games Gambler0 is black and second half DynamicBoard4 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Gambler0,DynamicBoard4,  Cycle,Gambler0,DynamicBoard4,   Cycle,Gambler0,DynamicBoard4
+0,0.0,1.0,  0,0.0,1.0,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.01,0.97,  3,0.02,0.98,  3,0.0,0.96
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.01,0.98,  5,0.02,0.96,  5,0.0,1.0
+6,0.01,0.98,  6,0.0,1.0,  6,0.02,0.96
+7,0.01,0.99,  7,0.02,0.98,  7,0.0,1.0
+8,0.0,0.99,  8,0.0,1.0,  8,0.0,0.98
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.004,0.991,    Mean,0.006,0.992,    Mean,0.002,0.99
+Std,0.0051639777949432225,0.011005049346146127,    Std,0.00966091783079296,0.013984117975602032,    Std,0.002,0.016996731711975965
+Err,0.001632993161855452,0.0034801021696368524,    Err,0.0030550504633038936,0.004422166387140537,    Err,0.002,0.005374838498865705
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Gambler0,DynamicBoard4,  Cycle,Gambler0,DynamicBoard4,   Cycle,Gambler0,DynamicBoard4
+0,None,32.14,  0,None,34.0,  0,None,30.28
+1,None,28.8,  1,None,28.56,  1,None,29.04
+2,None,30.8,  2,None,31.64,  2,None,29.96
+3,6.0,31.50515463917526,  3,6.0,29.510204081632654,  3,None,33.541666666666664
+4,None,32.84,  4,None,33.36,  4,None,32.32
+5,6.0,30.0,  5,6.0,30.458333333333332,  5,None,29.56
+6,4.0,33.204081632653065,  6,None,32.36,  6,4.0,34.083333333333336
+7,24.0,29.696969696969695,  7,24.0,29.26530612244898,  7,None,30.12
+8,None,30.727272727272727,  8,None,30.44,  8,None,31.020408163265305
+9,None,33.2,  9,None,33.32,  9,None,33.08
+Mean,10.0,31.291347869607073,    Mean,12.0,31.291384353741496,    Mean,4.0,31.300540816326524
+Std,9.38083151964686,1.543509326809729,    Std,10.392304845413264,1.9192420115162734,    Std,nan,1.8080862368578976
+Err,4.69041575982343,0.48810050624319395,    Err,6.000000000000001,0.6069176137474535,    Err,nan,0.5717670714473643
+

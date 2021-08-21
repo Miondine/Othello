@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax24 against AlphaBeta5
+Each cycle contains 10 games, where first half of games Edax24 is black and second half AlphaBeta5 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax24,AlphaBeta5,  Cycle,Edax24,AlphaBeta5,   Cycle,Edax24,AlphaBeta5
+0,0.9,0.1,  0,1.0,0.0,  0,0.8,0.2
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,0.9,0.0,  2,1.0,0.0,  2,0.8,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,0.9,0.0,  4,1.0,0.0,  4,0.8,0.0
+5,0.9,0.1,  5,0.8,0.2,  5,1.0,0.0
+6,0.9,0.0,  6,1.0,0.0,  6,0.8,0.0
+7,0.9,0.1,  7,0.8,0.2,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,0.8,0.2,  9,0.8,0.2,  9,0.8,0.2
+Mean,0.9200000000000002,0.05,    Mean,0.9400000000000001,0.06000000000000001,    Mean,0.9,0.04
+Std,0.06324555320336757,0.07071067811865477,    Std,0.09660917830792956,0.0966091783079296,    Std,0.033333333333333326,0.08432740427115679
+Err,0.019999999999999993,0.0223606797749979,    Err,0.030550504633038923,0.030550504633038936,    Err,0.033333333333333326,0.026666666666666665
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax24,AlphaBeta5,  Cycle,Edax24,AlphaBeta5,   Cycle,Edax24,AlphaBeta5
+0,44.888888888888886,14.0,  0,45.2,None,  0,44.5,14.0
+1,41.0,None,  1,40.8,None,  1,41.2,None
+2,39.55555555555556,None,  2,41.2,None,  2,37.5,None
+3,39.4,None,  3,42.4,None,  3,36.4,None
+4,33.77777777777778,None,  4,32.4,None,  4,35.5,None
+5,37.77777777777778,4.0,  5,41.0,4.0,  5,35.2,None
+6,46.666666666666664,None,  6,44.0,None,  6,50.0,None
+7,43.111111111111114,12.0,  7,43.0,12.0,  7,43.2,None
+8,33.2,None,  8,30.0,None,  8,36.4,None
+9,29.5,8.0,  9,31.5,4.0,  9,27.5,12.0
+Mean,38.88777777777777,9.5,    Mean,39.15,6.666666666666667,    Mean,38.739999999999995,13.0
+Std,5.45034311349934,4.43471156521669,    Std,5.614119105730955,4.618802153517007,    Std,6.216143856479228,1.4142135623730951
+Err,1.7235498268071532,2.217355782608345,    Err,1.775340342957748,2.666666666666667,    Err,1.9657172849737177,1.0
+

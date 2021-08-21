@@ -1,0 +1,42 @@
+Results of player Edax4 agains different agents
+
+Tournament4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta1,1.0,nan,nan,60.0,nan,nan
+AlphaBeta2,1.0,nan,nan,47.0,nan,nan
+AlphaBeta3,1.0,nan,nan,48.0,nan,nan
+AlphaBeta4,1.0,nan,nan,44.0,nan,nan
+AlphaBeta5,1.0,nan,nan,57.0,nan,nan
+AlphaBeta6,1.0,nan,nan,29.0,nan,nan
+StaticBoard1,1.0,nan,nan,50.0,nan,nan
+StaticBoard2,1.0,nan,nan,45.0,nan,nan
+StaticBoard3,1.0,nan,nan,58.0,nan,nan
+StaticBoard4,1.0,nan,nan,53.0,nan,nan
+StaticBoard5,1.0,nan,nan,37.0,nan,nan
+StaticBoard6,1.0,nan,nan,55.0,nan,nan
+DynamicBoard1,1.0,nan,nan,54.0,nan,nan
+DynamicBoard2,1.0,nan,nan,45.0,nan,nan
+DynamicBoard3,1.0,nan,nan,44.0,nan,nan
+DynamicBoard4,1.0,nan,nan,53.0,nan,nan
+DynamicBoard5,1.0,nan,nan,44.0,nan,nan
+DynamicBoard6,1.0,nan,nan,51.0,nan,nan
+MCTSMaxIter0,1.0,nan,nan,53.0,nan,nan
+MCTSMaxIter1,1.0,nan,nan,60.0,nan,nan
+MCTSMaxIter2,1.0,nan,nan,56.0,nan,nan
+MCTSMaxIter3,1.0,nan,nan,61.0,nan,nan
+MCTSMaxIter4,1.0,nan,nan,43.0,nan,nan
+MCTSMaxIter5,1.0,nan,nan,51.0,nan,nan
+MCTSRemMaxIter0,1.0,nan,nan,53.0,nan,nan
+MCTSRemMaxIter1,1.0,nan,nan,54.0,nan,nan
+MCTSRemMaxIter2,1.0,nan,nan,64.0,nan,nan
+MCTSRemMaxIter3,1.0,nan,nan,56.0,nan,nan
+MCTSRemMaxIter4,1.0,nan,nan,48.0,nan,nan
+MCTSRemMaxIter5,1.0,nan,nan,54.0,nan,nan
+Greedy,1.0,0.0,0.0,55.64,1.06207344378814,0.4749736834815166
+Gambler,1.0,0.0,0.0,58.04,0.6985699678629176,0.31240998703626544
+DynamicRoxanne,1.0,0.0,0.0,51.08,3.2972715993681834,1.4745846872933421
+Roxanne,1.0,0.0,0.0,52.8,1.536229149573722,0.6870225614927068
+
+End of Tournament4
+

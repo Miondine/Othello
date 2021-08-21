@@ -1,0 +1,9 @@
+Results of player AlphaBeta5 agains different agents
+
+Tournament_simple4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+DynamicRoxanne,1.0,0.0,0.0,45.7,4.121757985239899,1.303414319734476
+
+End of Tournament_simple4
+

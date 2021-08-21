@@ -1,0 +1,9 @@
+Results of player Edax34 agains different agents
+
+Tournament_3 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta6,0.89,0.07378647873726217,0.023333333333333327,30.652777777777782,7.409263772018584,2.3430149304549266
+
+End of Tournament_3
+

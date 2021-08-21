@@ -1,0 +1,36 @@
+Statistical evaluation for games between DynamicRoxanne against AlphaBeta5
+Each cycle contains 10 games, where first half of games DynamicRoxanne is black and second half AlphaBeta5 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,DynamicRoxanne,AlphaBeta5,  Cycle,DynamicRoxanne,AlphaBeta5,   Cycle,DynamicRoxanne,AlphaBeta5
+0,0.0,1.0,  0,0.0,1.0,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.0,1.0,  3,0.0,1.0,  3,0.0,1.0
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.0,1.0,  5,0.0,1.0,  5,0.0,1.0
+6,0.0,1.0,  6,0.0,1.0,  6,0.0,1.0
+7,0.0,1.0,  7,0.0,1.0,  7,0.0,1.0
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.0,1.0,    Mean,0.0,1.0,    Mean,0.0,1.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,DynamicRoxanne,AlphaBeta5,  Cycle,DynamicRoxanne,AlphaBeta5,   Cycle,DynamicRoxanne,AlphaBeta5
+0,None,46.4,  0,None,44.4,  0,None,48.4
+1,None,46.8,  1,None,48.8,  1,None,44.8
+2,None,46.4,  2,None,43.6,  2,None,49.2
+3,None,47.4,  3,None,50.0,  3,None,44.8
+4,None,54.8,  4,None,58.0,  4,None,51.6
+5,None,43.6,  5,None,46.4,  5,None,40.8
+6,None,43.2,  6,None,50.0,  6,None,36.4
+7,None,39.2,  7,None,36.0,  7,None,42.4
+8,None,42.4,  8,None,45.6,  8,None,39.2
+9,None,46.8,  9,None,48.8,  9,None,44.8
+Mean,nan,45.7,    Mean,nan,47.160000000000004,    Mean,nan,44.239999999999995
+Std,nan,4.121757985239899,    Std,nan,5.645686652461132,    Std,nan,4.703473893481994
+Err,nan,1.303414319734476,    Err,nan,1.7853228777388637,    Err,nan,1.4873690418543295
+

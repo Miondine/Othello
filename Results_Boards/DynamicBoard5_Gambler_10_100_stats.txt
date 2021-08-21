@@ -1,0 +1,36 @@
+Statistical evaluation for games between DynamicBoard5 against Gambler
+Each cycle contains 100 games, where first half of games DynamicBoard5 is black and second half Gambler is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,DynamicBoard5,Gambler,  Cycle,DynamicBoard5,Gambler,   Cycle,DynamicBoard5,Gambler
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,0.99,0.0,  4,0.98,0.0,  4,1.0,0.0
+5,0.99,0.01,  5,1.0,0.0,  5,0.98,0.02
+6,0.99,0.01,  6,1.0,0.0,  6,0.98,0.02
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,0.9969999999999999,0.002,    Mean,0.998,0.0,    Mean,0.9960000000000001,0.004
+Std,0.004830458915396484,0.004216370213557839,    Std,0.006324555320336764,0.0,    Std,0.0026666666666666687,0.008432740427115677
+Err,0.001527525231651948,0.001333333333333333,    Err,0.0020000000000000018,0.0,    Err,0.0026666666666666687,0.002666666666666666
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,DynamicBoard5,Gambler,  Cycle,DynamicBoard5,Gambler,   Cycle,DynamicBoard5,Gambler
+0,35.26,None,  0,36.4,None,  0,34.12,None
+1,35.48,None,  1,36.04,None,  1,34.92,None
+2,37.86,None,  2,38.6,None,  2,37.12,None
+3,35.84,None,  3,35.8,None,  3,35.88,None
+4,33.95959595959596,None,  4,34.326530612244895,None,  4,33.6,None
+5,35.696969696969695,2.0,  5,34.32,None,  5,37.10204081632653,2.0
+6,35.81818181818182,2.0,  6,37.08,None,  6,34.53061224489796,2.0
+7,35.98,None,  7,37.64,None,  7,34.32,None
+8,33.86,None,  8,32.84,None,  8,34.88,None
+9,35.6,None,  9,34.84,None,  9,36.36,None
+Mean,35.53547474747475,2.0,    Mean,35.7886530612245,nan,    Mean,35.28326530612245,2.0
+Std,1.114226027416687,0.0,    Std,1.7424447865142314,nan,    Std,1.2548797251625343,0.0
+Err,0.35234920748779497,0.0,    Err,0.5510094222470815,nan,    Err,0.39682781210797174,0.0
+

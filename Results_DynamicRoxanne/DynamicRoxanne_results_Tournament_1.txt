@@ -1,0 +1,16 @@
+Results of player DynamicRoxanne agains different agents
+
+Tournament_1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Tournament_1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+StaticBoard27,0.13999999999999999,0.05477225575051661,0.024494897427831782,11.6,9.528903399657276,4.261455150532503
+
+End of Tournament_1
+
+StaticBoard17,0.08,0.08366600265340757,0.03741657386773942,15.666666666666666,10.214368964029708,5.897268670984711
+
+End of Tournament_1
+

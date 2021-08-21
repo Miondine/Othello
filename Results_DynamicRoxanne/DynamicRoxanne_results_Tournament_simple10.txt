@@ -1,0 +1,9 @@
+Results of player DynamicRoxanne agains different agents
+
+Tournament_simple10 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+MCTSRemMaxIter3,0.13000000000000003,0.0674948557710553,0.021343747458109495,17.11111111111111,4.48454134902457,1.4948471163415233
+
+End of Tournament_simple10
+

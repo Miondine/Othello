@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax1 against MCTSRemMaxIter0
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSRemMaxIter0 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter0,  Cycle,Edax1,MCTSRemMaxIter0,   Cycle,Edax1,MCTSRemMaxIter0
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,0.9,0.1,  3,1.0,0.0,  3,0.8,0.2
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,0.9,0.1,  9,0.8,0.2,  9,1.0,0.0
+Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02,    Mean,0.9800000000000001,0.02
+Std,0.04216370213557838,0.04216370213557839,    Std,0.06324555320336757,0.06324555320336758,    Std,0.019999999999999997,0.06324555320336758
+Err,0.013333333333333329,0.013333333333333332,    Err,0.019999999999999993,0.019999999999999997,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax1,MCTSRemMaxIter0,  Cycle,Edax1,MCTSRemMaxIter0,   Cycle,Edax1,MCTSRemMaxIter0
+0,41.6,None,  0,38.0,None,  0,45.2,None
+1,47.0,None,  1,55.6,None,  1,38.4,None
+2,50.2,None,  2,48.4,None,  2,52.0,None
+3,46.22222222222222,64.0,  3,48.8,None,  3,43.0,64.0
+4,46.8,None,  4,50.0,None,  4,43.6,None
+5,50.8,None,  5,49.2,None,  5,52.4,None
+6,46.8,None,  6,47.6,None,  6,46.0,None
+7,47.8,None,  7,51.6,None,  7,44.0,None
+8,47.2,None,  8,46.8,None,  8,47.6,None
+9,53.333333333333336,24.0,  9,59.0,24.0,  9,48.8,None
+Mean,47.77555555555555,44.0,    Mean,49.5,24.0,    Mean,46.10000000000001,64.0
+Std,3.14997681094084,28.284271247461902,    Std,5.548373134932838,nan,    Std,4.274212078136611,nan
+Err,0.9961101299286652,20.0,    Err,1.754549641487651,nan,    Err,1.351624536951327,nan
+

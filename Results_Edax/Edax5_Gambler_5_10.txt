@@ -1,0 +1,70 @@
+Results for game Edax5 against Gambler
+Each cycle contains 10 games, where first half of games Edax5 is black and second half Gambler is black
+Number of cycles: 5
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Edax5,Gambler,Discs_Edax5,Discs_Gambler
+1,0,63,1
+1,0,64,0
+1,0,64,0
+1,0,63,1
+1,0,63,1
+1,0,64,0
+1,0,63,1
+1,0,64,0
+1,0,64,0
+1,0,59,5
+
+Cycle: 1
+Edax5,Gambler,Discs_Edax5,Discs_Gambler
+1,0,62,2
+1,0,64,0
+1,0,62,2
+1,0,64,0
+1,0,59,5
+1,0,63,1
+1,0,64,0
+1,0,62,2
+1,0,61,3
+1,0,58,6
+
+Cycle: 2
+Edax5,Gambler,Discs_Edax5,Discs_Gambler
+1,0,60,4
+1,0,64,0
+1,0,64,0
+1,0,63,1
+1,0,61,3
+1,0,53,11
+1,0,64,0
+1,0,64,0
+1,0,63,1
+1,0,62,2
+
+Cycle: 3
+Edax5,Gambler,Discs_Edax5,Discs_Gambler
+1,0,61,3
+1,0,64,0
+1,0,63,1
+1,0,59,5
+1,0,61,3
+1,0,64,0
+1,0,64,0
+1,0,64,0
+1,0,60,4
+1,0,64,0
+
+Cycle: 4
+Edax5,Gambler,Discs_Edax5,Discs_Gambler
+1,0,61,3
+1,0,60,4
+1,0,61,3
+1,0,64,0
+1,0,63,1
+1,0,64,0
+1,0,64,0
+1,0,62,2
+1,0,63,1
+1,0,59,5

@@ -1,0 +1,15 @@
+Results of games between DynamicBoard5 against deterministic opponents. 
+First game DynamicBoard5 is black and second game opponent is black
+
+Tournament_5 start
+
+Opponent,win_black,draw_black,disc_diff_black,win_white,draw_white,disc_diff_white,mean_win,mean_disc_win,mean_disc_loose
+Tournament_7 start
+
+Opponent,win_black,draw_black,disc_diff_black,win_white,draw_white,disc_diff_white,mean_win,mean_disc_win,mean_disc_loose
+
+End of Tournament_5
+
+
+End of Tournament_7
+

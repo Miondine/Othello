@@ -1,0 +1,135 @@
+Results for game DynamicRoxanne against MCTSMaxIter0
+Each cycle contains 10 games, where first half of games DynamicRoxanne is black and second half MCTSMaxIter0 is black
+Number of cycles: 10
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,40,24
+1,0,43,21
+0,1,20,44
+1,0,44,20
+1,0,36,28
+1,0,45,19
+1,0,54,10
+0,1,25,39
+0,1,30,34
+0,1,31,33
+
+Cycle: 1
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,39,25
+1,0,54,10
+0,1,31,33
+0,1,25,39
+0,1,15,49
+1,0,41,23
+0,1,28,36
+1,0,39,25
+0,1,31,33
+1,0,47,17
+
+Cycle: 2
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,36,28
+0,1,28,36
+0,1,24,40
+1,0,35,29
+1,0,46,18
+0,1,21,43
+0,0,32,32
+0,1,30,34
+0,1,28,36
+0,0,32,32
+
+Cycle: 3
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+0,1,31,33
+0,1,28,36
+0,1,30,34
+1,0,37,27
+0,1,26,38
+0,1,23,41
+0,0,32,32
+0,1,31,33
+0,1,22,42
+1,0,44,20
+
+Cycle: 4
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,49,15
+0,1,31,33
+0,1,29,35
+1,0,39,25
+1,0,55,9
+0,1,31,33
+1,0,53,11
+0,1,30,34
+1,0,42,22
+0,1,28,36
+
+Cycle: 5
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,39,25
+1,0,38,26
+1,0,38,26
+0,1,24,40
+0,1,26,38
+0,1,27,37
+1,0,54,10
+0,1,31,33
+0,0,32,32
+1,0,51,13
+
+Cycle: 6
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+1,0,37,27
+0,0,32,32
+1,0,47,17
+0,1,31,33
+1,0,40,24
+1,0,44,20
+1,0,36,28
+0,1,30,34
+1,0,40,24
+0,1,30,34
+
+Cycle: 7
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+0,1,31,33
+0,1,28,36
+0,1,31,33
+1,0,33,31
+1,0,41,23
+0,1,22,42
+0,1,30,34
+1,0,45,19
+1,0,51,13
+0,1,21,43
+
+Cycle: 8
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+0,1,24,40
+1,0,51,13
+1,0,42,22
+0,1,26,38
+0,0,32,32
+0,1,26,38
+0,1,30,34
+1,0,61,3
+1,0,45,19
+0,1,31,33
+
+Cycle: 9
+DynamicRoxanne,MCTSMaxIter0,Discs_DynamicRoxanne,Discs_MCTSMaxIter0
+0,1,30,34
+0,1,31,33
+0,1,31,33
+0,1,27,37
+0,1,31,33
+1,0,42,22
+1,0,39,25
+1,0,58,6
+0,1,30,34
+1,0,48,16

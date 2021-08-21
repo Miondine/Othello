@@ -1,0 +1,9 @@
+Results of games between Edax3 against deterministic opponents. 
+First game Edax3 is black and second game opponent is black
+
+Tournament_simple_3 start
+
+Opponent,win_black,draw_black,disc_diff_black,win_white,draw_white,disc_diff_white,mean_win,mean_disc_win,mean_disc_loose
+
+End of Tournament_simple_3
+

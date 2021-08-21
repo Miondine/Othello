@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax2 against DynamicRoxanne
+Each cycle contains 10 games, where first half of games Edax2 is black and second half DynamicRoxanne is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax2,DynamicRoxanne,  Cycle,Edax2,DynamicRoxanne,   Cycle,Edax2,DynamicRoxanne
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,0.9,0.1,  3,0.8,0.2,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,0.99,0.01,    Mean,0.9800000000000001,0.02,    Mean,1.0,0.0
+Std,0.031622776601683784,0.03162277660168379,    Std,0.06324555320336758,0.06324555320336758,    Std,0.0,0.0
+Err,0.009999999999999997,0.009999999999999998,    Err,0.019999999999999997,0.019999999999999997,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax2,DynamicRoxanne,  Cycle,Edax2,DynamicRoxanne,   Cycle,Edax2,DynamicRoxanne
+0,39.4,None,  0,33.2,None,  0,45.6,None
+1,53.2,None,  1,52.4,None,  1,54.0,None
+2,41.6,None,  2,36.4,None,  2,46.8,None
+3,51.333333333333336,22.0,  3,55.5,22.0,  3,48.0,None
+4,41.2,None,  4,49.6,None,  4,32.8,None
+5,44.0,None,  5,53.2,None,  5,34.8,None
+6,44.2,None,  6,41.2,None,  6,47.2,None
+7,50.4,None,  7,52.4,None,  7,48.4,None
+8,45.6,None,  8,44.8,None,  8,46.4,None
+9,36.6,None,  9,44.8,None,  9,28.4,None
+Mean,44.753333333333345,22.0,    Mean,46.35,22.0,    Mean,43.239999999999995,nan
+Std,5.434689673923605,nan,    Std,7.584084211909394,nan,    Std,8.228838179097814,nan
+Err,1.7185997745796389,nan,    Err,2.3982980076156784,nan,    Err,2.602187114290166,nan
+

@@ -1,0 +1,36 @@
+Statistical evaluation for games between DynamicBoard5 against Greedy
+Each cycle contains 100 games, where first half of games DynamicBoard5 is black and second half Greedy is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,DynamicBoard5,Greedy,  Cycle,DynamicBoard5,Greedy,   Cycle,DynamicBoard5,Greedy
+0,0.99,0.0,  0,0.98,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,0.99,0.0,  5,1.0,0.0,  5,0.98,0.0
+6,0.99,0.01,  6,0.98,0.02,  6,1.0,0.0
+7,0.99,0.0,  7,0.98,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,0.9960000000000001,0.001,    Mean,0.994,0.002,    Mean,0.998,0.0
+Std,0.005163977794943227,0.0031622776601683794,    Std,0.009660917830792967,0.006324555320336759,    Std,0.0020000000000000018,0.0
+Err,0.0016329931618554534,0.001,    Err,0.003055050463303896,0.002,    Err,0.0020000000000000018,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,DynamicBoard5,Greedy,  Cycle,DynamicBoard5,Greedy,   Cycle,DynamicBoard5,Greedy
+0,35.07070707070707,None,  0,32.326530612244895,None,  0,37.76,None
+1,36.48,None,  1,36.08,None,  1,36.88,None
+2,35.28,None,  2,34.36,None,  2,36.2,None
+3,35.84,None,  3,34.68,None,  3,37.0,None
+4,34.76,None,  4,34.24,None,  4,35.28,None
+5,36.64646464646464,None,  5,35.92,None,  5,37.38775510204081,None
+6,35.61616161616162,10.0,  6,35.55102040816327,10.0,  6,35.68,None
+7,34.64646464646464,None,  7,33.265306122448976,None,  7,36.0,None
+8,36.7,None,  8,35.44,None,  8,37.96,None
+9,35.46,None,  9,33.52,None,  9,37.4,None
+Mean,35.649979797979796,10.0,    Mean,34.53828571428571,10.0,    Mean,36.75477551020408,nan
+Std,0.7549356357787216,nan,    Std,1.2389432813653258,nan,    Std,0.9167214235283128,nan
+Err,0.23873160958880635,nan,    Err,0.39178826608772765,nan,    Err,0.28989276782213386,nan
+

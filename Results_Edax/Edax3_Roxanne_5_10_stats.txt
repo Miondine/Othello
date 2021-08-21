@@ -1,0 +1,26 @@
+Statistical evaluation for games between Edax3 against Roxanne
+Each cycle contains 10 games, where first half of games Edax3 is black and second half Roxanne is black
+Number of cycles: 5
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax3,Roxanne,  Cycle,Edax3,Roxanne,   Cycle,Edax3,Roxanne
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+Mean,1.0,0.0,    Mean,1.0,0.0,    Mean,1.0,0.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax3,Roxanne,  Cycle,Edax3,Roxanne,   Cycle,Edax3,Roxanne
+0,48.6,None,  0,47.6,None,  0,49.6,None
+1,50.8,None,  1,48.0,None,  1,53.6,None
+2,52.6,None,  2,51.6,None,  2,53.6,None
+3,49.2,None,  3,46.4,None,  3,52.0,None
+4,47.8,None,  4,46.4,None,  4,49.2,None
+Mean,49.8,nan,    Mean,48.0,nan,    Mean,51.6,nan
+Std,1.9131126469708994,nan,    Std,2.135415650406263,nan,    Std,2.1166010488516718,nan
+Err,0.8555699854482977,nan,    Err,0.9549869109050662,nan,    Err,0.9465727652959383,nan
+

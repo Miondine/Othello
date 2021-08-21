@@ -1,0 +1,37 @@
+Results of player DynamicBoard1 agains different agents
+
+Tournament1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.0,nan,nan,0,nan,nan
+
+End of Tournament1
+
+Tournament2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax2,0.0,nan,nan,0,nan,nan
+
+End of Tournament2
+
+Tournament3 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax3,0.0,nan,nan,0,nan,nan
+
+End of Tournament3
+
+Tournament4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax4,0.0,nan,nan,0,nan,nan
+
+End of Tournament4
+
+Tournament5 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax5,0.0,nan,nan,0,nan,nan
+
+End of Tournament5
+

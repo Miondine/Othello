@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax3 against Greedy
+Each cycle contains 100 games, where first half of games Edax3 is black and second half Greedy is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax3,Greedy,  Cycle,Edax3,Greedy,   Cycle,Edax3,Greedy
+0,0.99,0.01,  0,1.0,0.0,  0,0.98,0.02
+1,0.99,0.01,  1,1.0,0.0,  1,0.98,0.02
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,0.99,0.01,  3,1.0,0.0,  3,0.98,0.02
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,0.99,0.01,  8,1.0,0.0,  8,0.98,0.02
+9,0.99,0.01,  9,1.0,0.0,  9,0.98,0.02
+Mean,0.9949999999999999,0.005,    Mean,1.0,0.0,    Mean,0.99,0.01
+Std,0.0052704627669473035,0.005270462766947299,    Std,0.0,0.0,    Std,0.003333333333333336,0.010540925533894598
+Err,0.001666666666666668,0.0016666666666666666,    Err,0.0,0.0,    Err,0.003333333333333336,0.003333333333333333
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax3,Greedy,  Cycle,Edax3,Greedy,   Cycle,Edax3,Greedy
+0,54.18181818181818,64.0,  0,55.56,None,  0,52.775510204081634,64.0
+1,53.19191919191919,64.0,  1,53.8,None,  1,52.57142857142857,64.0
+2,55.1,None,  2,55.36,None,  2,54.84,None
+3,54.78787878787879,64.0,  3,55.4,None,  3,54.16326530612245,64.0
+4,53.48,None,  4,53.76,None,  4,53.2,None
+5,54.66,None,  5,54.0,None,  5,55.32,None
+6,55.12,None,  6,55.44,None,  6,54.8,None
+7,55.14,None,  7,55.28,None,  7,55.0,None
+8,54.0,64.0,  8,54.44,None,  8,53.55102040816327,64.0
+9,53.75757575757576,64.0,  9,55.16,None,  9,52.326530612244895,64.0
+Mean,54.34191919191919,64.0,    Mean,54.82000000000001,nan,    Mean,53.85477551020408,64.0
+Std,0.7200684846523506,0.0,    Std,0.73545148642782,nan,    Std,1.1098562513675438,0.0
+Err,0.22770564828074258,0.0,    Err,0.2325701805668323,nan,    Err,0.3509673629697805,0.0
+

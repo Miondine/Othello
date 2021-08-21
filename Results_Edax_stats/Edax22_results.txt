@@ -1,0 +1,9 @@
+Results of player Edax22 agains different agents
+
+Tournament_2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta5,0.74,0.11737877907772676,0.037118429085533484,29.940873015873017,6.5765004757546075,2.079672053656551
+
+End of Tournament_2
+

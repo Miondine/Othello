@@ -1,0 +1,12 @@
+Results of player DynamicRoxanne agains different agents
+
+Tournament_simple6 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Tournament_simple6 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta62,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament_simple6
+

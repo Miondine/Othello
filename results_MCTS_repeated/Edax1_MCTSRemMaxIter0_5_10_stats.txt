@@ -1,0 +1,4 @@
+Statistical evaluation for games between Edax1 against MCTSRemMaxIter0
+Each cycle contains 10 games, where first half of games Edax1 is black and second half MCTSRemMaxIter0 is black
+Number of cycles: 5
+

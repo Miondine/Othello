@@ -1,0 +1,9 @@
+Results of player AlphaBeta3 agains different agents
+
+Tournament_DRoxanne start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+DynamicRoxanne,0.9200000000000002,0.024037008503093253,0.007601169500660917,38.572673719805685,1.5817618108841982,0.5001970038266581
+
+End of Tournament_DRoxanne
+

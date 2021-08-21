@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax4 against Gambler
+Each cycle contains 100 games, where first half of games Edax4 is black and second half Gambler is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax4,Gambler,  Cycle,Edax4,Gambler,   Cycle,Edax4,Gambler
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,1.0,0.0,    Mean,1.0,0.0,    Mean,1.0,0.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax4,Gambler,  Cycle,Edax4,Gambler,   Cycle,Edax4,Gambler
+0,56.94,None,  0,55.44,None,  0,58.44,None
+1,57.32,None,  1,57.08,None,  1,57.56,None
+2,58.06,None,  2,57.72,None,  2,58.4,None
+3,56.86,None,  3,56.44,None,  3,57.28,None
+4,57.34,None,  4,58.52,None,  4,56.16,None
+5,57.08,None,  5,57.04,None,  5,57.12,None
+6,57.78,None,  6,58.6,None,  6,56.96,None
+7,56.94,None,  7,56.28,None,  7,57.6,None
+8,56.14,None,  8,56.2,None,  8,56.08,None
+9,58.06,None,  9,57.96,None,  9,58.16,None
+Mean,57.251999999999995,nan,    Mean,57.12800000000001,nan,    Mean,57.376,nan
+Std,0.5973422618380346,nan,    Std,1.0572585093323001,nan,    Std,0.8356926601461941,nan
+Err,0.18889620900848675,nan,    Err,0.33433449650844543,nan,    Err,0.2642692229946995,nan
+

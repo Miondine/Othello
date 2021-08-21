@@ -1,0 +1,36 @@
+Statistical evaluation for games between Greedy against MCTSMaxIter0
+Each cycle contains 10 games, where first half of games Greedy is black and second half MCTSMaxIter0 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter0,  Cycle,Greedy,MCTSMaxIter0,   Cycle,Greedy,MCTSMaxIter0
+0,0.1,0.8,  0,0.0,1.0,  0,0.2,0.6
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.0,1.0,  3,0.0,1.0,  3,0.0,1.0
+4,0.1,0.9,  4,0.0,1.0,  4,0.2,0.8
+5,0.1,0.9,  5,0.2,0.8,  5,0.0,1.0
+6,0.0,1.0,  6,0.0,1.0,  6,0.0,1.0
+7,0.2,0.8,  7,0.4,0.6,  7,0.0,1.0
+8,0.1,0.9,  8,0.2,0.8,  8,0.0,1.0
+9,0.1,0.9,  9,0.2,0.8,  9,0.0,1.0
+Mean,0.06999999999999999,0.9200000000000002,    Mean,0.1,0.9000000000000001,    Mean,0.04,0.9400000000000001
+Std,0.06749485577105528,0.07888106377466153,    Std,0.14142135623730953,0.14142135623730948,    Std,0.026666666666666665,0.1349897115421106
+Err,0.02134374745810949,0.024944382578492935,    Err,0.0447213595499958,0.044721359549995794,    Err,0.026666666666666665,0.04268749491621899
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Greedy,MCTSMaxIter0,  Cycle,Greedy,MCTSMaxIter0,   Cycle,Greedy,MCTSMaxIter0
+0,64.0,21.0,  0,None,20.8,  0,64.0,21.333333333333332
+1,None,15.2,  1,None,15.2,  1,None,15.2
+2,None,13.0,  2,None,14.4,  2,None,11.6
+3,None,15.2,  3,None,17.2,  3,None,13.2
+4,64.0,18.666666666666668,  4,None,19.2,  4,64.0,18.0
+5,6.0,18.666666666666668,  5,6.0,18.0,  5,None,19.2
+6,None,16.6,  6,None,17.6,  6,None,15.6
+7,36.0,17.25,  7,36.0,16.666666666666668,  7,None,17.6
+8,62.0,15.555555555555555,  8,62.0,23.0,  8,None,9.6
+9,22.0,14.444444444444445,  9,22.0,14.5,  9,None,14.4
+Mean,42.333333333333336,16.558333333333334,    Mean,31.5,17.656666666666666,    Mean,64.0,15.573333333333334
+Std,24.897121654252857,2.378716859096013,    Std,23.74166520416516,2.7634318438411967,    Std,0.0,3.5737313211202038
+Err,10.164207352819556,0.7522163183385215,    Err,11.87083260208258,0.8738738785176929,    Err,0.0,1.1301130720222448
+

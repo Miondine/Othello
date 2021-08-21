@@ -1,0 +1,135 @@
+Results for game Edax24 against AlphaBeta5
+Each cycle contains 10 games, where first half of games Edax24 is black and second half AlphaBeta5 is black
+Number of cycles: 10
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,45,19
+1,0,57,7
+1,0,56,8
+1,0,60,4
+1,0,55,9
+0,1,25,39
+1,0,46,18
+1,0,63,1
+1,0,57,7
+1,0,51,13
+
+Cycle: 1
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,42,22
+1,0,51,13
+1,0,52,12
+1,0,57,7
+1,0,60,4
+1,0,55,9
+1,0,51,13
+1,0,47,17
+1,0,60,4
+1,0,50,14
+
+Cycle: 2
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,46,18
+1,0,56,8
+1,0,55,9
+1,0,48,16
+1,0,58,6
+1,0,36,28
+1,0,52,12
+0,0,32,32
+1,0,61,3
+1,0,54,10
+
+Cycle: 3
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,60,4
+1,0,53,11
+1,0,55,9
+1,0,50,14
+1,0,48,16
+1,0,38,26
+1,0,54,10
+1,0,58,6
+1,0,53,11
+1,0,48,16
+
+Cycle: 4
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,61,3
+1,0,53,11
+1,0,33,31
+1,0,56,8
+1,0,38,26
+0,0,32,32
+1,0,49,15
+1,0,41,23
+1,0,59,5
+1,0,50,14
+
+Cycle: 5
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,58,6
+1,0,54,10
+1,0,48,16
+0,1,30,34
+1,0,50,14
+1,0,48,16
+1,0,62,2
+1,0,55,9
+1,0,33,31
+1,0,50,14
+
+Cycle: 6
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,40,24
+1,0,54,10
+1,0,58,6
+1,0,61,3
+1,0,57,7
+0,0,32,32
+1,0,59,5
+1,0,61,3
+1,0,52,12
+1,0,56,8
+
+Cycle: 7
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,42,22
+1,0,57,7
+1,0,58,6
+1,0,57,7
+0,1,26,38
+1,0,57,7
+1,0,51,13
+1,0,59,5
+1,0,51,13
+1,0,50,14
+
+Cycle: 8
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,55,9
+1,0,42,22
+1,0,39,25
+1,0,57,7
+1,0,42,22
+1,0,46,18
+1,0,58,6
+1,0,47,17
+1,0,62,2
+1,0,38,26
+
+Cycle: 9
+Edax24,AlphaBeta5,Discs_Edax24,Discs_AlphaBeta5
+1,0,60,4
+1,0,53,11
+1,0,38,26
+1,0,40,24
+0,1,30,34
+1,0,47,17
+1,0,51,13
+1,0,45,19
+0,1,26,38
+1,0,40,24

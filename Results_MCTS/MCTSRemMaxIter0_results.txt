@@ -1,0 +1,9 @@
+Results of player MCTSRemMaxIter0 agains different agents
+
+Tournament_mcts4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Gambler,0.9800000000000001,0.06324555320336758,0.019999999999999997,19.365000000000002,2.433339041089196,0.769489368925191
+
+End of Tournament_mcts4
+

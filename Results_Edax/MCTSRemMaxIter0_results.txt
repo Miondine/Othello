@@ -1,0 +1,12 @@
+Results of player MCTSRemMaxIter0 agains different agents
+
+Tournament_repeted start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Tournament_repeted start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.02,0.04216370213557839,0.013333333333333332,44.0,28.284271247461902,20.0
+
+End of Tournament_repeted
+

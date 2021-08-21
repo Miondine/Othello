@@ -1,0 +1,135 @@
+Results for game Greedy2 against MCTSRemMaxIter3
+Each cycle contains 10 games, where first half of games Greedy2 is black and second half MCTSRemMaxIter3 is black
+Number of cycles: 10
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,18,46
+0,1,23,41
+0,1,20,44
+0,1,14,50
+0,1,17,47
+0,1,20,44
+0,1,24,40
+0,1,24,40
+0,1,18,46
+0,1,23,41
+
+Cycle: 1
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,22,42
+0,1,22,42
+0,1,14,50
+0,1,18,46
+0,1,22,42
+0,1,24,40
+0,1,31,33
+0,1,25,39
+0,1,25,39
+0,1,24,40
+
+Cycle: 2
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,15,49
+0,1,15,49
+0,1,28,36
+0,1,21,43
+0,1,16,48
+0,1,21,43
+0,1,28,36
+0,1,31,33
+0,1,21,43
+0,1,24,40
+
+Cycle: 3
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,24,40
+0,1,20,44
+0,1,26,38
+0,1,20,44
+0,1,21,43
+0,1,19,45
+0,1,19,45
+0,1,22,42
+0,1,21,43
+0,1,24,40
+
+Cycle: 4
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,23,41
+0,1,18,46
+0,1,14,50
+0,1,14,50
+0,1,22,42
+0,1,30,34
+0,1,22,42
+0,1,19,45
+0,1,21,43
+0,1,27,37
+
+Cycle: 5
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,21,43
+0,1,26,38
+0,1,14,50
+0,1,19,45
+0,1,31,33
+0,1,29,35
+0,1,20,44
+0,1,27,37
+0,1,22,42
+0,1,30,34
+
+Cycle: 6
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,21,43
+0,1,13,51
+0,1,10,54
+0,1,17,47
+0,1,18,46
+0,1,27,37
+0,1,23,41
+0,1,21,43
+0,1,24,40
+0,1,28,36
+
+Cycle: 7
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,22,42
+0,1,26,38
+0,1,19,45
+0,1,26,38
+0,1,17,47
+0,1,14,50
+0,1,28,36
+0,1,22,42
+0,1,30,34
+0,1,21,43
+
+Cycle: 8
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,21,43
+1,0,64,0
+0,1,19,45
+0,1,14,50
+0,1,15,49
+0,1,29,35
+0,1,21,43
+0,1,29,35
+0,1,20,44
+0,1,22,42
+
+Cycle: 9
+Greedy2,MCTSRemMaxIter3,Discs_Greedy2,Discs_MCTSRemMaxIter3
+0,1,21,43
+0,1,13,51
+0,1,10,54
+0,1,16,48
+0,1,31,33
+0,1,21,43
+0,1,23,41
+0,1,23,41
+0,1,25,39
+0,1,23,41

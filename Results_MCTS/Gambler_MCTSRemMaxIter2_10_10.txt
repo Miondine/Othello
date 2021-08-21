@@ -1,0 +1,135 @@
+Results for game Gambler against MCTSRemMaxIter2
+Each cycle contains 10 games, where first half of games Gambler is black and second half MCTSRemMaxIter2 is black
+Number of cycles: 10
+In first two columns winner gets 1 looser 0
+last two columns refers to number of disc each player has at the end of the game
+
+Cycle: 0
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,28,36
+0,1,19,45
+0,1,19,45
+0,1,24,40
+0,1,20,44
+0,1,15,49
+0,1,23,41
+0,1,16,48
+0,1,24,40
+0,1,16,48
+
+Cycle: 1
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,24,40
+0,1,14,50
+0,1,28,36
+0,1,20,44
+0,1,21,43
+0,1,18,46
+0,1,24,40
+0,1,22,42
+0,1,29,35
+0,1,16,48
+
+Cycle: 2
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,24,40
+0,1,10,54
+0,1,23,41
+0,1,19,45
+0,1,21,43
+0,1,25,39
+0,1,17,47
+0,1,26,38
+0,1,27,37
+0,1,28,36
+
+Cycle: 3
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,8,56
+0,1,10,54
+0,1,16,48
+0,1,13,51
+0,1,13,51
+0,1,20,44
+0,1,28,36
+0,1,19,45
+0,1,27,37
+0,1,15,49
+
+Cycle: 4
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,14,50
+0,1,19,45
+0,1,24,40
+0,1,15,49
+0,1,24,40
+0,1,31,33
+0,1,21,43
+0,1,29,35
+0,1,27,37
+0,1,20,44
+
+Cycle: 5
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,14,50
+0,1,24,40
+0,1,21,43
+0,1,16,48
+0,1,24,40
+0,1,17,47
+0,1,23,41
+0,1,29,35
+0,1,20,44
+0,1,13,51
+
+Cycle: 6
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,15,49
+0,1,15,49
+0,1,23,41
+0,1,21,43
+0,1,23,41
+0,1,29,35
+0,1,18,46
+0,1,29,35
+1,0,33,31
+0,1,25,39
+
+Cycle: 7
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,20,44
+0,1,15,49
+0,1,24,40
+0,1,8,56
+0,1,16,48
+0,1,27,37
+0,1,15,49
+0,1,23,41
+0,1,19,45
+0,1,26,38
+
+Cycle: 8
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,19,45
+0,1,30,34
+0,1,7,57
+0,1,23,41
+0,1,14,50
+0,1,17,47
+0,1,25,39
+0,1,28,36
+0,1,27,37
+0,1,22,42
+
+Cycle: 9
+Gambler,MCTSRemMaxIter2,Discs_Gambler,Discs_MCTSRemMaxIter2
+0,1,18,46
+0,1,24,40
+0,1,18,46
+0,1,19,45
+0,1,28,36
+0,1,16,48
+0,1,23,41
+0,1,20,44
+0,1,24,40
+0,1,13,51

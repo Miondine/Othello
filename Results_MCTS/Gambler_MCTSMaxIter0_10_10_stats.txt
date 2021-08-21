@@ -1,0 +1,36 @@
+Statistical evaluation for games between Gambler against MCTSMaxIter0
+Each cycle contains 10 games, where first half of games Gambler is black and second half MCTSMaxIter0 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Gambler,MCTSMaxIter0,  Cycle,Gambler,MCTSMaxIter0,   Cycle,Gambler,MCTSMaxIter0
+0,0.1,0.9,  0,0.2,0.8,  0,0.0,1.0
+1,0.0,1.0,  1,0.0,1.0,  1,0.0,1.0
+2,0.0,1.0,  2,0.0,1.0,  2,0.0,1.0
+3,0.0,1.0,  3,0.0,1.0,  3,0.0,1.0
+4,0.0,1.0,  4,0.0,1.0,  4,0.0,1.0
+5,0.0,1.0,  5,0.0,1.0,  5,0.0,1.0
+6,0.1,0.9,  6,0.0,1.0,  6,0.2,0.8
+7,0.0,1.0,  7,0.0,1.0,  7,0.0,1.0
+8,0.0,1.0,  8,0.0,1.0,  8,0.0,1.0
+9,0.0,1.0,  9,0.0,1.0,  9,0.0,1.0
+Mean,0.02,0.9800000000000001,    Mean,0.02,0.9800000000000001,    Mean,0.02,0.9800000000000001
+Std,0.04216370213557839,0.04216370213557838,    Std,0.06324555320336758,0.06324555320336758,    Std,0.019999999999999997,0.06324555320336758
+Err,0.013333333333333332,0.013333333333333329,    Err,0.019999999999999997,0.019999999999999997,    Err,0.019999999999999997,0.019999999999999997
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Gambler,MCTSMaxIter0,  Cycle,Gambler,MCTSMaxIter0,   Cycle,Gambler,MCTSMaxIter0
+0,16.0,23.555555555555557,  0,16.0,27.5,  0,None,20.4
+1,None,22.2,  1,None,24.0,  1,None,20.4
+2,None,15.6,  2,None,23.2,  2,None,8.0
+3,None,16.0,  3,None,20.0,  3,None,12.0
+4,None,19.8,  4,None,23.2,  4,None,16.4
+5,None,15.0,  5,None,18.4,  5,None,11.6
+6,28.0,18.444444444444443,  6,None,21.6,  6,28.0,14.5
+7,None,19.0,  7,None,18.8,  7,None,19.2
+8,None,15.8,  8,None,19.2,  8,None,12.4
+9,None,18.8,  9,None,18.0,  9,None,19.6
+Mean,22.0,18.42,    Mean,16.0,21.389999999999997,    Mean,28.0,15.45
+Std,8.48528137423857,2.8947793697363715,    Std,nan,3.066105021032385,    Std,nan,4.392227984368145
+Err,5.999999999999999,0.9154096132033628,    Err,nan,0.969587541174081,    Err,nan,1.3889444433333775
+

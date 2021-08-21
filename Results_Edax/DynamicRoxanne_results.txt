@@ -1,0 +1,37 @@
+Results of player DynamicRoxanne agains different agents
+
+Tournament1 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax1,0.08,0.09189365834726815,0.029059326290271158,22.0,12.864680330268607,5.7532599454570095
+
+End of Tournament1
+
+Tournament2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax2,0.01,0.03162277660168379,0.009999999999999998,22.0,nan,nan
+
+End of Tournament2
+
+Tournament3 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax3,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament3
+
+Tournament4 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax4,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament4
+
+Tournament5 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+Edax5,0.0,0.0,0.0,nan,nan,nan
+
+End of Tournament5
+

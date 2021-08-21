@@ -1,0 +1,9 @@
+Results of player Edax23 agains different agents
+
+Tournament_2 start
+
+opponent,win_percentage,std,err,disc_diff,std,err
+AlphaBeta5,0.8400000000000001,0.12649110640673517,0.039999999999999994,31.68309523809524,6.020106506592559,1.9037248317631954
+
+End of Tournament_2
+

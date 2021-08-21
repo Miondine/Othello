@@ -1,0 +1,36 @@
+Statistical evaluation for games between Edax22 against MCTSMaxIter0
+Each cycle contains 10 games, where first half of games Edax22 is black and second half MCTSMaxIter0 is black
+Number of cycles: 10
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax22,MCTSMaxIter0,  Cycle,Edax22,MCTSMaxIter0,   Cycle,Edax22,MCTSMaxIter0
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+5,1.0,0.0,  5,1.0,0.0,  5,1.0,0.0
+6,1.0,0.0,  6,1.0,0.0,  6,1.0,0.0
+7,1.0,0.0,  7,1.0,0.0,  7,1.0,0.0
+8,1.0,0.0,  8,1.0,0.0,  8,1.0,0.0
+9,1.0,0.0,  9,1.0,0.0,  9,1.0,0.0
+Mean,1.0,0.0,    Mean,1.0,0.0,    Mean,1.0,0.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax22,MCTSMaxIter0,  Cycle,Edax22,MCTSMaxIter0,   Cycle,Edax22,MCTSMaxIter0
+0,52.4,None,  0,54.0,None,  0,50.8,None
+1,52.2,None,  1,50.8,None,  1,53.6,None
+2,50.2,None,  2,50.0,None,  2,50.4,None
+3,48.0,None,  3,44.8,None,  3,51.2,None
+4,49.6,None,  4,52.4,None,  4,46.8,None
+5,47.4,None,  5,45.2,None,  5,49.6,None
+6,52.6,None,  6,50.0,None,  6,55.2,None
+7,51.6,None,  7,50.8,None,  7,52.4,None
+8,50.4,None,  8,56.0,None,  8,44.8,None
+9,44.6,None,  9,45.2,None,  9,44.0,None
+Mean,49.9,nan,    Mean,49.92,nan,    Mean,49.88,nan
+Std,2.5841396591085743,nan,    Std,3.8311007991611663,nan,    Std,3.6711487757013255,nan
+Err,0.8171767114754176,nan,    Err,1.211500447104058,nan,    Err,1.1609191760554798,nan
+

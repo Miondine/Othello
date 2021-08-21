@@ -1,0 +1,26 @@
+Statistical evaluation for games between Edax3 against Greedy
+Each cycle contains 10 games, where first half of games Edax3 is black and second half Greedy is black
+Number of cycles: 5
+
+Win percentage per cycle total:    ,Win percentage per cycle p1 is black:    ,Win percentage per cycle p2 is black
+Cycle,Edax3,Greedy,  Cycle,Edax3,Greedy,   Cycle,Edax3,Greedy
+0,1.0,0.0,  0,1.0,0.0,  0,1.0,0.0
+1,1.0,0.0,  1,1.0,0.0,  1,1.0,0.0
+2,1.0,0.0,  2,1.0,0.0,  2,1.0,0.0
+3,1.0,0.0,  3,1.0,0.0,  3,1.0,0.0
+4,1.0,0.0,  4,1.0,0.0,  4,1.0,0.0
+Mean,1.0,0.0,    Mean,1.0,0.0,    Mean,1.0,0.0
+Std,0.0,0.0,    Std,0.0,0.0,    Std,0.0,0.0
+Err,0.0,0.0,    Err,0.0,0.0,    Err,0.0,0.0
+
+Disc Difference per cycle total:    ,Disc Difference per cycle p1 is black:    ,Disc Difference per cycle p2 is black
+Cycle,Edax3,Greedy,  Cycle,Edax3,Greedy,   Cycle,Edax3,Greedy
+0,54.6,None,  0,55.2,None,  0,54.0,None
+1,59.6,None,  1,57.6,None,  1,61.6,None
+2,57.6,None,  2,57.2,None,  2,58.0,None
+3,49.6,None,  3,52.0,None,  3,47.2,None
+4,57.4,None,  4,58.0,None,  4,56.8,None
+Mean,55.760000000000005,nan,    Mean,56.0,nan,    Mean,55.52,nan
+Std,3.8765964453370687,nan,    Std,2.4819347291981715,nan,    Std,5.391845695121476,nan
+Err,1.7336666346215466,nan,    Err,1.1099549540409286,nan,    Err,2.411306699696245,nan
+
