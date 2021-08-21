@@ -18,6 +18,7 @@ import othello_player.mcts as mcts
 import othello_player.mctsRemember as mctsRemember
 import othello_player.edax as edax
 import pygame
+import random
 
 
 class Game:
@@ -25,7 +26,7 @@ class Game:
     # (dic) key: String connected to possible players, value: function for player objects initialisation.
     player_types = {'HUMAN' : human.Human, 'ROXANNE' : roxanne.Roxanne, 'GAMBLER' : gambler.Gambler, 'GREEDY' : greedy.Greedy,
                     'NEGAMAX' : negamax.Negamax, 'ALPHA_BETA' : alphabeta.AlphaBeta, 'STATIC_BOARD' : staticboard.StaticBoard,
-                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'DYNAMIC_ROXANNE' : roxanneDynamic.RoxanneDynamic,
+                    'DYNAMIC_BOARD' : dynamicBoard.DynamicBoard, 'DYNAMIC_ROXANNE' : roxanneDynamic.RoxanneDynamic, 
                     'MCTS_MAX_ITER' : mcts.MCTSMaxIter, 'MCTS_REM_MAX_ITER' : mctsRemember.MCTSMaxIterRemember, 'EDAX': edax.Edax} 
     depth_players = ['NEGAMAX','ALPHA_BETA','STATIC_BOARD','DYNAMIC_BOARD','MCTS_MAX_ITER','MCTS_REM_MAX_ITER','EDAX']
 
@@ -287,3 +288,55 @@ class Game:
             if(self.game_board.empty_positions == 0):
                 self.game_finish()
                 break
+
+    def run_game_timed_random(self,timer_black,timer_white):
+        
+        black_made_move = True
+        white_made_move = True      
+        random_white = gambler.Gambler(-1,False,None)
+        random_black = gambler.Gambler(1,False,None)
+     
+        while True:
+
+            # black moves, with 7 % probability black makes random move (should make in average 2 random moves per game)
+            r = random.randint(1,100)
+            if(r <= 7):
+                timer_black.start_move()
+                black_made_move, self.game_board = self.random_black.make_move(self.game_board)
+                timer_black.stop_move()
+            
+            timer_black.start_move()
+            black_made_move, self.game_board = self.black.make_move(self.game_board)
+            timer_black.stop_move()
+            
+            # if both players passed calculate number of diks for each player, determine winner leave game loop
+            if(not black_made_move and not white_made_move):
+                self.game_finish()
+                break
+
+            # if no more empty positions calculate number of diks for each player, determine winner leave game loop
+            if(self.game_board.empty_positions == 0):
+                self.game_finish()
+                break
+
+            # white moves, with 7 % probability white makes random move (should make in average 2 random moves per game)
+            r = random.randint(1,100)
+            if(r <= 7):
+                timer_white.start_move()
+                white_made_move, self.game_board = self.random_white.make_move(self.game_board)
+                timer_white.stop_move()
+            # white moves
+            timer_white.start_move()
+            white_made_move, self.game_board = self.white.make_move(self.game_board)
+            timer_white.stop_move()
+
+            # if both players passed calculate number of diks for each player, determine winner leave game loop
+            if(not black_made_move and not white_made_move):
+                self.game_finish()
+                break
+       
+            # if no more empty positions calculate number of diks for each player, determine winner leave game loop
+            if(self.game_board.empty_positions == 0):
+                self.game_finish()
+                break
+            
