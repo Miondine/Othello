@@ -302,12 +302,12 @@ class Game:
             r = random.randint(1,100)
             if(r <= 7):
                 timer_black.start_move()
-                black_made_move, self.game_board = self.random_black.make_move(self.game_board)
+                black_made_move, self.game_board = random_black.make_move(self.game_board)
                 timer_black.stop_move()
-            
-            timer_black.start_move()
-            black_made_move, self.game_board = self.black.make_move(self.game_board)
-            timer_black.stop_move()
+            else:
+                timer_black.start_move()
+                black_made_move, self.game_board = self.black.make_move(self.game_board)
+                timer_black.stop_move()
             
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not black_made_move and not white_made_move):
@@ -323,12 +323,12 @@ class Game:
             r = random.randint(1,100)
             if(r <= 7):
                 timer_white.start_move()
-                white_made_move, self.game_board = self.random_white.make_move(self.game_board)
+                white_made_move, self.game_board = random_white.make_move(self.game_board)
                 timer_white.stop_move()
-            # white moves
-            timer_white.start_move()
-            white_made_move, self.game_board = self.white.make_move(self.game_board)
-            timer_white.stop_move()
+            else:
+                timer_white.start_move()
+                white_made_move, self.game_board = self.white.make_move(self.game_board)
+                timer_white.stop_move()
 
             # if both players passed calculate number of diks for each player, determine winner leave game loop
             if(not black_made_move and not white_made_move):
