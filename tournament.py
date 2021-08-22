@@ -14,8 +14,11 @@ class Tournament:
                     'EDAX':'Edax','MCTS_MAX_ITER':'MCTSMaxIter','MCTS_REM_MAX_ITER':'MCTSRemMaxIter'}
     path_init_boardstates = 'initial_game_states.txt'
 
-    def __init__(self, tournament_name, type_player1, name_player1, depth_player1 = None, opponent_types = 'all', opponent_names = None, num_cycles = 10, num_games = 100, min_depth = 1, max_depth = 7, opening_book = False):
+    def __init__(self, tournament_name, type_player1, name_player1, depth_player1 = None, opponent_types = 'all', opponent_names = None,
+                 num_cycles = 10, num_games = 100, min_depth = 1, max_depth = 7, opening_positions = False, random_stats = False, short = False):
+        
         self.tournament_name = tournament_name
+
         self.type_player1 = type_player1
         if(depth_player1 != None):
             self.name_player1 = f'{name_player1}{depth_player1}'
@@ -27,22 +30,28 @@ class Tournament:
             self.opponents_types = ['GREEDY','GAMBLER','ROXANNE','DYNAMIC_ROXANNE','NEGAMAX','ALPHA_BETA','STATIC_BOARD','DYNAMIC_BOARD','MCTS_MAX_ITER','MCTS_REM_MAX_ITER','EDAX']
         else:
             self.opponents_types = opponent_types
-
         if(opponent_names != None):
             self.opponent_names = opponent_names
         else:
             self.opponent_names = [Tournament.player_names[type] for type in self.opponents_types]
+
         self.player1_filename = self.init_player_file(self.name_player1)
         self.player2_filename = None
-        self.opening_book = opening_book
+
+        self.opening_positions = opening_positions
+        self.random_stats = random_stats
+        self.short = short
+        if(self.short == True):
+            self.filename_short = f'tournament_short_{self.name_player1}.txt'
+            self.init_file_short()
+
         self.num_cycles = num_cycles
         self.num_games = num_games
+
         self.max_depth = max_depth
         self.min_depth = min_depth
         self.mcts_iterations = [50,100,200,500,1000,2000,5000,10000,50000,100000]
-        if(type_player1 in Tournament.players_minimax or type_player1 in Tournament.players_mcts):
-            self.filename_short = f'tournament_short_{self.name_player1}.txt'
-            self.init_file_short()
+
 
     def init_file_short(self):
 
@@ -97,6 +106,51 @@ class Tournament:
 
         return player_filename
 
+
+    def play(self):
+
+        for type_player2, name_player2 in zip(self.opponents_types,self.opponent_names):
+
+            if(type_player2 in Tournament.players_simple):
+
+                if(self.opening_positions == True):
+                    self.play_stats_opening(type_player2, name_player2, depth_player2 = None)
+                elif(self.random_stats == True):
+                    self.play_random_stats(type_player2, name_player2, depth_player2 = None)
+                elif(self.short == True):
+                    self.play_short(type_player2, name_player2, depth_player2 = None)
+                else:
+                    self.play_stats(type_player2,name_player2,depth_player2 = None)
+            
+            elif(type_player2 in Tournament.players_minimax):
+                for depth in range(self.min_depth,self.max_depth + 1):
+
+                    if(self.opening_positions == True):
+                        self.play_stats_opening(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
+                    elif(self.random_stats == True):
+                        self.play_random_stats(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
+                    elif(self.short == True):
+                        self.play_short(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
+                    else:
+                        self.play_stats(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
+                    
+            else:
+                for depth in range(self.min_depth - 1,self.max_depth):
+
+                    if(self.opening_positions == True):
+                        self.play_stats_opening(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
+                    elif(self.random_stats == True):
+                        self.play_random_stats(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
+                    elif(self.short == True):
+                        self.play_short(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
+                    else:
+                        self.play_stats(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
+
+        if(self.short == True):
+            self.close_file(self.filename_short)
+        self.close_file(self.player1_filename)
+       
+
     def play_stats(self,type_player2, name_player2, depth_player2):
 
         timer_player1 = playertimer.PlayerTimer(self.name_player1,name_player2, self.num_cycles * self.num_games) 
@@ -148,41 +202,6 @@ class Tournament:
         timer_player1.close_file()
         timer_player2.close_file()
         self.close_file(player2_filename)
-
-    def play(self):
-
-        for type_player2, name_player2 in zip(self.opponents_types,self.opponent_names):
-
-            if(self.type_player1 in Tournament.players_simple): 
-
-                if(type_player2 in Tournament.players_simple):
-                    self.play_stats(type_player2,name_player2,depth_player2 = None)
-                elif(type_player2 in Tournament.players_minimax):
-                    for depth in range(self.min_depth,self.max_depth + 1):
-                        self.play_stats(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
-                else:
-                    for depth in range(self.min_depth - 1,self.max_depth):
-                        self.play_stats(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
-
-            else:
-
-                if(type_player2 in Tournament.players_simple):
-                    self.play_stats(type_player2,name_player2,depth_player2 = None)
-                elif(type_player2 in Tournament.players_minimax):
-                    for depth in range(self.min_depth,self.max_depth + 1):
-                        if(self.opening_book == True):
-                            self.play_stats_opening(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
-                        else:
-                            self.play_short(type_player2,f'{name_player2}{depth}',depth_player2 = depth)
-                else:
-                    for depth in range(self.min_depth - 1,self.max_depth):
-                        if(self.opening_book == True):
-                            self.play_stats_opening(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
-                        else:
-                            self.play_stats(type_player2,f'{name_player2}{self.mcts_iterations[depth]}',depth_player2 = self.mcts_iterations[depth])
-
-        self.close_file(self.player1_filename)
-        self.close_file(self.filename_short)
 
     def play_short(self,type_player2, name_player2, depth_player2):
 
@@ -255,6 +274,58 @@ class Tournament:
         f = open(player2_filename,'a')
         f.write(f'{self.name_player1},{1 - (win_white+win_black)/2},nan,nan,{-discs_loose},nan,nan\n')
         f.close()
+        self.close_file(player2_filename)
+
+    def play_random_stats(self, type_player2, name_player2, depth_player2):
+
+        timer_player1 = playertimer.PlayerTimer(self.name_player1,name_player2, self.num_cycles * self.num_games) 
+        timer_player2 = playertimer.PlayerTimer(name_player2,self.name_player1, self.num_cycles * self.num_games)
+
+        player2_filename = self.init_player_file(name_player2)
+   
+        results = resultfile.ResultFile(self.name_player1,name_player2,self.num_games,self.num_cycles,self.player1_filename,player2_filename)
+
+        for cycle in range(self.num_cycles):
+            # print new cycle in output file
+            results.new_cycle(cycle)
+            # loop over num_games/2 games for player1 black and player2 white
+            for game_number in range(int(self.num_games/2)):
+
+                colour_player1 = 'black'
+                colour_player2 = 'white'
+                # init game
+                current_game = game.Game(self.type_player1,self.name_player1,type_player2,name_player2,depth_black = self.depth_player1,depth_white = depth_player2)
+                # run game non graphical and timed
+                timer_player1.start_game()
+                timer_player2.start_game()
+                current_game.run_game_timed_random(timer_player1,timer_player2)
+                timer_player1.stop_game()
+                timer_player2.stop_game()
+                # save result of game
+                results.save_game_result(current_game.winner, colour_player1, colour_player2, current_game.num_discs_black, current_game.num_discs_white, cycle)
+
+            # loop over num_games/2 games for player1 white and player2 black
+            for game_number in range(int(self.num_games/2)):
+
+                colour_player1 = 'white'
+                colour_player2 = 'black'
+                # init game
+                current_game = game.Game(type_player2,name_player2,self.type_player1,self.name_player1, depth_black = depth_player2,depth_white = self.depth_player1)
+
+                # run game non graphical and timed
+                timer_player1.start_game()
+                timer_player2.start_game()
+                current_game.run_game_timed_random(timer_player2,timer_player1)
+                timer_player1.stop_game()
+                timer_player2.stop_game()
+
+                # save result of game
+                results.save_game_result(current_game.winner, colour_player1, colour_player2, current_game.num_discs_white, current_game.num_discs_black, cycle)
+
+        results.calculate_stats()
+        results.save_stats()
+        timer_player1.close_file()
+        timer_player2.close_file()
         self.close_file(player2_filename)
 
     def play_stats_opening(self,type_player2, name_player2, depth_player2):
@@ -350,5 +421,3 @@ class Tournament:
 
         return list(read())
 
-
-        
